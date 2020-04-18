@@ -1,0 +1,85 @@
+(B[m
+Start Main Menu.
+	 Name     Description
+	------   -------------
+	  1 - 	Menu Create databases Books's.
+
+	  2 - 	Delete databases Books's using mysql.
+
+	  3 - 	Show all databases using mysql.
+
+	  4 - 	Grant all to databases Books's using mysql.
+
+	  5 - 	Menu Create tables in books_developemnt using mysql.
+
+	  6 - 	Delete table books from books_developemnt using mysql.
+
+	 99 - 	Exit Program.
+
+Enter Selection ( 1 - 6, 99 ) >> 
+ 0 InputValue = 5 
+
+
+ ===== Create table books using Rails =====
+(B[m
+[3;J[H[2JStart Menu Create Tables.
+	 Name     Description
+	------   -------------
+	  1 - 	Create table books's using mysql.
+
+	  2 - 	Create table condition using mysql.
+
+	  3 - 	Create table media using mysql.
+
+	  4 - 	Create table type using mysql.
+
+	 99 - 	Return to Start Menu.
+
+Enter Selection ( 1 - 2, 99 ) >> (B[m
+Start Main Menu.
+	 Name     Description
+	------   -------------
+	  1 - 	Menu Create databases Books's.
+
+	  2 - 	Delete databases Books's using mysql.
+
+	  3 - 	Show all databases using mysql.
+
+	  4 - 	Grant all to databases Books's using mysql.
+
+	  5 - 	Menu Create tables in books_developemnt using mysql.
+
+	  6 - 	Delete table books from books_developemnt using mysql.
+
+	 99 - 	Exit Program.
+
+Enter Selection ( 1 - 6, 99 ) >> 
+ 0 InputValue = 99 
+
+[31m[1m
+
+          Exiting Program.
+(B[m
+
+Press Enter to continue start_menu[3;J[H[2J1 InputValue = 5
+
+Press Enter to continue start_menu2 InputValue = 5
+(B[m
+Start Main Menu.
+	 Name     Description
+	------   -------------
+	  1 - 	Menu Create databases Books's.
+
+	  2 - 	Delete databases Books's using mysql.
+
+	  3 - 	Show all databases using mysql.
+
+	  4 - 	Grant all to databases Books's using mysql.
+
+	  5 - 	Menu Create tables in books_developemnt using mysql.
+
+	  6 - 	Delete table books from books_developemnt using mysql.
+
+	 99 - 	Exit Program.
+
+Enter Selection ( 1 - 6, 99 ) >> 

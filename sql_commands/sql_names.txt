@@ -1,0 +1,74 @@
+#
+# List of script (sql) and others files in
+#		/Home/don/workspace/books/sql_commands/.
+#
+# ----------------------------------------------------------------- #
+# System    : Centos 7.4                                            #
+#   Name    : peekaboo                                              #
+# Location  : /home/don/workspace/books/sql_commands                #
+# File Name : sql_names.txt                                         #
+# Rev. Date : 04/16/2020                                            #
+# Rev. No.  : 0.0.5                                                 #
+# ----------------------------------------------------------------- #
+#
+
+db_create.sql							Create databases books using Mysql.
+db_delete.sql							Delete (Drop) databases books using Mysql.
+db_grant.sql							Grant access to databases books using Mysql.
+db_show.sql	      				Show all the databases in Mysql.
+
+sql_names.txt         		List all Sql script (this file).
+
+tb_delete_all.sql 				Delete (Drop) all 4 tables.
+tb_delete_books.sql 			Delete (Drop) all books table.
+tb_delete_conditions.sql 	Delete (Drop) all conditions table.
+tb_delete_mdeia_types.sql Delete (Drop) all media_types table.
+tb_delete_purposes.sql 		Delete (Drop) all purpose table.
+tb_load_all.sql 					Load all tables.
+tb_load_conditions.sql 		Load conditions table.
+tb_load_media_types.sql 	Load media_types table.
+tb_load_purposes.sql 			Load purposes table.
+tb_show_all.sql 					Show all tables.
+
+=============================================================================
+Old folder:
+setup_database.sql				Create and deletes (Drop) database mysql.
+							        			Used to create file create_db and delete_db.
+tb_delete_mdeia.sql 			Delete (Drop) all media table.
+tb_delete_types.sql 			Delete (Drop) all types table.
+
+#
+# ----------------------------------------------------------------- #
+# Date Rev.  : Rev. # :     Description                             #
+# ----------------------------------------------------------------- #
+# 04/11/2020 : 0.0.1  : Original.                                   #
+# ----------------------------------------------------------------- #
+# 04/12/2020 : 0.0.2  : Create a old folder: section.               #
+#            :        : Move files,                                 #
+#            :        :   setup_database.sql                        #
+#            :        :     to Old folder: section.                 #
+# ----------------------------------------------------------------- #
+# 04/13/2020 : 0.0.3  : Add new files,                              #
+#            :        :  create_tb_books.sql.                       #
+#            :        :  delete_tb_books.sql.                       #
+# ----------------------------------------------------------------- #
+# 04/15/2020 : 0.0.4  : Make all files start with db or tb.         #
+#            :        : Add new files,                              #
+#            :        :   tb_delete_media_types.sql,                #
+#            :        :   tb_show_all.sql.                          #
+#            :        : Move file,                                  #
+#            :        :   tb_delete_media.sql                       #
+#            :        :     to Old folder: section.                 #
+# ----------------------------------------------------------------- #
+# 04/16/2020 : 0.0.5  : Added new files,                            #
+#            :        :   tb_delete_purpose.sql.                    #
+#            :        :   tb_load_all.sql.                          #
+#            :        :   tb_load_conditions.sql.                   #
+#            :        :   tb_load_media_types.sql.                  #
+#            :        :   tb_load_purpose.sql.                      #
+#            :        : Move files,                                 #
+#            :        :   tb_delete_type.sql                        #
+#            :        :     to Old folder: section.                 #
+# ----------------------------------------------------------------- #
+#            :        :                                             #
+# ----------------------------------------------------------------- #

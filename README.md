@@ -5,13 +5,17 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version  2.2.2 (x86_64-linux)
+* System 									Centos 7.7
+
+* Ruby version  					2.2.2 (x86_64-linux)
+
+* Rails version						5.1.7
 
 * System dependencies
 
 * Configuration
 
-* Database creation MySql
+* Database creation MySql	5.6.47
 
 * Database initialization
 
