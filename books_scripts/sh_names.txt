@@ -1,0 +1,138 @@
+#
+# List of script and others files in
+#		/Home/don/workspace/books/books_scripts/.
+#
+# ----------------------------------------------------------------- #
+# System    : Centos 7.4                                            #
+#   Name    : peekaboo                                              #
+# Location  : /home/don/workspace/books/books_scripts/              #
+# File Name : script_names.txt                                      #
+# Rev. Date : 04/18/2020                                            #
+# Rev. No.  : 0.0.6                                                 #
+# ----------------------------------------------------------------- #
+#
+
+sh_names.txt      								List all script files (this file).
+
+-------------------------------------------------------------------------------
+z_db_create_mysql.sh							Create 3 books_ database using Mysql.
+z_db_create_rails.sh							Create 3 books_ database using Rails.
+z_db_create_rake.sh								Create 3 books_ database using Rake.
+
+-------------------------------------------------------------------------------
+z_db_delete_mysql.sh							Delete 3 books_ database using Mysql.
+z_db_grant_mysql.sh   						Grant all persmision on the 3 books_ 
+																		databases using Mysql.
+																		Users don, dondb, rootdb.
+-------------------------------------------------------------------------------
+z_db_show_mysql.sh								Show a list of all the databases in Mysql
+																		using Mysql.
+
+-------------------------------------------------------------------------------
+z_menu.sh 												Menu program (main menu).
+z_menu_db_create.sh 							Menu program to create 3 databases
+																		(sub menu 1).
+z_menu_tb_create.sh 							Menu program to create 4 tables
+																		(sub menu 2).
+z_menu_tb_delete.sh 							Menu program to delete 4 tables
+																		(sub menu 3).
+z_menu_tb_load.sh 								Menu program to load 3 tables
+																		(sub menu 4).
+
+-------------------------------------------------------------------------------
+z_tb_create_all_rails.sh 					Create all 4 tables using Rails.
+z_tb_create_books_rails.sh 				Create books table using Rails.
+z_tb_create_conditions_rails.sh 	Create conditions table using Rails.
+z_tb_create_media_types_rails.sh 	Create media_types table using Rails.
+z_tb_create_purpose_rails.sh 			Create purpose table using Rails.
+
+-------------------------------------------------------------------------------
+z_tb_delete_all_rails.sh 					Delete all 4 tables using Rails.
+z_tb_delete_books_rails.sh 				Delete books table using Rails.
+z_tb_delete_conditions_rails.sh 	Delete conditions table using Rails.
+z_tb_delete_media_types_rails.sh 	Delete media_types table using Rails.
+z_tb_delete_purpose_rails.sh 			Delete purpose table using Rails.
+
+-------------------------------------------------------------------------------
+z_tb_load_all_mysql.sh 						Load all tables using Mysql.
+z_tb_load_conditions_mysql.sh 		Load conditions table using Mysql.
+z_tb_load_media_types_mysql.sh 		Load media_types table using Mysql.
+z_tb_load_purpose_mysql.sh 				Load purpose table using Mysql.
+
+-------------------------------------------------------------------------------
+z_tb_show_all_mysql.sh 						Show all tables using Mysql.
+
+-------------------------------------------------------------------------------
+old folder:
+z_tb_create_media_rails.sh 				Create media table using Rails.
+z_tb_create_types_rails.sh 				Create types table using Rails.
+z_tb_delete_media_mysql.sh 				Delete media table using Rails.
+z_tb_delete_types_mysql.sh 				Delete types table using Rails.
+
+
+===============================================================================
+files				under bin/
+z								      						This file call z_menu.sh in folder
+																		/home/don/workspace/books/books_scripts.
+
+
+===============================================================================
+other_mysql_stuff folder:	under bin/
+drop_db.sh 			  								Testing a different way to delete (Drop)
+																		database using mysql.
+setup_db.sh 											Testing a different way to create and deletes
+																		(Drop) databases usng Mysql.
+
+-------------------------------------------------------------------------------
+old folder:	under bin/
+s 																Change to directory /home/don/workspace,
+																		Display current working directory.
+u 																Set to what version of ruby you are using.
+																		List all the gemset.
+y 																Try a different way of deleting the 3 
+																		books_ databases.
+z 																Try a different way of showing the 3 
+																		books_ databases.
+
+
+#
+# ----------------------------------------------------------------- #
+# Date Rev.  : Rev. # :     Description                             #
+# ----------------------------------------------------------------- #
+# 04/11/2020 : 0.0.1  : Original.                                   #
+# ----------------------------------------------------------------- #
+# 04/12/2020 : 0.0.2  :                                             #
+# ----------------------------------------------------------------- #
+# 04/13/2020 : 0.0.3  : Add new files,                              #
+#            :        :  create_tb_books.sh.                        #
+#            :        :  delete_tb_books.sh.                        #
+# ----------------------------------------------------------------- #
+# 04/15/2020 : 0.0.4  : Make all files start with db or tb.         #
+#            :        : Add new files,                              #
+#            :        :   tb_create_media_types.sh,                 #
+#            :        :   tb_delete_media_types.sh,                 #
+#            :        :   tb_show_all.sh.                           #
+#            :        : Move file,                                  #
+#            :        :   tb_create_media.sh                        #
+#            :        :   tb_delete_media.sh                        #
+#            :        :     to Old folder: section.                 #
+# ----------------------------------------------------------------- #
+# 04/16/2020 : 0.0.5  : Added new files,                            #
+#            :        :   tb_create_purposes.sh,                    #
+#            :        :   tb_delete_purposes.sh,                    #
+#            :        :   tb_load_all.sh,                           #
+#            :        :   tb_load_conditions.sh,                    #
+#            :        :   tb_load_media_types.sh,                   #
+#            :        :   tb_load_purposes.sh.                      #
+#            :        : Move files,                                 #
+#            :        :   tb_create_types.sh,                       #
+#            :        :   tb_delete_types.sh,                       #
+#            :        :     to old folder: section.                 #
+# ----------------------------------------------------------------- #
+# 04/18/2020 : 0.0.6  : Change path                                 #
+#            :        :   from /home/don/bin/books_scripts/         #
+#            :        :   to                                        #
+#            :        :   /home/don/workspace/books/books_scripts/. #
+# ----------------------------------------------------------------- #
+#            :        :                                             #
+# ----------------------------------------------------------------- #
