@@ -167,11 +167,11 @@ esac
 #            :        :   z_menu_tb_delete.sh.                      #
 #            : 0.1.1  : Change path to relative path.               #
 # ----------------------------------------------------------------- #
-# 04/20/2020 : 1.2.0  : Move section 8 to a function _delete_all.   #
+# 04/20/2020 : 0.2.0  : Move section 8 to a function _delete_all.   #
 #            :        : Remove info from section 1 to 4.            #
 #            :        : Add variables to pass to _delete_all,       #
 #            :        :   and call function _delete_all.            #
-#            :  1.2.1 : Remove unneeded code. Cleanup.              #
+#            : 0.2.1  : Remove unneeded code. Cleanup.              #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #
