@@ -25,11 +25,33 @@ DB1="books_developemnt"     # Hold name of database books_development.
 DB2="books_production"      # Hold name of database books_production.
 DB3="books_test"            # Hold name of database books_test.
 Answer="n"                  # Hold Answer to question default "n".
+Uname="dondb"
+Pword="dps0226db"
+loadTable="none"            # Hold partial name of table(s) you want to load.
+letterS=""                  # Holds "s" if loadTable is "all" other wise "".
 
 
 #####################
 ##### Functions #####
 #####################
+
+_load_all()
+{
+  # $1 = loadTable
+  echo "loadTable = $ 1 = $1"
+
+  if [ $1 == "all" ]; then
+    letterS="s"
+  else
+    letterS=""
+  fi
+
+  echo -e "\n***** Loading $1 table$letterS using Mysql.... *****\n"
+
+  mysql -u ${Uname} -p${Pword} < ./sql_commands/tb_load_${1}.sql 2>/dev/null
+  ERRORCODE=$?
+  #echo "1.1-ERRORCODE = $ERRORCODE"
+}
 
 _press_enter()
 {
@@ -82,31 +104,47 @@ do
 
   case $InputValue in
     1 )
+      loadTable="conditions"
+      # passing variables $loadTable parital names.
+      _load_all $loadTable
+
       # call script "tb_load_condition_mysql.sh"
-      echo -e "\n ***** Load table conditions using Mysql ***** \n"
-      ./books_scripts/z_tb_load_conditions_mysql.sh
-      echo -e "\n   Loading ....>       .... Done.\n"
+      #echo -e "\n ***** Load table conditions using Mysql ***** \n"
+      #./books_scripts/z_tb_load_conditions_mysql.sh
+      #echo -e "\n   Loading ....>       .... Done.\n"
       ;;
 
     2 )
+      loadTable="media_types"
+      # passing variables $loadTable parital names.
+      _load_all $loadTable
+
       # call script "tb_load_media_types_mysql.sh"
-      echo -e "\n ***** Load table media_types using Mysql ***** \n"
-      ./books_scripts/z_tb_load_media_types_mysql.sh
-      echo -e "\n   Loading ....>       .... Done.\n"
+      #echo -e "\n ***** Load table media_types using Mysql ***** \n"
+      #./books_scripts/z_tb_load_media_types_mysql.sh
+      #echo -e "\n   Loading ....>       .... Done.\n"
       ;;
 
     3 )
+      loadTable="purposes"
+      # passing variables $loadTable parital names.
+      _load_all $loadTable
+
       # call script "tb_load_types_mysqlsh"
-      echo -e "\n ***** Load table purposes using Mysql ***** \n"
-      ./books_scripts/z_tb_load_purposes_mysql.sh
-      echo -e "\n   Loading ....>       .... Done.\n"
+      #echo -e "\n ***** Load table purposes using Mysql ***** \n"
+      #./books_scripts/z_tb_load_purposes_mysql.sh
+      #echo -e "\n   Loading ....>       .... Done.\n"
       ;;
 
     8 )
+      loadTable="all"
+      # passing variables $loadTable parital names.
+      _load_all $loadTable
+
       # call script "tb_load_all_mysql.sh"
-      echo -e "\n ***** Load all 3 tables using Mysql ***** \n"
-      ./books_scripts/z_tb_load_all_mysql.sh
-      echo -e "\n   Loading ....>       .... Done.\n"
+      #echo -e "\n ***** Load all 3 tables using Mysql ***** \n"
+      #./books_scripts/z_tb_load_all_mysql.sh
+      #echo -e "\n   Loading ....>       .... Done.\n"
       ;;
 
    99 )
@@ -154,6 +192,11 @@ done
 #            :        :   to                                        #
 #            :        :   /home/don/workspace/books/books_scripts/. #
 #            : 0.0.3  : Change path to relative path.               #
+# ----------------------------------------------------------------- #
+# 04/21/2020 : 0.1.0  : Move section 8 to a function _load_all.     #
+#            :        : Remove info from section 1 to 3.            #
+#            :        : Add variable to pass to _load_all,          #
+#            :        :   and call function _load_all.              #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

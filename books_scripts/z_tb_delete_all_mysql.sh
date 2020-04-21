@@ -48,7 +48,6 @@ _delete_all()
 	fi
 	echo -e "Deleting $2 table$letterS.... \n"
 
-	tb_delete_${2}.sql 2>/dev/null)
 	mysql -u ${Uname} -p${Pword} < ./sql_commands/tb_delete_${2}.sql 2>/dev/null
 	ERRORCODE=$?
 	#echo "1.1-ERRORCODE = $ERRORCODE"
@@ -80,7 +79,7 @@ _delete_all()
 		echo -e "--"
 		ERRORCODE=$?
 		#echo "2.4-ERRORCODE = $ERRORCODE"
-
+	
 	fi
 }
 
