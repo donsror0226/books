@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Creat three databases.
+# Create three databases.
 # book_develpment, book_production, book_test.
 # Using the rake command.
 #
@@ -10,9 +10,10 @@
 # Location  : /home/don/workspace/books/books_scripts/              #
 # File Name : z_db_create_rake.sh                                   #
 # Rev. Date : 04/18/2020                                            #
-# Rev. No.  : 0.0.4                                                 #
+# Rev. No.  : 0.0.5                                                 #
 # ----------------------------------------------------------------- #
 #
+
 
 #####################
 ##### Variables #####
@@ -27,9 +28,9 @@ Errorcode=0                 # Hold error code $?
 
 _press_enter()
 {
-    echo -en "Press Enter to continue "
-    read
-    clear
+  echo -en "Press Enter to continue "
+  read
+  clear
 }
 
 
@@ -38,7 +39,7 @@ _press_enter()
 ########################
 
 clear
-cd /home/don/workspace/books
+#cd /home/don/workspace/books
 
 echo -e "  Creating databases using Rake"
 echo -e "---------------------------------\n"
@@ -48,15 +49,16 @@ rake db:create:all
 #Errorcode1=$?
 #echo -e "\n error code1 = $Errorcode1 \n"
 
+# call function _press enter to continue.
 #_press_enter
 
 #
 # ----------------------------------------------------------------- #
 # Date Rev.  : Rev. # :     Description                             #
 # ----------------------------------------------------------------- #
-# 04/09/2020 : 0.0.1  : Orginal.                                    #
+# 04/09/2020 : 0.0.1  : Original.                                   #
 # ----------------------------------------------------------------- #
-# 04/12/2020 : 0.0.2  : Add a 2nd way of creatting your databases.  #
+# 04/12/2020 : 0.0.2  : Add a 2nd way of creating your databases.   #
 # ----------------------------------------------------------------- #
 # 04/12/2020 : 0.0.3  : Move option 2 to new file                   #
 #            :        : z_db_create_rails.sh.                       #
@@ -65,6 +67,7 @@ rake db:create:all
 #            :        :   from /home/don/bin/books_scripts/         #
 #            :        :   to                                        #
 #            :        :   /home/don/workspace/books/books_scripts/. #
+#            : 0.0.5  : Change path to relative path.               #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

@@ -7,8 +7,8 @@
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/sql_commands                #
 # File Name : sql_names.txt                                         #
-# Rev. Date : 04/16/2020                                            #
-# Rev. No.  : 0.0.5                                                 #
+# Rev. Date : 04/18/2020                                            #
+# Rev. No.  : 0.0.6                                                 #
 # ----------------------------------------------------------------- #
 #
 
@@ -69,6 +69,11 @@ tb_delete_types.sql 			Delete (Drop) all types table.
 #            :        : Move files,                                 #
 #            :        :   tb_delete_type.sql                        #
 #            :        :     to Old folder: section.                 #
+# ----------------------------------------------------------------- #
+# 04/18/2020 : 0.0.6  : Change path                                 #
+#            :        :   from /home/don/bin/books_scripts/         #
+#            :        :   to                                        #
+#            :        :   /home/don/workspace/books/books_scripts/. #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

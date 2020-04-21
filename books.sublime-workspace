@@ -137,10 +137,13 @@
 	"expanded_folders":
 	[
 		"/home/don/workspace/books",
-		"/home/don/workspace/books/books_scripts"
+		"/home/don/workspace/books/books_scripts",
+		"/home/don/workspace/books/sql_commands"
 	],
 	"file_history":
 	[
+		"/home/don/workspace/books/sql_commands/sql_names.txt",
+		"/home/don/workspace/books/books_scripts/sh_names.txt",
 		"/home/don/workspace/books/books_scripts/z_tb_delete_purposes_mysql.sh",
 		"/home/don/workspace/books/books_scripts/z_tb_load_all_mysql.sh",
 		"/home/don/workspace/books/books_scripts/z_tb_load_conditions_mysql.sh",
@@ -168,7 +171,6 @@
 		"/home/don/workspace/books/books_scripts/z_tb_create_books_rails.sh",
 		"/home/don/workspace/books/books_scripts/z_tb_create_conditions_rails.sh",
 		"/home/don/workspace/books/books_scripts/z_tb_create_media_types_rails.sh",
-		"/home/don/workspace/books/books_scripts/sh_names.txt",
 		"/home/don/bin/books_scripts/z_tb_create_books_rails.sh",
 		"/home/don/bin/books_scripts/z_tb_delete_books_mysql.sh",
 		"/home/don/bin/books_scripts/z_menu.sh",
@@ -267,8 +269,7 @@
 		"/home/don/bin/z_start_menu_create_db.sh",
 		"/home/don/bin/z_start_menu_copy.sh",
 		"/home/don/bin/z_delete_tb_type_mysql.sh",
-		"/home/don/bin/z_delete_tb_media_mysql.sh",
-		"/home/don/bin/z_delete_tb_condition_mysql.sh"
+		"/home/don/bin/z_delete_tb_media_mysql.sh"
 	],
 	"find":
 	{

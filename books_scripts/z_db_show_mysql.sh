@@ -8,7 +8,7 @@
 # Location  : /home/don/workspace/books/books_scripts/              #
 # File Name : z_db_show_mysql.sh                                    #
 # Rev. Date : 04/18/2020                                            #
-# Rev. No.  : 0.0.2                                                 #
+# Rev. No.  : 0.0.3                                                 #
 # ----------------------------------------------------------------- #
 #
 
@@ -26,12 +26,13 @@ mysql -u dondb -pdps0226db < ./sql_commands/db_show.sql
 # ----------------------------------------------------------------- #
 # Date Rev.  : Rev. # :     Description                             #
 # ----------------------------------------------------------------- #
-# 04/10/2020 : 0.0.1  : Orginal.                                    #
+# 04/10/2020 : 0.0.1  : Original.                                   #
 # ----------------------------------------------------------------- #
 # 04/18/2020 : 0.0.2  : Changed path location of scripts            #
 #            :        :   from /home/don/bin/books_scripts/         #
 #            :        :   to                                        #
 #            :        :   /home/don/workspace/books/books_scripts/. #
+#            : 0.0.3  : Change path to relative path.               #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

@@ -6,7 +6,7 @@
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/sql_commands                #
 # File Name : tb_delete_all.sql                                     #
-# Rev. Date : 04/162020                                            #
+# Rev. Date : 04/162020                                             #
 # Rev. No.  : 0.0.3                                                 #
 # ----------------------------------------------------------------- #
 #

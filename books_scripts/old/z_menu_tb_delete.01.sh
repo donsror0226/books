@@ -9,7 +9,7 @@
 # Location  : /home/workspace/books/bin/books_scripts/              #
 # File Name : menu_tb_delete.sh                                     #
 # Rev. Date : 04/18/2020                                            #
-# Rev. No.  : 0.0.7                                                 #
+# Rev. No.  : 0.0.6                                                 #
 # ----------------------------------------------------------------- #
 #
 
@@ -101,15 +101,61 @@ do
   fi
 
   case $InputValue in
-
-    1|2|3|4|8 )
-      # call script "tb_delete_all_mysql.sh"
-      # and passing variable $InputValue
+    1 )
+      # call script "tb_delete_books_mysql.sh"
       clear
-      echo -e "\n ***** Delete tables using Mysql ***** \n"
+      echo -e "\n ***** Delete table books using Mysql ***** \n"
       _are_you_sure
       if [ $Answer = "Y" ]; then
-        ./books_scripts/z_tb_delete_all_mysql.sh $InputValue
+        ./books_scripts/z_tb_delete_books_mysql.sh 
+      else
+        _no_table_deleted
+      fi
+      ;;
+
+    2 )
+      # call script "tb_delete_condition_mysql.sh"
+      clear
+      echo -e "\n ***** Delete table conditions using Mysql ***** \n"
+      _are_you_sure
+      if [ $Answer = "Y" ]; then
+        ./books_scripts/z_tb_delete_conditions_mysql.sh
+      else
+        _no_table_deleted
+      fi
+      ;;
+
+    3 )
+      # call script "tb_delete_media_types_mysql.sh"
+      clear
+      echo -e "\n ***** Delete table media_types using Mysql ***** \n"
+      _are_you_sure
+      if [ $Answer = "Y" ]; then
+        ./books_scripts/z_tb_delete_media_types_mysql.sh
+      else
+        _no_table_deleted
+      fi
+        ;;
+
+    4 )
+      # call script "tb_delete_purposes_mysqlsh"
+      clear
+      echo -e "\n ***** Delete table purposes using Mysql ***** \n"
+      _are_you_sure
+      if [ $Answer = "Y" ]; then
+        ./books_scripts/z_tb_delete_purposes_mysql.sh
+      else
+        _no_table_deleted
+      fi
+      ;;
+
+    8 )
+      # call script "tb_delete_all_mysql.sh"
+      clear
+      echo -e "\n ***** Delete all 4 tables using Mysql ***** \n"
+      _are_you_sure
+      if [ $Answer = "Y" ]; then
+        ./books_scripts/z_tb_delete_all_mysql.sh
       else
         _no_table_deleted
       fi
@@ -142,8 +188,8 @@ do
 			#echo -en "         Press Enter to continue"
 			#read 
       ;;
+	   esac
 
-	esac
 
   # call function _press enter to continue.
 	_press_enter
@@ -169,11 +215,7 @@ done
 #            :        :   from /home/don/bin/books_scripts/         #
 #            :        :   to                                        #
 #            :        :   /home/don/workspace/books/books_scripts/. #
-#            : 0.0.6  : Remove section 1 - 4.                       #
-#            :        : Add $InputValue to the end of section 8     #
-#            :        :   command to pass the value of $InputValue. #
-#            :        : Change section 8 case from 8 to 1|2|3|4|6.  #
-#            : 0.0.7  : Change path to relative path.               #
+#            : 0.0.6  : Change path to relative path.               #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

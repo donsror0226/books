@@ -9,7 +9,7 @@
 # Location  : /home/don/workspace/books/books_scripts/              #
 # File Name : z_db_create_mysql.sh                                  #
 # Rev. Date : 04/18/2020                                            #
-# Rev. No.  : 0.0.2                                                 #
+# Rev. No.  : 0.0.3                                                 #
 # ----------------------------------------------------------------- #
 #
 
@@ -26,9 +26,9 @@ Errorcode=0                 # Hold error code $?
 
 _press_enter()
 {
-   echo -en "Press Enter to continue "
-   read
-    lear
+  echo -en "Press Enter to continue "
+  read
+  clear
 }
 
 
@@ -37,7 +37,7 @@ _press_enter()
 ########################
 
 clear
-cd /home/don/workspace/books
+#cd /home/don/workspace/books
 
 echo -e "  Creating databases using Mysql"
 echo -e "----------------------------------\n"
@@ -52,12 +52,13 @@ echo "ERRORCODE = $ERRORCODE"
 # ----------------------------------------------------------------- #
 # Date Rev.  : Rev. # :     Description                             #
 # ----------------------------------------------------------------- #
-# 04/10/2020 : 0.0.1  : Orginal.                                    #
+# 04/10/2020 : 0.0.1  : Original.                                   #
 # ----------------------------------------------------------------- #
 # 04/18/2020 : 0.0.2  : Changed path location of scripts            #
 #            :        :   from /home/don/bin/books_scripts/         #
 #            :        :   to                                        #
 #            :        :   /home/don/workspace/books/books_scripts/. #
+#            : 0.0.3  : Change path to relative path.               #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #
