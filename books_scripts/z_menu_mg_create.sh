@@ -1,15 +1,15 @@
 #!/bin/bash
 #
-# Menu for creating Tables.
+# Menu for creating migration files.
 # Using Mysql commands.
 #
 # ----------------------------------------------------------------- #
 # System    : Centos 7.7                                            #
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/books_scripts/              #
-# File Name : menu_tb_create.sh                                     #
-# Rev. Date : 04/18/2020                                            #
-# Rev. No.  : 0.0.8                                                 #
+# File Name : menu_bg_create.sh                                     #
+# Rev. Date : 04/22/2020                                            #
+# Rev. No.  : 0.0.1                                                 #
 # ----------------------------------------------------------------- #
 #
 
@@ -59,8 +59,8 @@ do
   #echo -e "$(tput bold)"
   clear
   
-  echo -e "\t Menu Create Tables "
-  echo -e "\t--------------------\n"
+  echo -e "\tMenu Create Migration Files "
+  echo -e "\t-------------------------------\n"
   echo -e "\t Name     Description"
   echo -e "\t------   -------------"
   echo -e "\t  1 - \tbooks using mysql.\n"
@@ -80,7 +80,7 @@ do
     1|2|3|4|8 )
       # call script "tb_create_all_rails.sh"
       # and passing the variable $InputValue
-      echo -e "\n ***** Create all tables ***** \n"
+      echo -e "\n ***** Create migration files... ***** \n"
       ./books_scripts/z_tb_create_all_rails.sh $InputValue
       returnStatus=$?
       #echo "returnStatus = $returnStatus"
@@ -146,30 +146,7 @@ exit
 # ----------------------------------------------------------------- #
 # Date Rev.  : Rev. # :     Description                             #
 # ----------------------------------------------------------------- #
-# 04/13/2020 : 0.0.1  : Original - Copyed from main.sh.             #
-# ----------------------------------------------------------------- #
-# 04/14/2020 : 0.0.2  : Add section 9 create all 4 tables.          #
-# ----------------------------------------------------------------- #
-# 04/15/2020 : 0.0.3  : Remove unneeded comment lines.              #
-#            : 0.0.4  : Change section 3                            #
-#            :        : from tb_create_media_rails.sh               #
-#            :        :  to  tb_create_media_type_rails.sh.         #
-#            :        : Change table media to table media_type.     #
-# ----------------------------------------------------------------- #
-# 04/16/2020 : 0.0.5  : Change section 4                            #
-#            :        : from tb_create_type_rails.sh                #
-#            :        :  to  tb_create_purpose_rails.sh.            #
-#            :        : Change table type to table purpose.         #
-# ----------------------------------------------------------------- #
-# 04/18/2020 : 0.0.6  : Changed path location of scripts            #
-#            :        :   from /home/don/bin/books_scripts/         #
-#            :        :   to                                        #
-#            :        :   /home/don/workspace/books/books_scripts/. #
-#            : 0.0.7  : Remove section 1 - 4.                       #
-#            :        : Add $InputValue to the end of section 8     #
-#            :        :   command to pass the value of $InputValue. #
-#            :        : Change section 8 case from 8 to 1|2|3|4|6.  #
-#            : 0.0.8  : Change path to relative path.               #
+# 04/22/2020 : 0.0.1  : Original - Copyed from z_menu_tb_create.sh. #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

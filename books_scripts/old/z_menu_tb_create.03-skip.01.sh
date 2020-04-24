@@ -59,8 +59,8 @@ do
   #echo -e "$(tput bold)"
   clear
   
-  echo -e "\t Menu Create Tables "
-  echo -e "\t--------------------\n"
+  echo -e "\tMenu Create Migration Files "
+  echo -e "\t-------------------------------\n"
   echo -e "\t Name     Description"
   echo -e "\t------   -------------"
   echo -e "\t  1 - \tbooks using mysql.\n"
@@ -80,7 +80,7 @@ do
     1|2|3|4|8 )
       # call script "tb_create_all_rails.sh"
       # and passing the variable $InputValue
-      echo -e "\n ***** Create all tables ***** \n"
+      echo -e "\n ***** Create migration files... ***** \n"
       ./books_scripts/z_tb_create_all_rails.sh $InputValue
       returnStatus=$?
       #echo "returnStatus = $returnStatus"

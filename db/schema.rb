@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200421023205) do
+ActiveRecord::Schema.define(version: 20200422080751) do
 
   create_table "books", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "author", limit: 50
@@ -43,6 +43,9 @@ ActiveRecord::Schema.define(version: 20200421023205) do
     t.integer "purpose_id", limit: 3
     t.string "purpose_type", limit: 15
     t.string "purpose_name", limit: 20
+  end
+
+  create_table "tests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
   end
 
 end

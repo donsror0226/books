@@ -1,6 +1,8 @@
 #!/bin/bash
 #
-# Start menu for create and delete Databases Books.
+# Start menu for 
+#   create and delete Databases Books,
+#   create and delete tables.
 # Using Mysql commands and a Rake command.
 #
 # ----------------------------------------------------------------- #
@@ -73,18 +75,18 @@ do
   clear
   #echo -e "\nList of Script Files in bin Dir.\n"
   
-  echo -e "\t      Main Menu"
-  echo -e "\t----------------------\n"
-  echo -e "\t Name     Description"
-  echo -e "\t------   -------------"
-  echo -e "\t  1 - \tMenu - Create databases $DB using mysql.\n"
-  echo -e "\t  2 - \tDelete databases $DB using mysql.\n"
-  echo -e "\t  3 - \tGrant all access to $DB_ databases using mysql.\n"
+  echo -e "\t\t      Main Menu"
+  echo -e "\t\t    -------------\n"
+  echo -e "\t Name     Description     < Database = $DB1 >"
+  echo -e "\t------   -------------   ----------------------------------"
+  echo -e "\t  1 - \tMenu - Create databases using mysql.\n"
+  echo -e "\t  2 - \tDelete databases using mysql.\n"
+  echo -e "\t  3 - \tGrant access to databases using mysql.\n"
   echo -e "\t  4 - \tShow all databases using mysql.\n"
-  echo -e "\t  5 - \tMenu - Create tables in $DB1 using mysql.\n"
-  echo -e "\t  6 - \tMenu - Load tables from $DB1 using mysql.\n"
-  echo -e "\t  7 - \tMenu - Delete tables from $DB1 using mysql.\n"
-  echo -e "\t  8 - \tShow all tables in $DB1.\n"
+  echo -e "\t  5 - \tMenu - Create tables using mysql.\n"
+  echo -e "\t  6 - \tMenu - Load tables using mysql.\n"
+  echo -e "\t  7 - \tMenu - Delete tables using mysql.\n"
+  echo -e "\t  8 - \tShow all tables.\n"
 	echo -e "\t 99 - \tExit Program."
   echo -en "\nEnter Selection ( 1 - 8, 99 ) >> "
   read InputValue
@@ -125,7 +127,7 @@ do
       ;;
 
     5 )
-      # call script "menu_db_create.sh"
+      # call script "menu_tb_create.sh"
       echo -e "\n ===== Call menu tb create ====="
       ./books_scripts/z_menu_tb_create.sh
       ;;
@@ -225,8 +227,6 @@ done
 #            :        :   to                                        #
 #            :        :   /home/don/workspace/books/books_scripts/. #
 #            : 0.0.11 : Change path to relative path.               #
-# ----------------------------------------------------------------- #
-#            :        :                                             #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #
