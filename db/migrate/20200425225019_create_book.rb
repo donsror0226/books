@@ -1,3 +1,6 @@
+class CreateBook < ActiveRecord::Migration[5.1]
+  def change
+    create_table :books do |t|
       t.string :author, :limit => 50, :null = false
       t.string :title, :limit => 25, :null = false
       t.string :series_name, :limit => 25
@@ -14,4 +17,6 @@
       t.integer :purpose_id, :limit => 2, :null = false
 
       t.timestamps
-      
+          end
+  end
+end

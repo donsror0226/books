@@ -1,0 +1,4 @@
+      t.integer :condition_id, :limit => 50, :null = false
+      t.string :condition_name, :limit => 10, :null = false
+      
+      t.timestamps
