@@ -82,7 +82,7 @@ do
       # and passing the variable $InputValue
       echo -e "\n ***** Create all tables ***** \n"
       ./books_scripts/z_tb_create_all_rails.sh $InputValue
-      returnStatus=$?
+      #returnStatus=$?
       #echo "returnStatus = $returnStatus"
       # this variable above is the return status from the above call script.
 
@@ -117,7 +117,8 @@ do
       #echo -e "$(tput setab 4)$(tput el)"
       ##echo -e "$(tput sgr0)"
       #skipPrompt=1
-      exit 
+      #exit 
+      break
       ;;
 
     * )

@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 # This will create the empty migration file to all 4 tables.
-# ####and all of it's fields in the database book_development.####
-# ####Then run the migration files to create the 4 tables.#### 
+#   and all of it's fields in the database book_development.
+# Then run the migration files to create the 4 tables. 
 #
 # ----------------------------------------------------------------- #
 # System    : Centos 7.7                                            #
@@ -10,7 +10,7 @@
 # Location  : /home/don/workspace/books/books_scripts/              #
 # File Name : z_tb_create_all_rails.sh                              #
 # Rev. Date : 04/25/2020                                            #
-# Rev. No.  : 0.1.6                                                 #
+# Rev. No.  : 0.1.7                                                 #
 # ----------------------------------------------------------------- #
 #
 
@@ -31,65 +31,59 @@ migrationFileName="none"		# Hold partial name of migration file name.
 														#   book, condition, media_type, purpose.
 tableName="none"						# Hold partial name of table.
 originalFile="none"					# Hold name of original file to work on.
-fileIn="none"								# Hold a copy of original that will be worked on.
+tempFileIn="none"						# Hold a copy of original file will be worked on.
+
 
 #####################
 ##### Functions #####
 #####################
 
-
 _create_migration()
 {
-	# $1 = migrationBuildName, $2 = migrationFileName
-	#echo -e "Creating empty migration file...\n"
-	#echo "1-migrationBuildName     = $ 1 = $1"
-	#echo "1-migrationFileName = $ 2 = $2"
-
-	#rails generate migration CreatePurpose purpose_id:integer{3} purpose_type:string{15} purpose_name:string{20}
-	#rails generate migration CreatePurpose
-	#rails generate migration Create$1
-	#rails generate migration Create$1 --force
+	## Pass variable $1 = migrationBuildName
+	## Run the rails command to generate migration file $1 
+	##	 "*_book*.*", "*_condition*.*", "*_media_type*.*", "*_purpose*.*".
+	## The --force removes the old migration file and
+	##             creats a new migration file.
+	## The 1>/dev/null takes the number output to the screen and puts it the
+	##   file /dev/null so no output is showen.
+	## The rails creats a file in the format of (see below)
+	##   yyyymmddhhmmss_create_$1.rb this becomes the orginalFile later.
+	##
 	rails generate migration Create$1 --force 1>/dev/null
-	#bash -c 'rails generate migration Create$1 --force' 2>&1 >/dev/null
 	Errorcode=$?
-	#echo "Errorcode = $Errorcode"
+	#echo -e "\npurpose - Errorcode = $Errorcode \n"
 	#echo "------------------------------------------------"
-	#echo ""
-	#echo -e "purpose - Errorcode = $Errorcode \n"
 }
 
 _insert_into_migration()
 {
-	# $1 = migrationBuildName, $2 = migrationFileName
-	## Part 1
-	##   
-	#
-	# Holds the basic file name of the migration file = 
-	#		"*_book*.*", "*_condition*.*", "*_media_type*.*", "*_purpose*.*"
-	# Then copy originalFile to fileIn to work on.
-	migratePath="./db/migrate"
-	echo "1a"
-	originalFile=$(ls ${migratePath}/*_${2}*.*)
-	#cat $originalFile
-	#cp -v $originalFile ${migratePath}/tempFileIn
-	cp $originalFile ${migratePath}/tempFileIn
-	# echo "------------------------------------"
-	# #diff -qB $originalFile ${migratePath}/tempFileIn 2>&1 >/dev/null
-	# #echo $?
-	# exit 
+	## Pass variable $1 = migrationFileName
+	##
+	## Part 1.
+	##   Change to the db/migrate directory.
+	##   Retrive the empty migratiion file  save as orginalFile
+	##		 "*_book*.*", "*_condition*.*", "*_media_type*.*", "*_purpose*.*".
+	##   Copy the orignalFile to tempFileIn (this is the working file).
+	## Part 2.
+	##   Use the sed command to find the word that is passed to the funcitiion
+	##	   _insert_into_migratin() $1 then look in file tempFileIn to find the
+	##		 word $1 "book", "condition", "media_type", "purpose" then inserts
+	##		 file *$1_fields.txt into the line after the word found. Then save
+	##		 result of the mearged file into newFile.txt.
+	## Part 3.
+	##	 Move the newFile.txt to orginalFile replace the old orginalFile.
+	##
+	# migratePath="./db/migrate"
+	cd db/migrate
+	originalFile=$(ls *_${1}*.*)
+	cp $originalFile tempFileIn
 
-	# Copy basic migration file fileIn to tempfileIn.
-	# cp $tempFileIn ./db/migrate/tempFileIn
-	# cat ${migratePath}/tempFileIn
-	# echo "1c"
+	#sed -e '/'${2}'/r '${migratePath}'/'${2}'_fields.txt' ${migratePath}/tempFileIn > ${migratePath}/newFile.txt
+	sed -e '/'${1}'/r '${1}'_fields.txt' tempFileIn > newFile.txt
 
-	sed -e '/'${2}'/r '${migratePath}'/'${2}'_fields.txt' ${migratePath}/tempFileIn > ${migratePath}/newFile.txt
+	mv -f newFile.txt $originalFile
 
-	#mv -f ${migratePath}/newFile.txt ${migratePath}/newFile.rb
-	mv -f ${migratePath}/newFile.txt $originalFile
-	#echo " These 3 lines are not needed."
-	#echo "   This is a cat of file $(basename ${originalFile})."
-	#echo ""
 	#cat $originalFile
 	# If you need you can add a question does this look good ?
 	echo ""
@@ -97,15 +91,27 @@ _insert_into_migration()
 	echo -e "$2 migration file $originalFile created."
 	echo -e "**********************************************************************\n"
 	cat $originalFile
-	#_press_enter
+}
+
+_migrate_files()
+{
+	## Move back to my application directory
+	## cd /home/don/workspace/books or by cd ../..
+	cd ../..
+	
+	echo -e "\n\n"
+	echo -e "\t-------------------------------------------"
+	echo -e "\tCreating tables using Migration file(s)...."
+	echo -e "\t-------------------------------------------\n"
+	rake db:migrate
+	Errorcode=$?
+	#echo -e "\nMigrate = Errorcode = $Errorcode \n"
 }
 
 _remove_files()
 {
 	echo -e "\tRemoving temporary working files.....\n"
-	#rm -v ${migratePath}/newFile.txt 					# output of sed working file.
-	rm -v ${migratePath}/tempFileIn 					# 
-	#rm -v ${migratePath}/newFile.rb						# copy output file to original file.
+	rm -v tempFileIn 					# a copy of original file.
 }
 
 _press_enter()
@@ -134,8 +140,9 @@ case $1 in
 		migrationBuildName="Book"
 		migrationFileName="book"
 
-		_create_migration $migrationBuildName $migrationFileName
-		_insert_into_migration $migrationBuildName $migrationFileName
+		_create_migration $migrationBuildName
+		_insert_into_migration $migrationFileName
+		_migrate_files
 		_remove_files
 		;;
 
@@ -145,8 +152,9 @@ case $1 in
 		migrationBuildName="Condition"
 		migrationFileName="condition"
 
-		_create_migration $migrationBuildName $migrationFileName
-		_insert_into_migration $migrationBuildName $migrationFileName
+		_create_migration $migrationBuildName
+		_insert_into_migration $migrationFileName
+		_migrate_files
 		_remove_files
 		;;
 
@@ -156,8 +164,9 @@ case $1 in
 		migrationBuildName="Media_type"
 		migrationFileName="media_type"
 
-		_create_migration $migrationBuildName $migrationFileName
-		_insert_into_migration $migrationBuildName $migrationFileName
+		_create_migration $migrationBuildName
+		_insert_into_migration $migrationFileName
+		_migrate_files
 		_remove_files
 		;;
 
@@ -167,77 +176,52 @@ case $1 in
 		migrationBuildName="Purpose"
 		migrationFileName="purpose"
 
-		_create_migration $migrationBuildName $migrationFileName
-		_insert_into_migration $migrationBuildName $migrationFileName
+		_create_migration $migrationBuildName
+		_insert_into_migration $migrationFileName
+		_migrate_files
 		_remove_files
 		;;
 
 	8 )
+		# _create_books.
 		echo -e "\tCreating all Migrating for all tables....\n"
 		#_create_books
 		migrationBuildName="Book"
 		migrationFileName="book"
 
-		_create_migration $migrationBuildName $migrationFileName
-		_insert_into_migration $migrationBuildName $migrationFileName
+		_create_migration $migrationBuildName
+		_insert_into_migration $migrationFileName
 
-		#_create_conditions
+		# _create_conditions.
 		migrationBuildName="Condition"
 		migrationFileName="condition"
 
-		_create_migration $migrationBuildName $migrationFileName
-		_insert_into_migration $migrationBuildName $migrationFileName
+		_create_migration $migrationBuildName
+		_insert_into_migration $migrationFileName
 
-		#_create_media_types
+		# _create_media_types.
 		migrationBuildName="Media_type"
 		migrationFileName="media_type"
 
-		_create_migration $migrationBuildName $migrationFileName
-		_insert_into_migration $migrationBuildName $migrationFileName
+		_create_migration $migrationBuildName
+		_insert_into_migration $migrationFileName
 
-		#_create_purposes
-			migrationBuildName="Purpose"
+		# _create_purposes.
+		migrationBuildName="Purpose"
 		migrationFileName="purpose"
 
-		_create_migration $migrationBuildName $migrationFileName
-		_insert_into_migration $migrationBuildName $migrationFileName
+		_create_migration $migrationBuildName
+		_insert_into_migration $migrationFileName
 
-		# remove all temporary
+		# migrate the migrate files to create the actual tables.
+		_migrate_files
+
+		# remove all temporary.
 		_remove_files
 	;;
 
-  # * )
-  #   # Change text color to Red 1. #
-  #   # Change text to  bold.       #
-  #   echo -en "$(tput setaf 1)"
-  #   echo -e "$(tput bold)"
-  #   echo -e "\n     Entered wrong value ($1) try agin. )\n\n"
-  #   echo -e "$(tput setab 4)$(tput el)"
-	#		echo -en "         Press Enter to continue"
-	#		read
-	#		exit
-  #   ;;
-
 esac
-
-#echo "$ 1 = $1"
-#echo "$ 2 = $2"
-#echo -e "\n\tMigration file(s) created.....\n"
-# call function _press enter to continue.
-# _press_enter
-
-#echo -e "\n 0a-Errorcode =  $Errorcode \n"
-#if [ $Errorcode -ne 0 ]; then
-	#echo -e "\n\n"
-	#echo -e "\t-----------------------------------------------"
-	#echo -e "\tCreating all tables using Migration file(s)...."
-	#echo -e "\t-----------------------------------------------\n"
-	#rake db:migrate
-	#Errorcode=$?
-	#echo -e "\n 0-errorcode = $Errorcode \n"
-#fi
-#exit $Errorcode
-exit 0
+exit
 
 #
 # ----------------------------------------------------------------- #
@@ -272,6 +256,10 @@ exit 0
 #            :        :   _create_book, _create_condition,          #
 #            :        :   _create_media_type, _create_purpose.      #
 #            :        : Add passing variables in section 2,3,4 & 8. #
+#            : 0.1.7  : Add the function _migrate_file              #
+#            :        :   this will migrate the migrate files       #
+#            :        :   to create the tables.                     #
+#            :        : Last clean up.                              #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

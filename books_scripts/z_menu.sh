@@ -163,7 +163,8 @@ do
       # Reset the colors back to the default.                  #
       #echo -e "$(tput setab 4)$(tput el)"
       echo -e "$(tput sgr0)"
-      exit
+      #exit
+      break
       ;;
 
     * )
@@ -190,6 +191,7 @@ do
   fi
 
 done
+exit
 
 #
 # ----------------------------------------------------------------- #
