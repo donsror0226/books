@@ -40,11 +40,11 @@ _load_all()
   # $1 = loadTable
   echo "loadTable = $ 1 = $1"
 
-  if [ $1 == "all" ]; then
-    letterS="s"
-  else
-    letterS=""
-  fi
+  # if [ $1 == "all" ]; then
+  #   letterS="s"
+  # else
+  #   letterS=""
+  # fi
 
   echo -e "\n***** Loading $1 table$letterS using Mysql.... *****\n"
 

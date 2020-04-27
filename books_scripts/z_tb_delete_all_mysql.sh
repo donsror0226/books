@@ -52,7 +52,7 @@ _delete_all()
 	ERRORCODE=$?
 	#echo "1.1-ERRORCODE = $ERRORCODE"
 
-	if [ $ERRORCODE -eq 0 ]; then
+	#if [ $ERRORCODE -eq 0 ]; then
 		echo -e "     --- Deleting migration \"*${1}.*\" file$letterS. ---"
 		echo -e "--"
 
@@ -80,7 +80,7 @@ _delete_all()
 		ERRORCODE=$?
 		#echo "2.4-ERRORCODE = $ERRORCODE"
 	
-	fi
+	#fi
 }
 
 _press_enter()

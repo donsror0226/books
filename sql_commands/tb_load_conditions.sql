@@ -6,26 +6,28 @@
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/sql_commands                #
 # File Name : tb_load_conditions.sql                               #
-# Rev. Date : 04/16/2020                                            #
-# Rev. No.  : 0.0.1                                                 #
+# Rev. Date : 04/26/2020                                            #
+# Rev. No.  : 0.0.2                                                 #
 # ----------------------------------------------------------------- #
 #
 
 use books_development;
 
-INSERT INTO conditions(condition_id, condition_name)
+INSERT INTO conditions(condition_id, condition_name, created_at, updated_at)
 VALUES
-	(1, "Excelent"),
-	(2, "Good"),
-	(3, "Fair"),
-	(4, "poor"),
-	(5, "Replace");
+	(1, "Excelent", NOW(), NOW() ),
+	(2, "Good",     NOW(), NOW() ),
+	(3, "Fair",     NOW(), NOW() ),
+	(4, "poor",     NOW(), NOW() ),
+	(5, "Replace",  NOW(), NOW() );
 
 #
 # ----------------------------------------------------------------- #
 # Date Rev.  : Rev. # :     Description                             #
 # ----------------------------------------------------------------- #
 # 04/16/2020 : 0.0.1  : Original.                                   #
+# ----------------------------------------------------------------- #
+# 04/26/2020 : 0.0.2  : Add fields created_at, updated_at.          #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

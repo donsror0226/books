@@ -1,37 +1,25 @@
 #
-# This loads the table media_types from database_develpment if it exists.
+# This count the number of rows in table conditions.
 #
 # ----------------------------------------------------------------- #
 # System    : Centos 7.7                                            #
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/sql_commands                #
-# File Name : tb_load_media_types.sql                               #
+# File Name : tb_count_row.sql                                      #
 # Rev. Date : 04/26/2020                                            #
-# Rev. No.  : 0.0.2                                                 #
+# Rev. No.  : 0.0.1                                                 #
 # ----------------------------------------------------------------- #
 #
 
 use books_development;
 
-INSERT INTO media_types(media_type_id, media_type_name, created_at, updated_at)
-VALUES
-	(1, "3.5",       NOW(), NOW() ),
-	(2, "5.25",      NOW(), NOW() ),
-	(3, "CD",        NOW(), NOW() ),
-	(4, "DVD",       NOW(), NOW() ),
-	(5, "Blue-Ray",  NOW(), NOW() ),
-	(6, "VHS",       NOW(), NOW() ),
-	(7, "Cassette",  NOW(), NOW() ),
-	(8, "Cartridge", NOW(), NOW() ),
-	(9, "-",         NOW(), NOW() );
+SELECT COUNT(*) FROM conditions;
 
 #
 # ----------------------------------------------------------------- #
 # Date Rev.  : Rev. # :     Description                             #
 # ----------------------------------------------------------------- #
-# 04/16/2020 : 0.0.1  : Original.                                   #
-# ----------------------------------------------------------------- #
-# 04/26/2020 : 0.0.2  : Add fields created_at, updated_at.          #
+# 04/26/2020 : 0.0.1  : Original.                                   #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #
