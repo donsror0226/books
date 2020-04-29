@@ -112,10 +112,10 @@
 	"buffers":
 	[
 		{
-			"file": "books_scripts/z_menu_tb_create.sh",
+			"file": "test.sh",
 			"settings":
 			{
-				"buffer_size": 6456,
+				"buffer_size": 49,
 				"line_ending": "Unix"
 			}
 		}
@@ -153,22 +153,27 @@
 	"expanded_folders":
 	[
 		"/home/don/workspace/books",
-		"/home/don/workspace/books/books_scripts",
-		"/home/don/workspace/books/lib",
-		"/home/don/workspace/books/log",
-		"/home/don/workspace/books/sql_commands"
+		"/home/don/workspace/books/books_scripts"
 	],
 	"file_history":
 	[
+		"/home/don/workspace/books/fileIn",
+		"/home/don/workspace/books/books_scripts/z_menu.sh",
+		"/home/don/workspace/books/books_scripts/z_db_show_mysql.sh",
+		"/home/don/workspace/books/books_scripts/z_db_grant_mysql.sh",
+		"/home/don/workspace/books/books_scripts/z_db_delete_mysql.sh",
+		"/home/don/workspace/books/books_scripts/z_db_create_rake.sh",
+		"/home/don/workspace/books/books_scripts/z_db_create_rails.sh",
+		"/home/don/workspace/books/sql_commands/tb_load_all.sql",
+		"/home/don/workspace/books/books_scripts/z_menu_tb_load.sh",
+		"/home/don/workspace/books/sql_commands/tb_load_conditions.sql",
 		"/home/don/workspace/books/books_scripts/z_menu_tb_create.sh",
 		"/home/don/workspace/books/books_scripts/z_tb_create_all_rails.sh",
 		"/home/don/workspace/books/books_scripts/z_menu_tb_delete.sh",
 		"/home/don/workspace/books/books_scripts/z_tb_delete_all_mysql.sh",
-		"/home/don/workspace/books/books_scripts/z_menu_tb_load.sh",
 		"/home/don/workspace/books/db/migrate/condition_fields.txt",
 		"/home/don/workspace/books/db/migrate/media_type_fields.txt",
 		"/home/don/workspace/books/db/migrate/purpose_fields.txt",
-		"/home/don/workspace/books/sql_commands/tb_load_conditions.sql",
 		"/home/don/workspace/books/sql_commands/tb_load_media_types.sql",
 		"/home/don/workspace/books/books_scripts/z_tb_load_all_mysql.sh",
 		"/home/don/workspace/books/sql_commands/tb_load_purposes.sql",
@@ -178,7 +183,6 @@
 		"/home/don/workspace/books/db/migrate/20200427072623_create_conditions.rb",
 		"/home/don/workspace/books/db/migrate/condition_fields.copy.txt",
 		"/home/don/workspace/books/sql_commands/tb_count_conditions.sql",
-		"/home/don/workspace/books/sql_commands/tb_load_all.sql",
 		"/home/don/workspace/books/sql_commands/tb_count_purposes.sql",
 		"/home/don/workspace/books/sql_commands/tb_count_conditions_rows.sql",
 		"/home/don/workspace/books/sql_commands/tb_count_purposes_rows.sql",
@@ -229,7 +233,6 @@
 		"/home/don/workspace/books/db/migrate/20200426080750_createtable.rb",
 		"/home/don/workspace/books/db/migrate/20200426075301_create_book.rb",
 		"/home/don/workspace/books/db/migrate/20200426075106_createbook.rb",
-		"/home/don/workspace/books/books_scripts/z_menu.sh",
 		"/home/don/workspace/books/books_scripts/old/z_tb_create_all_rails.05.sh",
 		"/home/don/workspace/books/books_scripts/old/z_tb_create_all_rails.06.sh",
 		"/home/don/workspace/books/db/migrate/20200425225019_create_book.rb",
@@ -277,21 +280,15 @@
 		"/home/don/workspace/books/books_scripts/old/z_tb_delete_media_mysql.sh",
 		"/home/don/workspace/books/books_scripts/z_tb_delete_media_types_mysql.01.sh",
 		"/home/don/workspace/books/books_scripts/old/z_tb_delete_all_mysql.01.sh",
-		"/home/don/workspace/books/books_scripts/z_db_show_mysql.sh",
-		"/home/don/workspace/books/books_scripts/z_db_grant_mysql.sh",
-		"/home/don/workspace/books/books_scripts/z_db_delete_mysql.sh",
-		"/home/don/workspace/books/books_scripts/z_db_create_rake.sh",
-		"/home/don/workspace/books/books_scripts/z_db_create_rails.sh",
 		"/home/don/workspace/books/books_scripts/z_db_create_mysql.sh",
 		"/home/don/workspace/books/books_scripts/z_menu_db_create.sh",
 		"/home/don/bin/z",
 		"/home/don/workspace/books/sql_commands/sql_names.txt",
-		"/home/don/workspace/books/books_scripts/sh_names.txt",
-		"/home/don/workspace/books/books_scripts/z_tb_delete_purposes_mysql.sh"
+		"/home/don/workspace/books/books_scripts/sh_names.txt"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -339,11 +336,11 @@
 			[
 				{
 					"buffer": 0,
-					"file": "books_scripts/z_menu_tb_create.sh",
+					"file": "test.sh",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6456,
+						"buffer_size": 49,
 						"regions":
 						{
 						},
@@ -356,12 +353,10 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/ShellScript/Bash.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2754.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -413,7 +408,7 @@
 	"project": "books.sublime-project",
 	"replace":
 	{
-		"height": 70.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":

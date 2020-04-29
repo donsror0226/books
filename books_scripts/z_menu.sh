@@ -2,14 +2,14 @@
 #
 # Start menu for 
 #   create and delete Databases Books,
-#   create and delete tables.
+#   create and delete and load tables.
 # Using Mysql commands and a Rake command.
 #
 # ----------------------------------------------------------------- #
 # System    : Centos 7.7                                            #
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/books_scripts/              #
-# File Name : start_menu.sh                                         #
+# File Name : z_menu.sh                                             #
 # Rev. Date : 04/18/2020                                            #
 # Rev. No.  : 0.0.10                                                #
 # ----------------------------------------------------------------- #
