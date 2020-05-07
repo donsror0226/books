@@ -67,7 +67,7 @@ _delete_all()
    	else
    		#echo "     File Exists"
 			# The -v will display removed in front of the file names it's deleting
-			rm -v ./db/migrate/*${1}*.* #2>/dev/null
+			rm -v ./db/migrate/*${1}.* #2>/dev/null
 			ERRORCODE=$?
 			#echo "3-ERRORCODE = $ERRORCODE"
 			if [ $ERRORCODE -gt 0 ]; then
@@ -105,29 +105,36 @@ echo -e "-------------------\n"
 
 case $1 in
 	1 )
-		deleteMigrate="_book"
+		deleteMigrate="_books"
 		deleteTable="books"
 		# passing variables $deleteMigrate & $deleteTable parital names.
 		_delete_all $deleteMigrate $deleteTable
 		;;
 
 	2 )
-		deleteMigrate="_condition"
+		deleteMigrate="_conditions"
 		deleteTable="conditions"
 		# passing variables $deleteMigrate & $deleteTable parital names.
 		_delete_all $deleteMigrate $deleteTable
 		;;
 
 	3 )
-		deleteMigrate="_media_type"
+		deleteMigrate="_media_types"
 		deleteTable="media_types"
 		# passing variables $deleteMigrate & $deleteTable parital names.
 		_delete_all $deleteMigrate $deleteTable
 		;;
 
 	4 )
-		deleteMigrate="_purpose"
+		deleteMigrate="_purposes"
 		deleteTable="purposes"
+		# passing variables $deleteMigrate & $deleteTable parital names.
+		_delete_all $deleteMigrate $deleteTable
+		;;
+
+	5 )
+		deleteMigrate="_book_types"
+		deleteTable="book_types"
 		# passing variables $deleteMigrate & $deleteTable parital names.
 		_delete_all $deleteMigrate $deleteTable
 		;;

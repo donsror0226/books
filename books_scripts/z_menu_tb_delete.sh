@@ -8,8 +8,8 @@
 #   Name    : peekaboo                                              #
 # Location  : /home/workspace/books/bin/books_scripts/              #
 # File Name : menu_tb_delete.sh                                     #
-# Rev. Date : 04/18/2020                                            #
-# Rev. No.  : 0.0.7                                                 #
+# Rev. Date : 05/04/2020                                            #
+# Rev. No.  : 0.0.8                                                 #
 # ----------------------------------------------------------------- #
 #
 
@@ -86,11 +86,12 @@ do
   echo -e "\t  1 - \tbooks using mysql.\n"
   echo -e "\t  2 - \tconditions using mysql.\n"
   echo -e "\t  3 - \tmedia_types using mysql.\n"
-  echo -e "\t  4 - \tpurposes using mysql.\n\n"
-  echo -e "\t  8 - \tall 4 tables above using mysql\n"
+  echo -e "\t  4 - \tpurposes using mysql.\n"
+  echo -e "\t  5 - \tbook_types using mysql.\n\n"
+  echo -e "\t  8 - \tall 5 tables above using mysql\n"
 	echo -e "\t 99 - \tReturn to Main Menu."
 
-  echo -en "\nEnter Selection ( 1 - 4, 8, 99 ) >> "
+  echo -en "\nEnter Selection ( 1 - 5, 8, 99 ) >> "
   read InputValue
   #echo -e "\n InputValue = $InputValue \n"
 
@@ -102,7 +103,7 @@ do
 
   case $InputValue in
 
-    1|2|3|4|8 )
+    1|2|3|4|5|8 )
       # call script "tb_delete_all_mysql.sh"
       # and passing variable $InputValue
       clear
@@ -174,6 +175,8 @@ done
 #            :        :   command to pass the value of $InputValue. #
 #            :        : Change section 8 case from 8 to 1|2|3|4|6.  #
 #            : 0.0.7  : Change path to relative path.               #
+# ----------------------------------------------------------------- #
+# 05/04/2020 : 0.0.8  : Add section to 5 to section 1,2,3,4,8.      #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

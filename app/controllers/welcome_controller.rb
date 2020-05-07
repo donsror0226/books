@@ -1,25 +1,28 @@
+#!/bin/bash
 #
-# This count the number of rows in table conditions.
+# Tells Rails where you actual home page is located and resources.
 #
 # ----------------------------------------------------------------- #
 # System    : Centos 7.7                                            #
 #   Name    : peekaboo                                              #
-# Location  : /home/don/workspace/books/sql_commands                #
-# File Name : tb_count_conditions.sql                               #
-# Rev. Date : 04/26/2020                                            #
+# Location  : /home/don/workspace/books/app/controller/             #
+# File Name : welcome_controller.rb                                 #
+# Rev. Date : 05/05/2020                                            #
 # Rev. No.  : 0.0.1                                                 #
 # ----------------------------------------------------------------- #
 #
 
-use books_development;
 
-SELECT COUNT(*) FROM conditions;
+class WelcomeController < ApplicationController
+  def index
+  end
+end
 
 #
 # ----------------------------------------------------------------- #
 # Date Rev.  : Rev. # :     Description                             #
 # ----------------------------------------------------------------- #
-# 04/26/2020 : 0.0.1  : Original.                                   #
+# 05/05/2020 : 0.0.1  : Original.                                   #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

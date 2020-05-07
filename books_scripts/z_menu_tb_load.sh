@@ -8,8 +8,8 @@
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/books_scripts/              #
 # File Name : menu_tb_load.sh                                       #
-# Rev. Date : 04/21/2020                                            #
-# Rev. No.  : 0.1.1                                                #
+# Rev. Date : 05/04/2020                                            #
+# Rev. No.  : 0.1.2                                                 #
 # ----------------------------------------------------------------- #
 #
 
@@ -38,7 +38,7 @@ letterS=""                  # Holds "s" if loadTable is "all" other wise "".
 _load_all()
 {
   # $1 = loadTable
-  echo "loadTable = $ 1 = $1"
+  #echo "loadTable = $ 1 = $1"
 
   # if [ $1 == "all" ]; then
   #   letterS="s"
@@ -88,11 +88,12 @@ do
   echo -e "\t------   -------------"
   echo -e "\t  1 - \tconditions using mysql.\n"
   echo -e "\t  2 - \tmedia_types using mysql.\n"
-  echo -e "\t  3 - \tpurposes using mysql.\n\n"
-  echo -e "\t  8 - \tall 3 tables above using mysql\n"
+  echo -e "\t  3 - \tpurposes using mysql.\n"
+  echo -e "\t  4 - \tbook_types using mysql.\n\n"
+  echo -e "\t  8 - \tall 4 tables above using mysql\n"
 	echo -e "\t 99 - \tReturn to Main Menu."
 
-  echo -en "\nEnter Selection ( 1 - 3, 8, 99 ) >> "
+  echo -en "\nEnter Selection ( 1 - 4, 8, 99 ) >> "
   read InputValue
   #echo -e "\n InputValue = $InputValue \n"
 
@@ -117,6 +118,12 @@ do
 
     3 )
       loadTable="purposes"
+      # passing variables $loadTable parital names.
+      _load_all $loadTable
+      ;;
+
+    4 )
+      loadTable="books"
       # passing variables $loadTable parital names.
       _load_all $loadTable
       ;;
@@ -178,6 +185,8 @@ done
 #            :        : Add variable to pass to _load_all,          #
 #            :        :   and call function _load_all.              #
 #            : 0.1.1  : Remove unneeded code. Cleanup.              #
+# ----------------------------------------------------------------- #
+# 05/04/2020 : 0.1.2  : Add section 4 to load book_types.           #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

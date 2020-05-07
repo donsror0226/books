@@ -111,14 +111,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "test.sh",
-			"settings":
-			{
-				"buffer_size": 49,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -153,10 +145,26 @@
 	"expanded_folders":
 	[
 		"/home/don/workspace/books",
-		"/home/don/workspace/books/books_scripts"
+		"/home/don/workspace/books/app",
+		"/home/don/workspace/books/app/controllers",
+		"/home/don/workspace/books/app/views",
+		"/home/don/workspace/books/app/views/welcome",
+		"/home/don/workspace/books/config"
 	],
 	"file_history":
 	[
+		"/home/don/workspace/blog/config/database.yml",
+		"/home/don/workspace/database.yml",
+		"/home/don/workspace/books/app/controllers/welcome_controller.rb",
+		"/home/don/workspace/books/config/routes.rb",
+		"/home/don/workspace/books/config/database.yml",
+		"/home/don/workspace/books/config/environment.rb",
+		"/home/don/workspace/books/config/puma.rb",
+		"/home/don/workspace/books/config/secrets.yml",
+		"/home/don/workspace/books/config/spring.rb",
+		"/home/don/workspace/books/app/views/welcome/index.html.erb",
+		"/home/don/bin/zz",
+		"/home/don/workspace/books/test.sh",
 		"/home/don/workspace/books/fileIn",
 		"/home/don/workspace/books/books_scripts/z_menu.sh",
 		"/home/don/workspace/books/books_scripts/z_db_show_mysql.sh",
@@ -272,19 +280,7 @@
 		"/home/don/workspace/books/books_scripts/z_tb_add_all_rails.sh",
 		"/home/don/workspace/books/books_scripts/old/z_tb_delete_all_mysql.02.sh",
 		"/home/don/workspace/books/books_scripts/old/z_menu_tb_load.01.sh",
-		"/home/don/workspace/books/books_scripts/z_tb_load_all_mysql.01.sh",
-		"/home/don/workspace/books/books_scripts/old/z_tb_create_all_rails.02.sh",
-		"/home/don/workspace/books/sql_commands/tb_delete_all.sql",
-		"/home/don/workspace/books/books_scripts/z_tb_delete_books_mysql.01.sh",
-		"/home/don/workspace/books/books_scripts/old/z_tb_delete_media_mysql.01.sh",
-		"/home/don/workspace/books/books_scripts/old/z_tb_delete_media_mysql.sh",
-		"/home/don/workspace/books/books_scripts/z_tb_delete_media_types_mysql.01.sh",
-		"/home/don/workspace/books/books_scripts/old/z_tb_delete_all_mysql.01.sh",
-		"/home/don/workspace/books/books_scripts/z_db_create_mysql.sh",
-		"/home/don/workspace/books/books_scripts/z_menu_db_create.sh",
-		"/home/don/bin/z",
-		"/home/don/workspace/books/sql_commands/sql_names.txt",
-		"/home/don/workspace/books/books_scripts/sh_names.txt"
+		"/home/don/workspace/books/books_scripts/z_tb_load_all_mysql.01.sh"
 	],
 	"find":
 	{
@@ -331,37 +327,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "test.sh",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 49,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

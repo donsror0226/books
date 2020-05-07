@@ -1,0 +1,260 @@
+<!--                                                                   -->
+<!-- Tells Rails how to view the new book.                             -->
+<!--                                                                   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- System    : Centos 7.7                                            -->
+<!--   Name    : peekaboo                                              -->
+<!-- Location  : /home/don/workspace/books/app/view/books/             -->
+<!-- File Name : new.html.erb                                          -->
+<!-- Rev. Date : 05/05/2020                                            -->
+<!-- Rev. No.  : 0.0.3                                                 -->
+<!-- ----------------------------------------------------------------- -->
+<!--                                                                   -->
+
+<h1>Books#new</h1>
+<p>Find me in app/views/books/new.html.erb</p>
+
+<center>
+	<h1>
+		New Books
+	</h1>
+</center>
+
+<%= form_with scope: :book, local: true do |f| %>
+	<!-- --------------------------------------------------------------- -->
+	<!-- Table #1 - Book Info.                                           -->
+	<!-- --------------------------------------------------------------- -->
+	<!--            Author / Title / Series Name / series No.            -->
+	<!--            ISBN / Publisher / Published Date                    -->
+	<!-- --------------------------------------------------------------- -->
+
+	<table width="100%" border=1>
+	  <!-- ------------------------------------------------------------- -->
+	  <!-- Setup of 1st Row in Table #1.                                 -->
+	  <!--   Name = Author, Size = 50, Maxsize = 50.                     -->
+	  <!-- ------------------------------------------------------------- -->
+	  <tr>
+	  	<td width="12%">
+	  		<%= f.label :author %>
+	  	</td>
+	  	<td width="88%" colspan=3>
+	  		<%= f.text_field :author, :size => 50, :maxsize => 50 %>
+	  	</td>
+	  </tr>
+
+	  <!-- ------------------------------------------------------------- -->
+	  <!-- Setup of 2nd Row in Table #1.                                 -->
+	  <!--   Name = Title,, Size = 25, Maxsize = 25.                     -->
+	  <!-- ------------------------------------------------------------- -->
+	  <tr>
+	  	<td width="12%">
+	  		<%= f.label :title %>
+	  	</td>
+	  	<td width="38%">
+	  		<%= f.text_field :title, :size => 25, :maxsize => 25 %>
+	  	</td>
+	  	<td width=12%>
+	  		*
+	  	</td>
+	  	<td width=38%>
+	  		*
+	  	</td>
+	  </tr>
+
+	  <!-- ------------------------------------------------------------- -->
+	  <!-- Setup of 3rd Row in Table #1.                                 -->
+	  <!--   Name = Series name, Size = 25, Maxsize = 25.                -->
+	  <!--   Name = Series No. , Size =  3, Maxsize =  3.                -->
+	  <!-- ------------------------------------------------------------- -->
+	  <tr>
+	  	<td width="12%">
+	  		<%= f.label :series_name %>
+	  	</td>
+	  	<td width="38%">
+	  		<%= f.text_field :series_name, :size => 25, :maxsize => 25 %>
+	  	</td>
+	  	<td width=12%>
+	  		<%= f.label :series_no %>
+	  	</td>
+	  	<td width=38%>
+	  		<%= f.text_field :series_no, :size => 3, :maxsize => 3 %>
+	  	</td>
+	  </tr>
+
+	  <!-- ------------------------------------------------------------- -->
+	  <!-- Setup of 4th Row in Table #1.                                 -->
+	  <!--   Name = ISBN Tab No, Size = 20, Maxsize = 20.                -->
+	  <!--   Name = Publisher  , Size = 20, Maxsize = 20.                -->
+	  <!-- ------------------------------------------------------------- -->
+	  <tr>
+	  	<td width="12%">
+	  		<%= f.label :isbn_tab_no %>
+	  	</td>
+	  	<td width="38%">
+	  		<%= f.text_field :isbn_tab_no, :size => 20, :maxsize => 20 %>
+	  	</td>
+	  	<td width=12%>
+	  		<%= f.label :publisher %>
+	  	</td>
+	  	<td width=38%>
+	  		<%= f.text_field :publisher, :size => 20, :maxsize => 20 %>
+	  	</td>
+	  </tr>
+
+	  <!-- ------------------------------------------------------------- -->
+	  <!-- Setup of 5th Row in Table #1.                                 -->
+	  <!--   Name = Published Date.                                      -->
+	  <!--          Has 3 fields Year, Month, Day.                       -->
+	  <!--          Year has a start year of 1900.                       -->
+	  <!-- ------------------------------------------------------------- -->
+	  <tr>
+	  	<td width="12%">
+	  		<%= f.label :published_date %>
+	  	</td>
+	  	<td width="38%">
+	  		<!--<%= f.date_select :published_date %>-->
+	  		<%= date_select :book, :publisher_date, :start_year => 1900 %>
+	  	</td>
+	  	<td width=12%>
+	  		*
+	  	</td>
+	  	<td width=38%>
+	  		*
+	  	</td>
+	  </tr>
+	</table>
+
+	<!-- --------------------------------------------------------------- -->
+ 	<!-- Draws a horizontal line, Size = 4.                              -->
+	<!-- --------------------------------------------------------------- -->
+	 <hr size="4" "noshade">
+	 </hr>
+
+	<!-- --------------------------------------------------------------- -->
+	<!-- Table #2 - Purchased Info.                                      -->
+	<!-- --------------------------------------------------------------- -->
+	<!--            Location / Price / Purchased / Entry Date.           -->
+	<!-- --------------------------------------------------------------- -->
+
+	<table width="100%" border=1>
+	  <!-- ------------------------------------------------------------- -->
+	  <!-- Setup of 1st Row in Table #2.                                 -->
+	  <!--   Name = Location, Size = 20, Maxsize = 20.                   -->
+	  <!--   Name = Price,    Size =  7, Maxsize =  7.                   -->
+	  <!-- ------------------------------------------------------------- -->
+	  <tr>
+	  	<td width="12%">
+	  		<%= f.label :location %>
+	  	</td>
+	  	<td width="38%">
+	  		<%= f.text_field :location, :size => 20, :maxsize => 20 %>
+	  	</td>
+	  	<td width="12%">
+	  		<%= f.label :price %>
+	  	</td>
+	  	<td width="38%">
+	  		<%= f.text_field :price, :size => 7, :maxsize => 7 %>
+	  	</td>
+	  </tr>
+
+	  <!-- ------------------------------------------------------------- -->
+	  <!-- Setup of 2nd Row in Table #2.                                 -->
+	  <!--   Name = Purchase Date.                                       -->
+	  <!--          Has 3 fields Year, Month, Day.                       -->
+	  <!--          Year has a start year of 1900.                       -->
+	  <!-- ------------------------------------------------------------- -->
+	  <tr>
+	  	<td width="12%">
+	  		<%= f.label :purchase_date %>
+	  	</td>
+	  	<td width="38%">
+	  		<!--<%= f.date_select :purchase_date %>-->
+	  		<%= date_select :book, :purchaser_date, :start_year => 1900 %>
+	  	</td>
+	  	<td width="12%">
+	  		<%= f.label :entry_date %>
+	  	</td>
+	  	<td width="38%">
+	  		<%= f.date_select :entry_date %>
+	  	</td>
+	  </tr>
+	</table>
+
+	<!-- --------------------------------------------------------------- -->
+ 	<!-- Draws a horizontal line, Size = 4.                              -->
+	<!-- --------------------------------------------------------------- -->
+	 <hr size="4" "noshade">
+	 </hr>
+
+	<!-- --------------------------------------------------------------- -->
+	<!-- Table #3 - Pop Up Menus.                                        -->
+	<!-- --------------------------------------------------------------- -->
+	<!--            Condition / Media Type / Purpose.                    -->
+	<!-- --------------------------------------------------------------- -->
+
+	<table width="100%" border=1>
+	  <!-- ------------------------------------------------------------- -->
+	  <!-- Setup of 1st Row in Table #3.                                 -->
+	  <!--   Name = Location, Size = 20, Maxsize = 20.                   -->
+	  <!--   Name = Price,    Size =  7, Maxsize =  7.                   -->
+	  <!-- ------------------------------------------------------------- -->
+	  <tr>
+	  	<td width="12%">
+	  		<%= f.label :condition_id %>
+	  	</td>
+	  	<td width="38%">
+	  		*
+	  		<!--<%= f.collection_select(:condition_id, 
+	  														Condition.all, 
+	  														:id, 
+	  														:condition_name ) %>-->
+
+	  		<!--<%= f.text_field :condition_id %>-->
+	  		<!--<%= collection_select( :book,
+	  													 :condition_id,
+	  		                       Condition.all,
+	  		                     	 :condition_id,
+	  		                       :condition_name,
+	  		                       prompt: true )
+	  		%>-->
+
+	  		<!--<select name="condition_id">
+	  			<%= @conditions.each do |c| %>
+	  				<option value="%= c.condition_id" %>
+	  					<%c.condition_name %>
+	  				</option>"
+	  			<% end %>
+	  		</select>-->
+
+	  	<!--<%= select(:condition, :condition_id, @condition_options) %>-->
+	  	</td>
+	  	<!--<td width="12%">
+	  		<%= f.label :media_type_id %>-->
+	  	</td>
+	  	<td width="38%">
+	  		*
+	  		<!--<%= f.text_field :media_type_id %>-->
+	  		<!--<%= collection_select(:book,
+	  		                      :media_type_id,
+	  		                       Media_type.all,
+	  		                      :media_typeid,
+	  		                      :media_type_name)
+	  		%>-->
+	  	</td>
+	  </tr>
+
+	</table>
+<% end %>
+
+
+<!--                                                                   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev.   :     Description                             -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 05/05/2020 : 0.0.1  : Original.                                   -->
+<!--            : 0.0.2  : Add input form.                             -->
+<!--            : 0.0.3  : Remove unneeded code.                       -->
+<!--            : 0.0.4  : Add table 1.                                -->
+<!-- ----------------------------------------------------------------- -->
+<!--            :        :                                             -->
+<!-- ----------------------------------------------------------------- -->

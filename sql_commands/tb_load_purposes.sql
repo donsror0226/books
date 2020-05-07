@@ -46,17 +46,19 @@ VALUES
 	(221, "Consoles", "XB0x 360", NOW(), NOW() ),
 	(222, "Consoles", "XB0x 1",   NOW(), NOW() ),
 
-	(300, "Hobbies", "Electronics", NOW(), NOW() ),
-	(301, "Hobbies", "Cooking",     NOW(), NOW() ),
-	(302, "Hobbies", "Fishing",     NOW(), NOW() ),
+	(300, "Hobbies", "Electronics",      NOW(), NOW() ),
+	(301, "Hobbies", "Cooking",          NOW(), NOW() ),
+	(302, "Hobbies", "Fishing",          NOW(), NOW() ),
+	(303, "Hobbies", "Home Improvement", NOW(), NOW() ),
+	(304, "Hobbies", "Guns",             NOW(), NOW() ),
 
-	(400, "Books", "Fictiion",           NOW(), NOW() ),
-	(401, "Books", "Non-Fiction (True)", NOW(), NOW() ),
-	(402, "Books", "Si-Fi",              NOW(), NOW() ),
-	(403, "Books", "Fantsy",             NOW(), NOW() ),
-	(404, "Books", "Eduction",           NOW(), NOW() ),
-	(405, "Books", "Weterns",            NOW(), NOW() ),
-	(406, "Books", "War",                NOW(), NOW() );
+	(400, "Genre", "Fiction",            NOW(), NOW() ),
+	(401, "Genre", "Non-Fiction (True)", NOW(), NOW() ),
+	(402, "Genre", "Si Fi",              NOW(), NOW() ),
+	(403, "Genre", "Fantasy",            NOW(), NOW() ),
+	(404, "Genre", "Education",          NOW(), NOW() ),
+	(405, "Genre", "Western",            NOW(), NOW() ),
+	(406, "Genre", "War",                NOW(), NOW() );
 
 #
 # ----------------------------------------------------------------- #

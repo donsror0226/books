@@ -5,6 +5,7 @@ class CreateConditions < ActiveRecord::Migration[5.1]
       t.index :condition_id, :unique => true
       t.string :condition_name, limit: 10, :null => false
       
-      t.timestamps    end
+      t.timestamps
+    end
   end
 end

@@ -27,12 +27,9 @@ VALUES
 	(1, "3.5",       NOW(), NOW() ),
 	(2, "5.25",      NOW(), NOW() ),
 	(3, "CD",        NOW(), NOW() ),
-	(4, "DVD",       NOW(), NOW() ),
-	(5, "Blue-Ray",  NOW(), NOW() ),
-	(6, "VHS",       NOW(), NOW() ),
-	(7, "Cassette",  NOW(), NOW() ),
-	(8, "Cartridge", NOW(), NOW() ),
-	(9, "-",         NOW(), NOW() );
+	(4, "Cassette",  NOW(), NOW() ),
+	(5, "Cartridge", NOW(), NOW() ),
+	(6, "NA",        NOW(), NOW() );
 
 
 INSERT INTO purposes(purpose_id, purpose_type, purpose_name, created_at, updated_at)
@@ -68,17 +65,29 @@ VALUES
 	(221, "Consoles", "XB0x 360", NOW(), NOW() ),
 	(222, "Consoles", "XB0x 1",   NOW(), NOW() ),
 
-	(300, "Hobbies", "Electronics", NOW(), NOW() ),
-	(301, "Hobbies", "Cooking",     NOW(), NOW() ),
-	(302, "Hobbies", "Fishing",     NOW(), NOW() ),
+	(300, "Hobbies", "Electronics",      NOW(), NOW() ),
+	(301, "Hobbies", "Cooking",          NOW(), NOW() ),
+	(302, "Hobbies", "Fishing",          NOW(), NOW() ),
+	(303, "Hobbies", "Home Improvement", NOW(), NOW() ),
+	(304, "Hobbies", "Guns",             NOW(), NOW() ),
 
-	(400, "Books", "Fictiion",           NOW(), NOW() ),
-	(401, "Books", "Non-Fiction (True)", NOW(), NOW() ),
-	(402, "Books", "Si-Fi",              NOW(), NOW() ),
-	(403, "Books", "Fantsy",             NOW(), NOW() ),
-	(404, "Books", "Eduction",           NOW(), NOW() ),
-	(405, "Books", "Weterns",            NOW(), NOW() ),
-	(406, "Books", "War",                NOW(), NOW() );
+	(400, "Genre", "Fiction",            NOW(), NOW() ),
+	(401, "Genre", "Non-Fiction (True)", NOW(), NOW() ),
+	(402, "Genre", "Si Fi",              NOW(), NOW() ),
+	(403, "Genre", "Fantasy",            NOW(), NOW() ),
+	(404, "Genre", "Education",          NOW(), NOW() ),
+	(405, "Genre", "Western",            NOW(), NOW() ),
+	(406, "Genre", "War",                NOW(), NOW() );
+
+
+INSERT INTO book_types(book_type_id, book_type_name, created_at, updated_at)
+VALUES
+	(1, "Hard",     NOW(), NOW() ),
+	(2, "Soft",     NOW(), NOW() ),
+	(3, "Magazine", NOW(), NOW() ),
+	(4, "Audible",  NOW(), NOW() ),
+	(5, "MP3",      NOW(), NOW() );
+# can have more then one choice. (check box).
 
 #
 # ----------------------------------------------------------------- #

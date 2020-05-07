@@ -5,17 +5,17 @@ application up and running.
 
 Things you may want to cover:
 
-* System 									Centos 7.7
+* System : Centos 7.7 tested
 
-* Ruby version  					2.2.2 (x86_64-linux)
+* Ruby version : 2.2.2 (x86_64-linux) tested
 
-* Rails version						5.1.7
+* Rails version : 5.1.7 tested
 
 * System dependencies
 
 * Configuration
 
-* Database creation MySql	5.6.47
+* Database creation : MySql 5.6.47 tested
 
 * Database initialization
 
@@ -26,3 +26,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# Books

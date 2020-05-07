@@ -5,7 +5,7 @@
 # System    : Centos 7.7                                            #
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/sql_commands                #
-# File Name : delete_tb_books.sql                                   #
+# File Name : tb_delete_books.sql                                   #
 # Rev. Date : 04/13/2020                                            #
 # Rev. No.  : 0.0.1                                                 #
 # ----------------------------------------------------------------- #

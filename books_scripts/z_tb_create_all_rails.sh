@@ -50,7 +50,7 @@ _create_migration()
 	## The rails creates a file in the format of (see below)
 	##   yyyymmddhhmmss_create_$1.rb this becomes the orginalFile later.
 	##
-	echo "2create_migration - "
+	#echo "2create_migration - "
 	rails generate migration Create_$1 --force
 	#1>/dev/null
 	Errorcode=$?
@@ -77,7 +77,7 @@ _insert_into_migration()
 	##	 Move the newFile.txt to orginalFile replace the old orginalFile.
 	##
 	# migratePath="./db/migrate"
-	cd db/migrate
+	cd ./db/migrate
 	originalFile=$(ls *_${1}*.*)
 	cp $originalFile tempFileIn
 
@@ -187,6 +187,18 @@ case $1 in
 		_remove_files
 		;;
 
+	5 )
+		echo -e "\tCreating Migration for \"book_types\"....\n"
+		#_create_media_types
+		migrationBuildName="Book_types"
+		migrationFileName="book_type"
+
+		_create_migration $migrationBuildName
+		_insert_into_migration $migrationFileName
+		_migrate_files
+		_remove_files
+		;;
+
 	8 )
 		# ------------------------------------------1-
 		echo -e "\tCreating all Migrating for all tables....\n"
@@ -217,6 +229,14 @@ case $1 in
 		# _create_purposes.
 		migrationBuildName="Purposes"
 		migrationFileName="purpose"
+
+		_create_migration $migrationBuildName
+		_insert_into_migration $migrationFileName
+
+		# ------------------------------------------3-
+		# _create_book_types.
+		migrationBuildName="Book_types"
+		migrationFileName="book_type"
 
 		_create_migration $migrationBuildName
 		_insert_into_migration $migrationFileName

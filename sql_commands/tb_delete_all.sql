@@ -7,7 +7,7 @@
 # Location  : /home/don/workspace/books/sql_commands                #
 # File Name : tb_delete_all.sql                                     #
 # Rev. Date : 04/162020                                             #
-# Rev. No.  : 0.0.3                                                 #
+# Rev. No.  : 0.0.4                                                 #
 # ----------------------------------------------------------------- #
 #
 
@@ -21,6 +21,8 @@ drop table IF EXISTS media_types;
 
 drop table IF EXISTS purposes;
 
+drop table IF EXISTS book_types;
+
 #show tables;
 
 #
@@ -32,6 +34,8 @@ drop table IF EXISTS purposes;
 # 04/15/2020 : 0.0.2  : Changed table media to table media_types.   #
 # ----------------------------------------------------------------- #
 # 04/16/2020 : 0.0.3  : Changed table type to table purposes.       #
+# ----------------------------------------------------------------- #
+# 05/04/2020 : 0.0.4  : Add table book_types.                       #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

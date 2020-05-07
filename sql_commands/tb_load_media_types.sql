@@ -18,12 +18,9 @@ VALUES
 	(1, "3.5",       NOW(), NOW() ),
 	(2, "5.25",      NOW(), NOW() ),
 	(3, "CD",        NOW(), NOW() ),
-	(4, "DVD",       NOW(), NOW() ),
-	(5, "Blue-Ray",  NOW(), NOW() ),
-	(6, "VHS",       NOW(), NOW() ),
-	(7, "Cassette",  NOW(), NOW() ),
-	(8, "Cartridge", NOW(), NOW() ),
-	(9, "-",         NOW(), NOW() );
+	(4, "Cassette",  NOW(), NOW() ),
+	(5, "Cartridge", NOW(), NOW() ),
+	(6, "NA",        NOW(), NOW() );
 
 #
 # ----------------------------------------------------------------- #

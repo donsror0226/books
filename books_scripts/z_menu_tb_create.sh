@@ -8,8 +8,8 @@
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/books_scripts/              #
 # File Name : menu_tb_create.sh                                     #
-# Rev. Date : 04/18/2020                                            #
-# Rev. No.  : 0.0.8                                                 #
+# Rev. Date : 05/04/2020                                            #
+# Rev. No.  : 0.0.9                                                 #
 # ----------------------------------------------------------------- #
 #
 
@@ -66,18 +66,19 @@ do
   echo -e "\t  1 - \tbooks using mysql.\n"
   echo -e "\t  2 - \tconditions using mysql.\n"
   echo -e "\t  3 - \tmedia_types using mysql.\n"
-  echo -e "\t  4 - \tpurpose using mysql.\n\n"
-  echo -e "\t  8 - \tall 4 tables above using mysql.\n"
+  echo -e "\t  4 - \tpurpose using mysql.\n"
+  echo -e "\t  5 - \tbook_types using mysql.\n\n"
+  echo -e "\t  8 - \tall 5 tables above using mysql.\n"
   echo -e "\t 99 - \tReturn to Main Menu."
   
   #echo -e "\nEnd of list"
 
-  echo -en "\nEnter Selection ( 1 - 4, 8, 99 ) >> "
+  echo -en "\nEnter Selection ( 1 - 5, 8, 99 ) >> "
   read InputValue
   
   case $InputValue in
 
-    1|2|3|4|8 )
+    1|2|3|4|5|8 )
       # call script "tb_create_all_rails.sh"
       # and passing the variable $InputValue
       echo -e "\n ***** Create all tables ***** \n"
@@ -126,7 +127,7 @@ do
       # Change text to  bold.     #
       echo -en "$(tput setaf 1)"
       echo -e "$(tput bold)"
-      echo -en "\n     Please enter a value ( 1 - 4, 8, 99 )\n\n"
+      echo -en "\n     Please enter a value ( 1 - 5, 8, 99 )\n\n"
       #InputValue=999
       #echo -e "$(tput setab 4)$(tput el)"
 		  #echo -en "         Press Enter to continue"
@@ -171,6 +172,8 @@ exit
 #            :        :   command to pass the value of $InputValue. #
 #            :        : Change section 8 case from 8 to 1|2|3|4|6.  #
 #            : 0.0.8  : Change path to relative path.               #
+# ----------------------------------------------------------------- #
+# 05/04/2020 : 0.0.9  : Add section 5 to section 1,2,3,4,8.         #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #
