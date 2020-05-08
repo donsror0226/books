@@ -82,6 +82,7 @@ do
       # call script "tb_create_all_rails.sh"
       # and passing the variable $InputValue
       echo -e "\n ***** Create all tables ***** \n"
+      ## Used for Rails.
       ./books_scripts/z_tb_create_all_rails.sh $InputValue
       #returnStatus=$?
       #echo "returnStatus = $returnStatus"

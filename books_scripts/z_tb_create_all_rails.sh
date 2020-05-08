@@ -41,8 +41,10 @@ tempFileIn="none"						# Hold a copy of original file will be worked on.
 _create_migration()
 {
 	## Pass variable $1 = migrationBuildName
-	## Run the rails command to generate migration file $1 
-	##	 "*_book*.*", "*_condition*.*", "*_media_type*.*", "*_purpose*.*".
+	#### Run the rails command to generate migration file $1 
+	## Run the rails command to generate migration file $1 and all files needed
+	##	 "*_book*.*",    "*_condition*.*", "*_media_type*.*",
+	##   "*_purpose*.*", "*_book_type*.*".
 	## The --force removes the old migration file and
 	##             creates a new migration file.
 	## The 1>/dev/null takes the number output to the screen and puts it the
@@ -51,7 +53,9 @@ _create_migration()
 	##   yyyymmddhhmmss_create_$1.rb this becomes the orginalFile later.
 	##
 	#echo "2create_migration - "
-	rails generate migration Create_$1 --force
+	echo -e "\n${1}....."
+	#rails generate migration Create_$1 --force
+	rails generate scaffold $1 --force
 	#1>/dev/null
 	Errorcode=$?
 	#echo -e "\npurpose - Errorcode = $Errorcode \n"
@@ -142,7 +146,8 @@ case $1 in
 	1 )
 		echo -e "\tCreating Migration for \"books\"....\n"
 		#_create_books
-		migrationBuildName="Books"	# this need the "s" on the end of name
+		#migrationBuildName="Books"	# need the "s" on the end of name for rails
+		migrationBuildName="Book"		# need no "s" on the end of name for ruby
 		migrationFileName="book"
 
 		_create_migration $migrationBuildName
@@ -154,7 +159,8 @@ case $1 in
 	2 )
 		echo -e "\tCreating Migration for \"conditions\"....\n"
 		#_create_conditions
-		migrationBuildName="Conditions"
+		#migrationBuildName="Conditions"
+		migrationBuildName="Condition"
 		migrationFileName="condition"
 
 		_create_migration $migrationBuildName
@@ -166,7 +172,8 @@ case $1 in
 	3 )
 		echo -e "\tCreating Migration for \"media_types\"....\n"
 		#_create_media_types
-		migrationBuildName="Media_types"
+		#migrationBuildName="Media_types"
+		migrationBuildName="Media_type"
 		migrationFileName="media_type"
 
 		_create_migration $migrationBuildName
@@ -178,7 +185,8 @@ case $1 in
 	4 )
 		echo -e "\tCreating Migration for \"purposes\"....\n"
 		#_create_purposes
-		migrationBuildName="Purposes"
+		#migrationBuildName="Purposes"
+		migrationBuildName="Purpose"
 		migrationFileName="purpose"
 
 		_create_migration $migrationBuildName
@@ -190,7 +198,8 @@ case $1 in
 	5 )
 		echo -e "\tCreating Migration for \"book_types\"....\n"
 		#_create_media_types
-		migrationBuildName="Book_types"
+		#migrationBuildName="Book_types"
+		migrationBuildName="Book_type"
 		migrationFileName="book_type"
 
 		_create_migration $migrationBuildName
@@ -203,7 +212,8 @@ case $1 in
 		# ------------------------------------------1-
 		echo -e "\tCreating all Migrating for all tables....\n"
 		#_create_books
-		migrationBuildName="Books"
+		#migrationBuildName="Books"
+		migrationBuildName="Book"
 		migrationFileName="book"
 
 		_create_migration $migrationBuildName
@@ -211,7 +221,8 @@ case $1 in
 
 		# ------------------------------------------2-
 		# _create_conditions.
-		migrationBuildName="Conditions"
+		#migrationBuildName="Conditions"
+		migrationBuildName="Condition"
 		migrationFileName="condition"
 
 		_create_migration $migrationBuildName
@@ -219,7 +230,8 @@ case $1 in
 
 		# ------------------------------------------3-
 		# _create_media_types.
-		migrationBuildName="Media_types"
+		#migrationBuildName="Media_types"
+		migrationBuildName="Media_type"
 		migrationFileName="media_type"
 
 		_create_migration $migrationBuildName
@@ -227,7 +239,8 @@ case $1 in
 
 		# ------------------------------------------4-
 		# _create_purposes.
-		migrationBuildName="Purposes"
+		#migrationBuildName="Purposes"
+		migrationBuildName="Purpose"
 		migrationFileName="purpose"
 
 		_create_migration $migrationBuildName
@@ -235,7 +248,8 @@ case $1 in
 
 		# ------------------------------------------3-
 		# _create_book_types.
-		migrationBuildName="Book_types"
+		#migrationBuildName="Book_types"
+		migrationBuildName="Book_type"
 		migrationFileName="book_type"
 
 		_create_migration $migrationBuildName
@@ -289,6 +303,11 @@ exit
 #            :        :   this will migrate the migrate files       #
 #            :        :   to create the tables.                     #
 #            :        : Last clean up.                              #
+# ----------------------------------------------------------------- #
+# 05/08/2020 : 0.1.8  : Change migrationBuildName so there is no    #
+#            :        :   "s" on the end of name.                   #
+#            :        : Change rails generate migration _create_$1  #
+#            :        :   to rails generate scaffold $1             #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

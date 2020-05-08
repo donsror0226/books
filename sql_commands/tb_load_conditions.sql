@@ -13,12 +13,12 @@
 
 use books_development;
 
-INSERT INTO conditions(condition_id, condition_name, created_at, updated_at)
+INSERT INTO conditions(condition_idx, condition_name, created_at, updated_at)
 VALUES
 	(1, "Excelent", NOW(), NOW() ),
 	(2, "Good",     NOW(), NOW() ),
 	(3, "Fair",     NOW(), NOW() ),
-	(4, "poor",     NOW(), NOW() ),
+	(4, "Poor",     NOW(), NOW() ),
 	(5, "Replace",  NOW(), NOW() );
 
 #

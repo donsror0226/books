@@ -13,7 +13,7 @@
 
 use books_development;
 
-INSERT INTO media_types(media_type_id, media_type_name, created_at, updated_at)
+INSERT INTO media_types(media_type_idx, media_type_name, created_at, updated_at)
 VALUES
 	(1, "3.5",       NOW(), NOW() ),
 	(2, "5.25",      NOW(), NOW() ),

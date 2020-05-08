@@ -13,7 +13,7 @@
 
 use books_development;
 
-INSERT INTO purposes(purpose_id, purpose_type, purpose_name, created_at, updated_at)
+INSERT INTO purposes(purpose_idx, purpose_type, purpose_name, created_at, updated_at)
 VALUES
 	(10, "OS", "TRS",           NOW(), NOW() ),
 	(20, "OS", "Commodore 64",  NOW(), NOW() ),

@@ -15,6 +15,10 @@
 
 Rails.application.routes.draw do
 
+  resources :book_types
+  resources :purposes
+  resources :media_types
+  resources :conditions
   get 'books/new'
 
 	## Use on web page when you type localhost:3000 it will bring up the 

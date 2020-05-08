@@ -1,0 +1,42 @@
+<!--                                                                   -->
+<!-- Tells Rails how to view the new book.                             -->
+<!--                                                                   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- System    : Centos 7.7                                            -->
+<!--   Name    : peekaboo                                              -->
+<!-- Location  : /home/don/workspace/books/app/view/books/             -->
+<!-- File Name : _form.html.erb                                        -->
+<!-- Rev. Date : 05/08/2020                                            -->
+<!-- Rev. No.  : 0.0.3                                                 -->
+<!-- ----------------------------------------------------------------- -->
+<!--                                                                   -->
+
+<%= form_with(model: book, local: true) do |form| %>
+  <% if book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<!--                                                                   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev.   :     Description                             -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 05/08/2020 : 0.0.1  : Original.                                   -->
+<!--            : 0.0.2  : Add input form.                             -->
+<!--            : 0.0.3  : Remove unneeded code.                       -->
+<!--            : 0.0.4  : Add table 1.                                -->
+<!-- ----------------------------------------------------------------- -->
+<!--            :        :                                             -->
+<!-- ----------------------------------------------------------------- -->

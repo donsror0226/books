@@ -13,7 +13,7 @@
 
 use books_development;
 
-INSERT INTO book_types(book_type_id, book_type_name, created_at, updated_at)
+INSERT INTO book_types(book_type_idx, book_type_name, created_at, updated_at)
 VALUES
 	(1, "Hard",     NOW(), NOW() ),
 	(2, "Soft",     NOW(), NOW() ),
