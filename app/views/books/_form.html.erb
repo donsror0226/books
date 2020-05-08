@@ -25,12 +25,28 @@
         <td width="38%">
           <!--<!%= form.text_field :condition_id, :size => 10, :maxsize => 1 %>
           **-->
-          <!-- ------------------------------------------------- -->
+          <!-- --------------------------------------------------- -->
+          <!-- #1 This methed works.                               -->
+          <!-- Note: Need to add belongs_to :condition to book.rb. -->
+          <!--       Need to add has_many :books to condition.rb   -->
+          <%= collection_select(:book,
+                                :condition_id, 
+                                 Condition.all, 
+                                :condition_idx, 
+                                :condition_name) %>
+          <!-- --------------------------------------------------- -->
+          <!-- #2 This methed works.                               -->
+          <!-- Note: Need to add belongs_to :condition to book.rb. -->
+          <!--       Need to add has_many :books to condition.rb   -->
           <%= form.collection_select :condition_id, 
                                       Condition.all, 
                                      :condition_idx, 
                                      :condition_name %>
-          <!--<!%= form.select :condition_id, 
+          <!-- --------------------------------------------------- -->
+          <!-- #3 This methed does not works.                      -->
+          <!-- Note: Need to add belongs_to :condition to book.rb. -->
+          <!--       Need to add has_many :books to condition.rb   -->
+         <!--<!%= form.select :condition_id, 
                            Condition.all.collect, 
                           :condition_idx, 
                           :condition_name %>-->
@@ -40,28 +56,6 @@
                           raw('<option value="1">Lisbon</option>
                                <option value="2">Madrid</option>
                                <option value="3">Berlin</option>')) %>-->
-          <!-- ------------------------------------------------- -->
-          <!-- Do Not Use - ok -->
-          <!-- Note - Display all 3 entry in box. -->
-          <!-- with a default of 2. -->
-          <!--<!%= options_for_select(
-              [
-                ['Lisbon', 1], 
-                ['Madrid', 2], 
-                ['Berlin', 3]
-              ], 2
-          ) %>-->
-          <!-- ------------------------------------------------- -->
-          <!-- Do Not Use - Not Working -->
-          <!--<!%= select_tag(:condition_idx, 
-                          options_for_select([['Lisbon', 1], 
-                                              ['Madrid', 2], 
-                                              ['Berlin', 3]]) %>-->
-          <!-- ------------------------------------------------- -->
-
-          <!--<!% condition_array = Condition.all.map { |cond| [cond.id,
-                                                           cond.name] } %>
-          <!%= options_for_select(condition_array) %>-->
           <!-- ------------------------------------------------- -->
         </td>
       </tr>

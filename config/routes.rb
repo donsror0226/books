@@ -26,7 +26,6 @@ Rails.application.routes.draw do
 	##   It uses the precise location of the index file.
   get 'welcome/index'
 
-  #resources :conditions
   ## Rails provides a resources method which can be used to declare a
   ##   a standard REST resource.
   ##   You can create, read, update, destroy (CRUD).
