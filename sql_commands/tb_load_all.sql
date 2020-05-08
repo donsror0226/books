@@ -6,14 +6,14 @@
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/sql_commands                #
 # File Name : tb_load_all.sql                                       #
-# Rev. Date : 04/26/2020                                            #
-# Rev. No.  : 0.0.3                                                 #
+# Rev. Date : 05/08/2020                                            #
+# Rev. No.  : 0.0.4                                                 #
 # ----------------------------------------------------------------- #
 #
 
 use books_development;
 
-INSERT INTO conditions(condition_id, condition_name, created_at, updated_at)
+INSERT INTO conditions(condition_idx, condition_name, created_at, updated_at)
 VALUES
 	(1, "Excelent", NOW(), NOW() ),
 	(2, "Good",     NOW(), NOW() ),
@@ -22,7 +22,7 @@ VALUES
 	(5, "Replace",  NOW(), NOW() );
 
 
-INSERT INTO media_types(media_type_id, media_type_name, created_at, updated_at)
+INSERT INTO media_types(media_type_idx, media_type_name, created_at, updated_at)
 VALUES
 	(1, "3.5",       NOW(), NOW() ),
 	(2, "5.25",      NOW(), NOW() ),
@@ -32,7 +32,7 @@ VALUES
 	(6, "NA",        NOW(), NOW() );
 
 
-INSERT INTO purposes(purpose_id, purpose_type, purpose_name, created_at, updated_at)
+INSERT INTO purposes(purpose_idx, purpose_type, purpose_name, created_at, updated_at)
 VALUES
 	(10, "OS", "TRS",           NOW(), NOW() ),
 	(20, "OS", "Commodore 64",  NOW(), NOW() ),
@@ -80,7 +80,7 @@ VALUES
 	(406, "Genre", "War",                NOW(), NOW() );
 
 
-INSERT INTO book_types(book_type_id, book_type_name, created_at, updated_at)
+INSERT INTO book_types(book_type_idx, book_type_name, created_at, updated_at)
 VALUES
 	(1, "Hard",     NOW(), NOW() ),
 	(2, "Soft",     NOW(), NOW() ),
@@ -99,6 +99,8 @@ VALUES
 #            :        : 	into purposes table,                      #
 # ----------------------------------------------------------------- #
 # 04/26/2020 : 0.0.3  : Add fields created_at, updated_at.          #
+# ----------------------------------------------------------------- #
+# 05/08/2020 : 0.0.4  : Add an x to end of all _id.                 #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

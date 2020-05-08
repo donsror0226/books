@@ -11,6 +11,68 @@
     </div>
   <% end %>
 
+  <table width="100%" border=1>
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Setup of 1st Row in Table #3.                                    -->
+    <!--   Name = Condition Id.                                           -->
+    <!--          Field Loaded From Table Condition.                      -->
+    <!-- ---------------------------------------------------------------- -->
+  <div id="condition_area">
+      <tr>
+        <td width="12%">
+         <%= form.label :condition_id %>
+        </td>
+        <td width="38%">
+          <!--<!%= form.text_field :condition_id, :size => 10, :maxsize => 1 %>
+          **-->
+          <!-- ------------------------------------------------- -->
+          <%= form.collection_select :condition_id, 
+                                      Condition.all, 
+                                     :condition_idx, 
+                                     :condition_name %>
+          <!--<!%= form.select :condition_id, 
+                           Condition.all.collect, 
+                          :condition_idx, 
+                          :condition_name %>-->
+          <!-- ------------------------------------------------- -->
+          <!-- ok -->
+          <!--<!%= select_tag(:condition_idx, 
+                          raw('<option value="1">Lisbon</option>
+                               <option value="2">Madrid</option>
+                               <option value="3">Berlin</option>')) %>-->
+          <!-- ------------------------------------------------- -->
+          <!-- Do Not Use - ok -->
+          <!-- Note - Display all 3 entry in box. -->
+          <!-- with a default of 2. -->
+          <!--<!%= options_for_select(
+              [
+                ['Lisbon', 1], 
+                ['Madrid', 2], 
+                ['Berlin', 3]
+              ], 2
+          ) %>-->
+          <!-- ------------------------------------------------- -->
+          <!-- Do Not Use - Not Working -->
+          <!--<!%= select_tag(:condition_idx, 
+                          options_for_select([['Lisbon', 1], 
+                                              ['Madrid', 2], 
+                                              ['Berlin', 3]]) %>-->
+          <!-- ------------------------------------------------- -->
+
+          <!--<!% condition_array = Condition.all.map { |cond| [cond.id,
+                                                           cond.name] } %>
+          <!%= options_for_select(condition_array) %>-->
+          <!-- ------------------------------------------------- -->
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="purpose_area">
+  </div>
+  <div id="book_type_area">
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

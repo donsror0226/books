@@ -5,6 +5,7 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @books = Book.all
+    #@conditions = Condition.all
   end
 
   # GET /books/1
@@ -15,6 +16,7 @@ class BooksController < ApplicationController
   # GET /books/new
   def new
     @book = Book.new
+    #@conditions = Condition.all
   end
 
   # GET /books/1/edit

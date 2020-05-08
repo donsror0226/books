@@ -6,14 +6,14 @@
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/sql_commands                #
 # File Name : tb_load_purposes.sql                                  #
-# Rev. Date : 04/26/2020                                            #
-# Rev. No.  : 0.0.3                                                 #
+# Rev. Date : 05/08/2020                                            #
+# Rev. No.  : 0.0.4                                                 #
 # ----------------------------------------------------------------- #
 #
 
 use books_development;
 
-INSERT INTO purposes(purpose_id, purpose_type, purpose_name, created_at, updated_at)
+INSERT INTO purposes(purpose_idx, purpose_type, purpose_name, created_at, updated_at)
 VALUES
 	(10, "OS", "TRS",           NOW(), NOW() ),
 	(20, "OS", "Commodore 64",  NOW(), NOW() ),
@@ -70,6 +70,8 @@ VALUES
 #            :        : 	into purposes table,                      #
 # ----------------------------------------------------------------- #
 # 04/26/2020 : 0.0.3  : Add fields created_at, updated_at.          #
+# ----------------------------------------------------------------- #
+# 05/08/2020 : 0.0.4  : Add an x to end of _id.                     #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

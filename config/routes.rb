@@ -19,13 +19,14 @@ Rails.application.routes.draw do
 
 	## Use on web page when you type localhost:3000 it will bring up the 
 	##   Yay! You're on Rails default web page application working.
-	##   No git 'xxxxx' or resources :yyyyys
+	##   No get 'xxxxx' or resources :yyyyys
 
 	## Tells the web page when you type localhost:3000/welcome/index it will
 	##   bring up the index page for your application.
 	##   It uses the precise location of the index file.
   get 'welcome/index'
 
+  #resources :conditions
   ## Rails provides a resources method which can be used to declare a
   ##   a standard REST resource.
   ##   You can create, read, update, destroy (CRUD).

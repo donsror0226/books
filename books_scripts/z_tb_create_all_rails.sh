@@ -109,6 +109,12 @@ _migrate_files()
 	rake -q db:migrate 2>/dev/null
 	Errorcode=$?
 	#echo -e "\nMigrate = Errorcode = $Errorcode \n"
+	if [ $Errorcode == 1 ]; then
+    echo "*************************"
+    echo "* error code = $Errorcode        *"
+    echo "* No data returned.     *"
+    echo "*************************"
+  fi
 }
 
 _remove_files()
@@ -203,6 +209,7 @@ case $1 in
 		# ------------------------------------------1-
 		echo -e "\tCreating all Migrating for all tables....\n"
 		#_create_books
+		echo -e "\nBooks....."
 		migrationBuildName="Books"
 		migrationFileName="book"
 
@@ -211,6 +218,7 @@ case $1 in
 
 		# ------------------------------------------2-
 		# _create_conditions.
+		echo -e "\nConditions....."
 		migrationBuildName="Conditions"
 		migrationFileName="condition"
 
@@ -219,6 +227,7 @@ case $1 in
 
 		# ------------------------------------------3-
 		# _create_media_types.
+		echo -e "\nMedia_types....."
 		migrationBuildName="Media_types"
 		migrationFileName="media_type"
 
@@ -227,6 +236,7 @@ case $1 in
 
 		# ------------------------------------------4-
 		# _create_purposes.
+		echo -e "\nPurposes....."
 		migrationBuildName="Purposes"
 		migrationFileName="purpose"
 
@@ -235,6 +245,7 @@ case $1 in
 
 		# ------------------------------------------3-
 		# _create_book_types.
+		echo -e "\nBook_types....."
 		migrationBuildName="Book_types"
 		migrationFileName="book_type"
 
@@ -243,6 +254,7 @@ case $1 in
 
 		# -------------------------------------------
 		# migrate the migrate files to create the actual tables.
+		echo -e "\nmigrating....."
 		_migrate_files
 
 		# remove all temporary.

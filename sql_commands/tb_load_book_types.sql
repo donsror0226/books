@@ -6,14 +6,14 @@
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/sql_commands                #
 # File Name : tb_load_book_types.sql                                #
-# Rev. Date : 05/03/2020                                            #
-# Rev. No.  : 0.0.1                                                 #
+# Rev. Date : 05/08/2020                                            #
+# Rev. No.  : 0.0.2                                                 #
 # ----------------------------------------------------------------- #
 #
 
 use books_development;
 
-INSERT INTO book_types(book_type_id, book_type_name, created_at, updated_at)
+INSERT INTO book_types(book_type_idx, book_type_name, created_at, updated_at)
 VALUES
 	(1, "Hard",     NOW(), NOW() ),
 	(2, "Soft",     NOW(), NOW() ),
@@ -27,6 +27,8 @@ VALUES
 # Date Rev.  : Rev. # :     Description                             #
 # ----------------------------------------------------------------- #
 # 05/03/2020 : 0.0.1  : Original. Copyed from tb_media_types.sql.   #
+# ----------------------------------------------------------------- #
+# 05/08/2020 : 0.0.2  : Add an x to end of _id.                     #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

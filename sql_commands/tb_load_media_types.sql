@@ -6,14 +6,14 @@
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/sql_commands                #
 # File Name : tb_load_media_types.sql                               #
-# Rev. Date : 04/26/2020                                            #
-# Rev. No.  : 0.0.2                                                 #
+# Rev. Date : 05/08/2020                                            #
+# Rev. No.  : 0.0.3                                                 #
 # ----------------------------------------------------------------- #
 #
 
 use books_development;
 
-INSERT INTO media_types(media_type_id, media_type_name, created_at, updated_at)
+INSERT INTO media_types(media_type_idx, media_type_name, created_at, updated_at)
 VALUES
 	(1, "3.5",       NOW(), NOW() ),
 	(2, "5.25",      NOW(), NOW() ),
@@ -29,6 +29,8 @@ VALUES
 # 04/16/2020 : 0.0.1  : Original.                                   #
 # ----------------------------------------------------------------- #
 # 04/26/2020 : 0.0.2  : Add fields created_at, updated_at.          #
+# ----------------------------------------------------------------- #
+# 05/08/2020 : 0.0.3  : Add an x to end of _id.                     #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #
