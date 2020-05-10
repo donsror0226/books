@@ -65,9 +65,9 @@ do
   echo -e "\t------   -------------"
   echo -e "\t  1 - \tbooks using mysql.\n"
   echo -e "\t  2 - \tconditions using mysql.\n"
-  echo -e "\t  3 - \tmedia_types using mysql.\n"
+  echo -e "\t  3 - \tmedia types using mysql.\n"
   echo -e "\t  4 - \tpurpose using mysql.\n"
-  echo -e "\t  5 - \tbook_types using mysql.\n\n"
+  echo -e "\t  5 - \tbook types using mysql.\n\n"
   echo -e "\t  8 - \tall 5 tables above using mysql.\n"
   echo -e "\t 99 - \tReturn to Main Menu."
   
@@ -174,7 +174,8 @@ exit
 #            :        : Change section 8 case from 8 to 1|2|3|4|6.  #
 #            : 0.0.8  : Change path to relative path.               #
 # ----------------------------------------------------------------- #
-# 05/04/2020 : 0.0.9  : Add section 5 to section 1,2,3,4,8.         #
+# 05/04/2020 : 0.0.9  : Add 5 to menu options.                      #
+#            :        : Add section 5 to section 1,2,3,4,8.         #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

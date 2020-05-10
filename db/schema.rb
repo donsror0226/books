@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200508193956) do
-
-  create_table "book_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "book_type_idx", limit: 1, null: false, unsigned: true
-    t.string "book_type_name", limit: 10, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["book_type_idx"], name: "index_book_types_on_book_type_idx", unique: true
-  end
+ActiveRecord::Schema.define(version: 20200510030205) do
 
   create_table "books", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "author", limit: 50, null: false
@@ -40,6 +32,14 @@ ActiveRecord::Schema.define(version: 20200508193956) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "booktypes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "book_type_idx", limit: 1, null: false, unsigned: true
+    t.string "book_type_name", limit: 10, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_type_idx"], name: "index_booktypes_on_book_type_idx", unique: true
+  end
+
   create_table "conditions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "condition_idx", limit: 1, null: false, unsigned: true
     t.string "condition_name", limit: 10, null: false
@@ -48,12 +48,12 @@ ActiveRecord::Schema.define(version: 20200508193956) do
     t.index ["condition_idx"], name: "index_conditions_on_condition_idx", unique: true
   end
 
-  create_table "media_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "mediatypes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "media_type_idx", limit: 1, null: false, unsigned: true
     t.string "media_type_name", limit: 15, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["media_type_idx"], name: "index_media_types_on_media_type_idx", unique: true
+    t.index ["media_type_idx"], name: "index_mediatypes_on_media_type_idx", unique: true
   end
 
   create_table "purposes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

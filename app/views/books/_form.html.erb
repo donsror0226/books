@@ -252,11 +252,11 @@
             <!-- Note: Need to add belongs_to :media_type to book.rb      -->
             <!--       Need to add has_many :books to media_type.rb       -->
             <!-- -------------------------------------------------------- -->
-            <!--<!%= collection_select(:book,
+            <%= collection_select(:book,
                                   :media_type_id, 
-                                   Media_type.all, 
+                                   Mediatype.all, 
                                   :media_type_idx, 
-                                  :media_type_name ) %>-->
+                                  :media_type_name ) %>
 
             <!-- -------------------------------------------------------- -->
             <!-- #2 This method works.                                    -->
@@ -264,7 +264,7 @@
             <!--       Need to add has_many :books to media_type.rb       -->
             <!-- -------------------------------------------------------- -->
             <!--<!%= f.collection_select :media_type_id,
-                                     Media_type.all,
+                                     Mediatype.all,
                                     :media_type_idx,
                                     :media_type_name %>-->
           </td>
@@ -323,7 +323,7 @@
             <!-- -------------------------------------------------------- -->
             <%= collection_select(:book,
                                   :book_type_id, 
-                                   Book_type.all, 
+                                   Booktype.all, 
                                   :book_type_idx, 
                                   :book_type_name ) %>
 
@@ -333,7 +333,7 @@
             <!--       Need to add has_many :books to book_type.rb       -->
             <!-- -------------------------------------------------------- -->
             <!--<!%= f.collection_select :book_type_id,
-                                     Book_type.all,
+                                     Booktype.all,
                                     :book_type_idx,
                                     :book_type_name %>-->
           </td>

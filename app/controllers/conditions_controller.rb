@@ -1,17 +1,3 @@
-#!/bin/bash
-#
-# Tells Rails where you actual home page is located and resources.
-#
-# ----------------------------------------------------------------- #
-# System    : Centos 7.7                                            #
-#   Name    : peekaboo                                              #
-# Location  : /home/don/workspace/books/app/controller/             #
-# File Name : conditions_controller.rb                              #
-# Rev. Date : 05/08/2020                                            #
-# Rev. No.  : 0.0.1                                                 #
-# ----------------------------------------------------------------- #
-#
-
 class ConditionsController < ApplicationController
   before_action :set_condition, only: [:show, :edit, :update, :destroy]
 
@@ -86,12 +72,3 @@ class ConditionsController < ApplicationController
       params.fetch(:condition, {})
     end
 end
-
-#
-# ----------------------------------------------------------------- #
-# Date Rev.  : Rev. # :     Description                             #
-# ----------------------------------------------------------------- #
-# 05/08/2020 : 0.0.1  : Original.                                   #
-# ----------------------------------------------------------------- #
-#            :        :                                             #
-# ----------------------------------------------------------------- #

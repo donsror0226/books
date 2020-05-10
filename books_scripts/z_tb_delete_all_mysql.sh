@@ -1,14 +1,14 @@
 #!/bin/bash
 #
-# This will run Mysql and delete (drop) all 4 tables.
+# This will run Mysql and delete (drop) all 5 tables.
 #
 # ----------------------------------------------------------------- #
 # System    : Centos 7.7                                            #
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/books_scripts/              #
 # File Name : z_tb_delete_all_mysql.sh                              #
-# Rev. Date : 04/20/2020                                            #
-# Rev. No.  : 0.2.1                                                 #
+# Rev. Date : 05/09/2020                                            #
+# Rev. No.  : 0.2.5                                                 #
 # ----------------------------------------------------------------- #
 #
 
@@ -119,8 +119,8 @@ case $1 in
 		;;
 
 	3 )
-		deleteMigrate="_media_types"
-		deleteTable="media_types"
+		deleteMigrate="_mediatypes"
+		deleteTable="mediatypes"
 		# passing variables $deleteMigrate & $deleteTable parital names.
 		_delete_all $deleteMigrate $deleteTable
 		;;
@@ -133,8 +133,8 @@ case $1 in
 		;;
 
 	5 )
-		deleteMigrate="_book_types"
-		deleteTable="book_types"
+		deleteMigrate="_booktypes"
+		deleteTable="bookmediatype.types"
 		# passing variables $deleteMigrate & $deleteTable parital names.
 		_delete_all $deleteMigrate $deleteTable
 		;;
@@ -179,6 +179,11 @@ esac
 #            :        : Add variables to pass to _delete_all,       #
 #            :        :   and call function _delete_all.            #
 #            : 0.2.1  : Remove unneeded code. Cleanup.              #
+# ----------------------------------------------------------------- #
+# 05/09/2020 : 0.2.2  : Change table name media_type to             #
+#            :        :   mediatype.                                 #
+#            :        : Change table name media_type to             #
+#            :        :   booktype.                                 #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

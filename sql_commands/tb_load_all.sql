@@ -22,14 +22,14 @@ VALUES
 	(5, "Replace",  NOW(), NOW() );
 
 
-INSERT INTO media_types(media_type_idx, media_type_name, created_at, updated_at)
+INSERT INTO mediatypes(media_type_idx, media_type_name, created_at, updated_at)
 VALUES
-	(1, "3.5",       NOW(), NOW() ),
-	(2, "5.25",      NOW(), NOW() ),
-	(3, "CD",        NOW(), NOW() ),
-	(4, "Cassette",  NOW(), NOW() ),
-	(5, "Cartridge", NOW(), NOW() ),
-	(6, "NA",        NOW(), NOW() );
+	(1, "N/A",       NOW(), NOW() ),
+	(2, "3.5",       NOW(), NOW() ),
+	(3, "5.25",      NOW(), NOW() ),
+	(4, "CD",        NOW(), NOW() ),
+	(5, "Cassette",  NOW(), NOW() ),
+	(6, "Cartridge", NOW(), NOW() );
 
 
 INSERT INTO purposes(purpose_idx, purpose_type, purpose_name, created_at, updated_at)
@@ -80,7 +80,7 @@ VALUES
 	(406, "Genre", "War",                NOW(), NOW() );
 
 
-INSERT INTO book_types(book_type_idx, book_type_name, created_at, updated_at)
+INSERT INTO booktypes(book_type_idx, book_type_name, created_at, updated_at)
 VALUES
 	(1, "Hard",     NOW(), NOW() ),
 	(2, "Soft",     NOW(), NOW() ),

@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# This will run Mysql and load all 3 tables.
+# This will run Mysql and load all 4 tables.
 #
 # ----------------------------------------------------------------- #
 # System    : Centos 7.7                                            #

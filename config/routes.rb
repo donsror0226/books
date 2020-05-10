@@ -15,6 +15,8 @@
 
 Rails.application.routes.draw do
 
+  resources :booktypes
+  resources :mediatypes
   resources :book_types
   resources :purposes
   resources :media_types

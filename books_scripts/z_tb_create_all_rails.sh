@@ -9,8 +9,8 @@
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/books_scripts/              #
 # File Name : z_tb_create_all_rails.sh                              #
-# Rev. Date : 04/25/2020                                            #
-# Rev. No.  : 0.1.7                                                 #
+# Rev. Date : 05/09/2020                                            #
+# Rev. No.  : 0.1.9                                                 #
 # ----------------------------------------------------------------- #
 #
 
@@ -170,11 +170,11 @@ case $1 in
 		;;
 
 	3 )
-		echo -e "\tCreating Migration for \"media_types\"....\n"
+		echo -e "\tCreating Migration for \"mediatypes\"....\n"
 		#_create_media_types
 		#migrationBuildName="Media_types"
-		migrationBuildName="Media_type"
-		migrationFileName="media_type"
+		migrationBuildName="Mediatype"
+		migrationFileName="mediatype"
 
 		_create_migration $migrationBuildName
 		_insert_into_migration $migrationFileName
@@ -196,11 +196,11 @@ case $1 in
 		;;
 
 	5 )
-		echo -e "\tCreating Migration for \"book_types\"....\n"
+		echo -e "\tCreating Migration for \"booktypes\"....\n"
 		#_create_media_types
 		#migrationBuildName="Book_types"
-		migrationBuildName="Book_type"
-		migrationFileName="book_type"
+		migrationBuildName="Booktype"
+		migrationFileName="booktype"
 
 		_create_migration $migrationBuildName
 		_insert_into_migration $migrationFileName
@@ -231,8 +231,8 @@ case $1 in
 		# ------------------------------------------3-
 		# _create_media_types.
 		#migrationBuildName="Media_types"
-		migrationBuildName="Media_type"
-		migrationFileName="media_type"
+		migrationBuildName="Mediatype"
+		migrationFileName="mediatype"
 
 		_create_migration $migrationBuildName
 		_insert_into_migration $migrationFileName
@@ -249,8 +249,8 @@ case $1 in
 		# ------------------------------------------3-
 		# _create_book_types.
 		#migrationBuildName="Book_types"
-		migrationBuildName="Book_type"
-		migrationFileName="book_type"
+		migrationBuildName="Booktype"
+		migrationFileName="booktype"
 
 		_create_migration $migrationBuildName
 		_insert_into_migration $migrationFileName
@@ -308,6 +308,11 @@ exit
 #            :        :   "s" on the end of name.                   #
 #            :        : Change rails generate migration _create_$1  #
 #            :        :   to rails generate scaffold $1             #
+# ----------------------------------------------------------------- #
+# 05/09/2020 : 0.1.9  : Change table name media_type to             #
+#            :        :   mediatype.                                #
+#            :        : Change table name media_type to             #
+#            :        :   booktype.                                 #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

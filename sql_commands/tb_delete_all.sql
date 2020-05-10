@@ -17,11 +17,11 @@ drop table IF EXISTS books;
 
 drop table IF EXISTS conditions;
 
-drop table IF EXISTS media_types;
+drop table IF EXISTS mediatypes;
 
 drop table IF EXISTS purposes;
 
-drop table IF EXISTS book_types;
+drop table IF EXISTS booktypes;
 
 #show tables;
 

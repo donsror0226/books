@@ -85,9 +85,9 @@ do
   echo -e "\t------   -------------"
   echo -e "\t  1 - \tbooks using mysql.\n"
   echo -e "\t  2 - \tconditions using mysql.\n"
-  echo -e "\t  3 - \tmedia_types using mysql.\n"
+  echo -e "\t  3 - \tmedia types using mysql.\n"
   echo -e "\t  4 - \tpurposes using mysql.\n"
-  echo -e "\t  5 - \tbook_types using mysql.\n\n"
+  echo -e "\t  5 - \tbook types using mysql.\n\n"
   echo -e "\t  8 - \tall 5 tables above using mysql\n"
 	echo -e "\t 99 - \tReturn to Main Menu."
 
@@ -137,7 +137,7 @@ do
       # Change text to  bold.       #
       echo -en "$(tput setaf 1)"
       echo -e "$(tput bold)"
-      echo -en "\n     Please enter a value ( 1 - 4, 8, 99 )\n\n"
+      echo -en "\n     Please enter a value ( 1 - 5, 8, 99 )\n\n"
       InputValue=999
       #echo -e "$(tput setab 4)$(tput el)"
 			#echo -en "         Press Enter to continue"
@@ -176,7 +176,8 @@ done
 #            :        : Change section 8 case from 8 to 1|2|3|4|6.  #
 #            : 0.0.7  : Change path to relative path.               #
 # ----------------------------------------------------------------- #
-# 05/04/2020 : 0.0.8  : Add section to 5 to section 1,2,3,4,8.      #
+# 05/04/2020 : 0.0.8  : Add 5 to menu option.                       #
+#            :        : Add section to 5 to section 1,2,3,4,8.      #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #
