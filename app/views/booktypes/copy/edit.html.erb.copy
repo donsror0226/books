@@ -1,0 +1,6 @@
+<h1>Editing Booktype</h1>
+
+<%= render 'form', booktype: @booktype %>
+
+<%= link_to 'Show', @booktype %> |
+<%= link_to 'Back', booktypes_path %>

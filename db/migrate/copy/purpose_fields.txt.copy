@@ -1,0 +1,4 @@
+      t.integer :purpose_idx, limit: 3, :unsigned => true, unique: true, :null => false
+      t.index :purpose_idx, :unique => true
+      t.string :purpose_type, limit: 15, :null => false
+      t.string :purpose_name, limit: 20, :null => false

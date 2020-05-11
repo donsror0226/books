@@ -1,0 +1,4 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit', edit_booktype_path(@booktype) %> |
+<%= link_to 'Back', booktypes_path %>

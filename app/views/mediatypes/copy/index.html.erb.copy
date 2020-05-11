@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mediatypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mediatypes.each do |mediatype| %>
+      <tr>
+        <td><%= link_to 'Show', mediatype %></td>
+        <td><%= link_to 'Edit', edit_mediatype_path(mediatype) %></td>
+        <td><%= link_to 'Destroy', mediatype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mediatype', new_mediatype_path %>
