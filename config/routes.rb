@@ -7,14 +7,18 @@
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/config/                     #
 # File Name : routes.rb                                             #
-# Rev. Date : 05/05/2020                                            #
-# Rev. No.  : 0.0.3                                                 #
+# Rev. Date : 05/13/2020                                            #
+# Rev. No.  : 0.0.4                                                 #
 # ----------------------------------------------------------------- #
 #
 
 
 Rails.application.routes.draw do
 
+  ## Rails provides a resources method which can be used to declare a
+  ##   a standard REST resource.
+  ##   You can create, read, update, destroy (CRUD).
+  resources :books
   resources :conditions
   resources :mediatypes
   resources :purposes
@@ -26,20 +30,15 @@ Rails.application.routes.draw do
 	##   Yay! You're on Rails default web page application working.
 	##   No git 'xxxxx' or resources :yyyyys
 
-	## Tells the web page when you type localhost:3000/welcome/index it will
-	##   bring up the index page for your application.
-	##   It uses the precise location of the index file.
-  get 'welcome/index'
+	# ## Tells the web page when you type localhost:3000/welcome/index it will
+	# ##   bring up the index page for your application.
+	# ##   It uses the precise location of the index file.
+  # get 'welcome/index'
 
-  ## Rails provides a resources method which can be used to declare a
-  ##   a standard REST resource.
-  ##   You can create, read, update, destroy (CRUD).
-  resources :books
-
-  ## Tells the web page when you type localhost:3000/ it will  
-  ##   bring up the index page for your application.
-  ##   It uses the root of the application.
-  root 'welcome#index'
+  # ## Tells the web page when you type localhost:3000/ it will  
+  # ##   bring up the index page for your application.
+  # ##   It uses the root of the application.
+  # root 'welcome#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
@@ -51,6 +50,11 @@ end
 # 05/05/2020 : 0.0.1  : Original.                                   #
 #            : 0.0.2  : Add root 'welcome#index'                    #
 #            : 0.0.3  : Add resources :books                        #
+# ----------------------------------------------------------------- #
+# 05/13/2020 : 0.0.4  : Add resources :condition, :mediatypes,      #
+#            :        :               :purposes,  :booktypes.       #
+#            :        : Comment out get welcome/index,              #
+#            :        :             root welcome#index.             #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

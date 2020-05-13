@@ -81,7 +81,7 @@ do
     1|2|3|4|5|8 )
       # call script "tb_create_all_rails.sh"
       # and passing the variable $InputValue
-      echo -e "\n ***** Create all tables ***** \n"
+      echo -e "\n ***** Creating tables ***** \n"
       ## Used for Rails.
       ./books_scripts/z_tb_create_all_rails.sh $InputValue
       #returnStatus=$?

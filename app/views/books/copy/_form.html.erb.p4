@@ -1,14 +1,3 @@
-<!--                                                                   -->
-<!-- ----------------------------------------------------------------- --> 
-<!-- System    : Centos 7.7                                            --> 
-<!--   Name    : peekaboo                                              --> 
-<!-- Location  : /home/don/workspace/books/app/views/books/            -->
-<!-- File Name : _form.html.erb                                        --> 
-<!-- Rev. Date : 05/13/2020                                            --> 
-<!-- Rev. No.  : 0.0.3                                                 --> 
-<!-- ----------------------------------------------------------------- --> 
-<!--                                                                   -->
-
 <%= form_with(model: book, local: true) do |f| %>
   <% if book.errors.any? %>
     <div id="error_explanation">
@@ -285,11 +274,11 @@
             <!-- Note: Need to add belongs_to :purpose to book.rb         -->
             <!--       Need to add has_many :books to purpose.rb          -->
             <!-- -------------------------------------------------------- -->
-            <%= collection_select(:book,
+            <!--<!%= collection_select(:book,
                                   :purpose_id, 
                                    Purpose.all, 
                                   :purpose_idx, 
-                                  :purpose_name ) %>
+                                  :purpose_name ) %>-->
 
             <!-- -------------------------------------------------------- -->
             <!-- #2 This method works.                                    -->
@@ -317,11 +306,11 @@
             <!-- Note: Need to add belongs_to :book_type to book.rb       -->
             <!--       Need to add has_many :books to book_type.rb        -->
             <!-- -------------------------------------------------------- -->
-            <%= collection_select(:book,
+            <!--<!%= collection_select(:book,
                                   :book_type_id, 
                                    Booktype.all, 
                                   :book_type_idx, 
-                                  :book_type_name ) %>
+                                  :book_type_name ) %>-->
 
             <!-- -------------------------------------------------------- -->
             <!-- #2 This method works.                                    -->
@@ -340,23 +329,8 @@
                <!-- select_date() -->
     </table>
 
+  <!--</div>-->
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
-
-<!--                                                                   -->
-<!-- ----------------------------------------------------------------- -->
-<!-- Date Rev.  : Rev. # :     Description                             -->
-<!-- ----------------------------------------------------------------- -->
-<!-- 05/05/2020 : 0.0.1  : Original.                                   -->
-<!-- ----------------------------------------------------------------- -->
-<!-- 05/06/2020 : 0.0.2  : Rewrote multipliable times.                 -->
-<!-- ----------------------------------------------------------------- -->
-<!-- 05/13/2020 : 0.0.3  : Change all |form| to |f|.                   -->
-<!--            :        : Add Table #1 only.                          -->
-<!--            :        : Add Table #2.                               -->
-<!--            :        : Add Table #3.                               -->
-<!-- ----------------------------------------------------------------- -->
-<!--            :        :                                             -->
-<!-- ----------------------------------------------------------------- -->

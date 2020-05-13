@@ -55,8 +55,7 @@ _create_migration()
 	#echo "2create_migration - "
 	echo -e "\n${1}....."
 	#rails generate migration Create_$1 --force
-	rails generate scaffold $1 --force
-	#1>/dev/null
+	rails generate scaffold $1 --force 1>/dev/null
 	Errorcode=$?
 	#echo -e "\npurpose - Errorcode = $Errorcode \n"
 	#echo "------------------------------------------------"
@@ -82,7 +81,7 @@ _insert_into_migration()
 	##
 	# migratePath="./db/migrate"
 	cd ./db/migrate
-	originalFile=$(ls *_${1}*.*)
+	originalFile=$(ls *_${1}s.*)
 	cp $originalFile tempFileIn
 
 	#sed -e '/'${2}'/r '${migratePath}'/'${2}'_fields.txt' ${migratePath}/tempFileIn > ${migratePath}/newFile.txt
@@ -112,7 +111,7 @@ _migrate_files()
 	echo -e "\t-------------------------------------------\n"
 	rake -q db:migrate 2>/dev/null
 	Errorcode=$?
-	#echo -e "\nMigrate = Errorcode = $Errorcode \n"
+	echo -e "\nMigrate = Errorcode = $Errorcode \n"
 }
 
 _remove_files()
@@ -232,7 +231,7 @@ case $1 in
 		# _create_media_types.
 		#migrationBuildName="Media_types"
 		migrationBuildName="Mediatype"
-		migrationFileName="mediatype"
+		migrationFileName="mediatypes"
 
 		_create_migration $migrationBuildName
 		_insert_into_migration $migrationFileName

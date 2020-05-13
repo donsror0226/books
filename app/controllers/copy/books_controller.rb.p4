@@ -1,15 +1,3 @@
-#!/bin/bash
-#
-# ----------------------------------------------------------------- #
-# System    : Centos 7.7                                            #
-#   Name    : peekaboo                                              #
-# Location  : /home/don/workspace/books/app/controllers/            #
-# File Name : books_controller.rb                                   #
-# Rev. Date : 05/13/2020                                            #
-# Rev. No.  : 0.0.3                                                 #
-# ----------------------------------------------------------------- #
-#
-
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
@@ -83,23 +71,11 @@ class BooksController < ApplicationController
     def book_params
       ##params.fetch(:book, {})
       params.require(:book).permit(:author, :title, :series_name, :series_no,
-                     :isbn_tab_no, :publisher, :published_date, 
-                     :location, :price, :purchase_date, :entry_date, 
-                     :condition_id, :media_type_id, :purpose_id, :book_type_id,
-                     :created_at, :updated_at)
+                     :isbn_tab_no, :publisher, :published_date, :location, 
+                     :price, :purchase_date, :entry_date, :condition_id, 
+                     :media_type_id, :created_at, :updated_at)
+      #               :purpose_id, :book_type_id, 
+
       ## example -> params.require(:user).permit(:username, :email, :password, :salt, :encrypted_password)
     end
 end
-
-#
-# ----------------------------------------------------------------- #
-# Date Rev.  : Rev. # :     Description                             #
-# ----------------------------------------------------------------- #
-# 05/05/2020 : 0.0.1  : Original.                                   #
-# ----------------------------------------------------------------- #
-# 05/06/2020 : 0.0.2  : Replaced params.fetch with params.require.  #
-# ----------------------------------------------------------------- #
-# 05/13/2020 : 0.0.3  : Rewrote multipliable times.                 #
-# ----------------------------------------------------------------- #
-#            :        :                                             #
-# ----------------------------------------------------------------- #

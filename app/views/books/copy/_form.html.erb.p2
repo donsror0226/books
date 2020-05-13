@@ -1,0 +1,185 @@
+<%= form_with(model: book, local: true) do |f| %>
+  <% if book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Table #1 - Book Info.                                            -->
+    <!-- ---------------------------------------------------------------- -->
+    <!--            Author / Title / Series Name / series No.             -->
+    <!--            ISBN / Publisher / Published Date                     -->
+    <!-- ---------------------------------------------------------------- -->
+
+    <table width="100%" border=1>
+      <!-- -------------------------------------------------------------- -->
+      <!-- Setup of 1st Row in Table #1.                                  -->
+      <!--   Name = Author, Size = 50, Maxsize = 50.                      -->
+      <!-- -------------------------------------------------------------- -->
+      <tr>
+        <td width="12%">
+          <%= f.label :author %>
+        </td>
+        <td width="88%" colspan=3>
+          <%= f.text_field :author, :size => 50, :maxsize => 50 %>
+        </td>
+      </tr>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- Setup of 2nd Row in Table #1.                                  -->
+      <!--   Name = Title,, Size = 25, Maxsize = 25.                      -->
+      <!-- -------------------------------------------------------------- -->
+      <tr>
+        <td width="12%">
+          <%= f.label :title %>
+        </td>
+        <td width="38%">
+          <%= f.text_field :title, :size => 25, :maxsize => 25 %>
+        </td>
+        <td width=12%>
+          *
+        </td>
+        <td width=38%>
+          *
+        </td>
+      </tr>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- Setup of 3rd Row in Table #1.                                  -->
+      <!--   Name = Series name, Size = 25, Maxsize = 25.                 -->
+      <!--   Name = Series No. , Size =  3, Maxsize =  3.                 -->
+      <!-- -------------------------------------------------------------- -->
+      <tr>
+        <td width="12%">
+          <%= f.label :series_name %>
+        </td>
+        <td width="38%">
+          <%= f.text_field :series_name, :size => 25, :maxsize => 25 %>
+        </td>
+        <td width=12%>
+        <%= f.label :series_no %>
+        </td>
+        <td width=38%>
+          <%= f.text_field :series_no, :size => 3, :maxsize => 3 %>
+        </td>
+      </tr>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- Setup of 4th Row in Table #1.                                  -->
+      <!--   Name = ISBN Tab No, Size = 20, Maxsize = 20.                 -->
+      <!--   Name = Publisher  , Size = 20, Maxsize = 20.                 -->
+      <!-- -------------------------------------------------------------- -->
+      <tr>
+        <td width="12%">
+          <%= f.label :isbn_tab_no %>
+        </td>
+        <td width="38%">
+          <%= f.text_field :isbn_tab_no, :size => 20, :maxsize => 20 %>
+        </td>
+        <td width=12%>
+          <%= f.label :publisher %>
+        </td>
+        <td width=38%>
+          <%= f.text_field :publisher, :size => 20, :maxsize => 20 %>
+        </td>
+      </tr>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- Setup of 5th Row in Table #1.                                  -->
+      <!--   Name = Published Date.                                       -->
+      <!--          Has 3 fields Year, Month, Day.                        -->
+      <!--          Year has a start year of 1900.                        -->
+      <!-- -------------------------------------------------------------- -->
+      <tr>
+        <td width="12%">
+          <%= f.label :published_date %>
+        </td>
+        <td width="38%">
+          <!--<%= f.date_select :published_date %>-->
+          <%= date_select :book, :published_date, :start_year => 1900 %>
+        </td>
+        <td width=12%>
+          *
+        </td>
+        <td width=38%>
+          *
+        </td>
+      </tr>
+    </table>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Draws a horizontal line, Size = 4.                               -->
+    <!-- ---------------------------------------------------------------- -->
+    <hr size="4" "noshade">
+    </hr>
+  <!--</div>-->
+
+  <!--<div id="lay_out_table_#2">-->
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Table #2 - Purchased Info.                                       -->
+    <!-- ---------------------------------------------------------------- -->
+    <!--            Location / Price / Purchased / Entry Date.            -->
+    <!-- ---------------------------------------------------------------- -->
+
+    <table width="100%" border=1>
+      <!-- -------------------------------------------------------------- -->
+      <!-- Setup of 1st Row in Table #2.                                  -->
+      <!--   Name = Location, Size = 20, Maxsize = 20.                    -->
+      <!--   Name = Price,    Size =  7, Maxsize =  7.                    -->
+      <!-- -------------------------------------------------------------- -->
+      <tr>
+        <td width="12%">
+          <%= f.label :location %>
+        </td>
+        <td width="38%">
+          <%= f.text_field :location, :size => 20, :maxsize => 20 %>
+        </td>
+        <td width="12%">
+          <%= f.label :price %>
+        </td>
+        <td width="38%">
+          <%= f.text_field :price, :size => 7, :maxsize => 7 %>
+        </td>
+      </tr>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- Setup of 2nd Row in Table #2.                                  -->
+      <!--   Name = Purchase Date.                                        -->
+      <!--          Has 3 fields Year, Month, Day.                        -->
+      <!--          Year has a start year of 1900.                        -->
+      <!-- -------------------------------------------------------------- -->
+      <tr>
+        <td width="12%">
+          <%= f.label :purchase_date %>
+        </td>
+        <td width="38%">
+          <!--<%= f.date_select :purchase_date %>-->
+          <%= date_select :book, :purchase_date, :start_year => 1900 %>
+        </td>
+        <td width="12%">
+          <%= f.label :entry_date %>
+        </td>
+        <td width="38%">
+          <%= f.date_select :entry_date %>
+        </td>
+      </tr>
+    </table>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Draws a horizontal line, Size = 4.                               -->
+    <!-- ---------------------------------------------------------------- -->
+    <hr size="4" "noshade">
+    </hr>
+  <!--</div>-->
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
