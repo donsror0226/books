@@ -22,6 +22,12 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
+    @book = Book.find(params[:id])
+  #  @mediatype = Mediatype.all
+
+  #  respond_to do |format|
+  #    format.html   # show.html.erb
+  #  end
   end
 
   # GET /books/new
