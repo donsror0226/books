@@ -1,7 +1,275 @@
+<!--                                                                   -->
+<!-- ----------------------------------------------------------------- --> 
+<!-- System    : Centos 7.7                                            --> 
+<!--   Name    : peekaboo                                              --> 
+<!-- Location  : /home/don/workspace/books/app/views/books/            --> 
+<!-- File Name : show.html.erb                                         --> 
+<!-- Rev. Date : 05/15/2020                                            --> 
+<!-- Rev. No.  : 0.0.2                                                 --> 
+<!-- ----------------------------------------------------------------- --> 
+<!--                                                                   -->
+
 <h1>
-	Show
+	Show Book
 </h1>
 <p id="notice"><%= notice %></p>
 
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Table #1 - Book Info.                                            -->
+    <!-- ---------------------------------------------------------------- -->
+    <!--        Author       / Title      / Series Name    / Series No.   -->
+    <!--        ISBN Tab No. / Publisher  / Published Date / Location     -->
+    <!--        Price        / Entry Date /                               -->
+    <!--        Condition Id  - Condition Name  /                         -->
+    <!--        Media Type Id - Media Type Name /                         -->
+    <!--        Purpose Id    - Purpose Name    /                         -->
+    <!--        Book Type Id  - Book Type Name.                           -->
+    <!-- ---------------------------------------------------------------- -->
+
+    <table width="65%" border=1>
+    	<tr>
+        <td width="15%" bgcolor="lightgreen">
+        	<strong>
+          	Author:
+          </strong>
+        </td>
+        <td width="50%" colspan=2 bgcolor="pink">
+          <%=h @book.author %>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="15%" bgcolor="lightgreen">
+        	<strong>
+          	Title
+          </strong>
+        </td>
+        <td width="50%" colspan=2 bgcolor="pink">
+          <%=h @book.title %>
+        </td>
+      </tr>
+
+       <tr>
+        <td width="15%" bgcolor="lightgreen">
+        	<strong>
+          	Series Name:
+          </strong>
+        </td>
+        <td width="50%" colspan=2 bgcolor="pink">
+          <%=h @book.series_name %>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="15%" bgcolor="lightgreen">
+        	<strong>
+          	Series No:
+          </strong>
+        </td>
+        <td width="50%" colspan=2 bgcolor="pink">
+          <%=h @book.series_no %>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="15%" bgcolor="lightgreen">
+        	<strong>
+          	Isbn Tab No:
+          </strong>
+        </td>
+        <td width="50%" colspan=2 bgcolor="pink">
+          <%=h @book.isbn_tab_no %>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="15%" bgcolor="lightgreen">
+        	<strong>
+          	Publisher:
+          </strong>
+        </td>
+        <td width="50%" colspan=2 bgcolor="pink">
+          <%=h @book.publisher %>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="15%" bgcolor="lightgreen">
+        	<strong>
+          	Published Date:
+          </strong>
+        </td>
+        <td width="50%" colspan=2 bgcolor="pink">
+          <%=h @book.published_date %>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="15%" bgcolor="lightgreen">
+        	<strong>
+          	Location:
+          </strong>
+        </td>
+        <td width="50%" colspan=2 bgcolor="pink">
+          <%=h @book.location %>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="15%" bgcolor="lightgreen">
+        	<strong>
+          	Price:
+          </strong>
+        </td>
+        <td width="50%" colspan=2 bgcolor="pink">
+          <%=h @book.price %>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="15%" bgcolor="lightgreen">
+        	<strong>
+          	Purchase Date:
+          </strong>
+        </td>
+        <td width="50%" colspan=2 bgcolor="pink">
+          <%=h @book.purchase_date %>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="15%" bgcolor="lightgreen">
+        	<strong>
+          	Entry Date:
+          </strong>
+        </td>
+        <td width="50%" colspan=2 bgcolor="pink">
+          <%=h @book.entry_date %>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="15%" bgcolor="lightgreen">
+        	<strong>
+          	Condition:
+          </strong>
+        </td>
+        <!--<td width="50%" bgcolor="pink">-->
+        <td width="5%" bgcolor="pink">
+         <%=h @book.condition_id %>
+        </td>
+          <!--&nbsp - &nbsp-->
+        <td width="45%" bgcolor="pink">
+        	<!-- Method #1 - old way rails 1.9.x -->
+          <!--<!%= condition_names = Condition.find(:all,
+          	                    :conditions => ["condition_idx = ?", 
+          	                    @book.condition_id]) %>-->
+          <!--<!%=h condition_name3 = condition_names.at(0).condition_name %>-->
+
+          <!-- Method #2 - new way rails 5.x -->
+ 					<!--returns the first country object with specified argument-->
+					<!--Country.find_by(name: 'US')-->
+					<% record = Condition.find_by(condition_idx: 
+																			 @book.condition_id) %>
+					<%=h record.condition_name %>
+      </td>
+      </tr>
+
+      <tr>
+        <td width="15%" bgcolor="lightgreen">
+        	<strong>
+          	Media Type:
+          </strong>
+        </td>
+        <td width="5%" bgcolor="pink">
+         <%=h @book.media_type_id %>
+        </td>
+          <!--&nbsp - &nbsp-->
+        <td width="45%" bgcolor="pink">
+       		<!-- Method #1 - old way rails 1.9.x -->
+          <!--<!% media_type_names = MediaType.find(:all,
+          	                    :mediatypes => 
+          	                    ["media_type_idx = ?", @book.media_type_id]) %>-->
+          <!--<!%=h media_type_name3 = media_type_names.at(0).media_type_name %>-->
+
+          <!-- Method #2 - new way rails 5.x -->
+ 					<!--returns the first country object with specified argument-->
+					<!--Country.find_by(name: 'US')-->
+					<% record = Mediatype.find_by(media_type_idx: 
+																			 @book.media_type_id) %>
+					<%=h record.media_type_name %>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="15%" bgcolor="lightgreen">
+        	<strong>
+          	Purpose:
+          </strong>
+        </td>
+        <td width="5%" bgcolor="pink">
+         <%=h @book.purpose_id %>
+       	</td>
+          <!--&nbsp - &nbsp-->
+        <td width="45%" bgcolor="pink">
+       		<!-- Method #1 - old way rails 1.9.x -->
+          <!--<!% purpose_names = Purpose.find(:all,
+          	                    :purposes => 
+          	                    ["purpose_idx = ?", @book.purpose_id]) %>-->
+          <!--<!%=h purpose_name3 = purpose_names.at(0).purpose_name %>-->
+
+          <!-- Method #2 - new way rails 5.x -->
+ 					<!--returns the first country object with specified argument-->
+					<!--Country.find_by(name: 'US')-->
+					<% record = Purpose.find_by(purpose_idx: 
+																			 @book.purpose_id) %>
+					<%=h record.purpose_name %>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="15%" bgcolor="lightgreen">
+        	<strong>
+          	Book Type:
+          </strong>
+        </td>
+        <td width="5%" bgcolor="pink">
+         <%=h @book.book_type_id %>
+        </td>
+          <!--&nbsp - &nbsp-->
+        <td width="45%" bgcolor="pink">
+       		<!-- Method #1 - old way rails 1.9.x -->
+          <!--<!% book_type_names = Book_type.find(:all,
+          	                    :booktypes => 
+          	                    ["book_types_idx = ?", @book.book_type_id]) %>-->
+          <!--<!%=h book_type_name3 = book_type_names.at(0).book_type_name %>-->
+
+          <!-- Method #2 - new way rails 5.x -->
+ 					<!--returns the first country object with specified argument-->
+					<!--Country.find_by(name: 'US')-->
+					<% record = Booktype.find_by(book_type_idx: 
+																			 @book.book_type_id) %>
+					<%=h record.book_type_name %>
+        </td>
+      </tr>
+
+   </table>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Draws a horizontal line, Size = 4.                               -->
+    <!-- ---------------------------------------------------------------- -->
+    <hr size="4" "noshade">
+    </hr>
+  <!--</div>-->
+
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
+
+<!--                                                                   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev. # :     Description                             -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 05/14/2020 : 0.0.1  : Original.                                   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 05/15/2020 : 0.0.2  : Fixed lookup tables.                        -->
+<!-- ----------------------------------------------------------------- -->
