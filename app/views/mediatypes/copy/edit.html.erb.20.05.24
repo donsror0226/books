@@ -1,0 +1,6 @@
+<h1>Editing Mediatype</h1>
+
+<%= render 'form', mediatype: @mediatype %>
+
+<%= link_to 'Show', @mediatype %> |
+<%= link_to 'Back', mediatypes_path %>

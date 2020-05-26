@@ -1,0 +1,425 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"_",
+				"_press_enter"
+			],
+			[
+				"purpose",
+				"purposes"
+			],
+			[
+				"Iput",
+				"InputValue"
+			],
+			[
+				"don",
+				"dondb"
+			],
+			[
+				"me",
+				"media"
+			],
+			[
+				"in",
+				"InputValue"
+			],
+			[
+				"Input",
+				"InputValue"
+			],
+			[
+				"books_",
+				"books_development"
+			],
+			[
+				"DB",
+				"DBNAME"
+			],
+			[
+				"press",
+				"_press_enter"
+			],
+			[
+				"start",
+				"start_menu"
+			],
+			[
+				"In",
+				"InputValue"
+			],
+			[
+				"link",
+				"link_to"
+			],
+			[
+				"ass",
+				"assets"
+			],
+			[
+				"head",
+				"header\tTag"
+			],
+			[
+				"bi",
+				"birthday"
+			],
+			[
+				"birth",
+				"birthdate"
+			],
+			[
+				"birt",
+				"birthdate"
+			],
+			[
+				"co",
+				"column"
+			],
+			[
+				"article_",
+				"article_path"
+			],
+			[
+				"com",
+				"comments"
+			],
+			[
+				"st",
+				"strong\tTag"
+			],
+			[
+				"la",
+				"label"
+			],
+			[
+				"arti",
+				"article"
+			],
+			[
+				"par",
+				"params"
+			],
+			[
+				"articl",
+				"articles_path"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 150.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/don/workspace/books",
+		"/home/don/workspace/books/app",
+		"/home/don/workspace/books/app/controllers",
+		"/home/don/workspace/books/app/views",
+		"/home/don/workspace/books/app/views/welcome",
+		"/home/don/workspace/books/config"
+	],
+	"file_history":
+	[
+		"/home/don/workspace/blog/config/database.yml",
+		"/home/don/workspace/database.yml",
+		"/home/don/workspace/books/app/controllers/welcome_controller.rb",
+		"/home/don/workspace/books/config/routes.rb",
+		"/home/don/workspace/books/config/database.yml",
+		"/home/don/workspace/books/config/environment.rb",
+		"/home/don/workspace/books/config/puma.rb",
+		"/home/don/workspace/books/config/secrets.yml",
+		"/home/don/workspace/books/config/spring.rb",
+		"/home/don/workspace/books/app/views/welcome/index.html.erb",
+		"/home/don/bin/zz",
+		"/home/don/workspace/books/test.sh",
+		"/home/don/workspace/books/fileIn",
+		"/home/don/workspace/books/books_scripts/z_menu.sh",
+		"/home/don/workspace/books/books_scripts/z_db_show_mysql.sh",
+		"/home/don/workspace/books/books_scripts/z_db_grant_mysql.sh",
+		"/home/don/workspace/books/books_scripts/z_db_delete_mysql.sh",
+		"/home/don/workspace/books/books_scripts/z_db_create_rake.sh",
+		"/home/don/workspace/books/books_scripts/z_db_create_rails.sh",
+		"/home/don/workspace/books/sql_commands/tb_load_all.sql",
+		"/home/don/workspace/books/books_scripts/z_menu_tb_load.sh",
+		"/home/don/workspace/books/sql_commands/tb_load_conditions.sql",
+		"/home/don/workspace/books/books_scripts/z_menu_tb_create.sh",
+		"/home/don/workspace/books/books_scripts/z_tb_create_all_rails.sh",
+		"/home/don/workspace/books/books_scripts/z_menu_tb_delete.sh",
+		"/home/don/workspace/books/books_scripts/z_tb_delete_all_mysql.sh",
+		"/home/don/workspace/books/db/migrate/condition_fields.txt",
+		"/home/don/workspace/books/db/migrate/media_type_fields.txt",
+		"/home/don/workspace/books/db/migrate/purpose_fields.txt",
+		"/home/don/workspace/books/sql_commands/tb_load_media_types.sql",
+		"/home/don/workspace/books/books_scripts/z_tb_load_all_mysql.sh",
+		"/home/don/workspace/books/sql_commands/tb_load_purposes.sql",
+		"/home/don/workspace/books/sql_commands/tb_delete_purposes.sql",
+		"/home/don/workspace/books/books_scripts/z_tb_add_tests.rb",
+		"/home/don/workspace/books/books_scripts/z_tb_add_test_rails.sh",
+		"/home/don/workspace/books/db/migrate/20200427072623_create_conditions.rb",
+		"/home/don/workspace/books/db/migrate/condition_fields.copy.txt",
+		"/home/don/workspace/books/sql_commands/tb_count_conditions.sql",
+		"/home/don/workspace/books/sql_commands/tb_count_purposes.sql",
+		"/home/don/workspace/books/sql_commands/tb_count_conditions_rows.sql",
+		"/home/don/workspace/books/sql_commands/tb_count_purposes_rows.sql",
+		"/home/don/workspace/books/sql_commands/tb_count_media_types_rows.sql",
+		"/home/don/workspace/books/db/migrate/book_fields.txt",
+		"/home/don/workspace/books/db/migrate/20200427042505_create_conditions.rb",
+		"/home/don/workspace/books/db/migrate/20200427043512_create_conditions.rb",
+		"/home/don/workspace/books/db/migrate/20200427004256_create_media_types.rb",
+		"/home/don/workspace/books/db/migrate/20200427004257_create_purposes.rb",
+		"/home/don/workspace/books/db/migrate/20200427004254_create_books.rb",
+		"/home/don/workspace/books/db/migrate/20200427042207_create_conditions.rb",
+		"/home/don/workspace/books/sql_commands/tb_delete_conditions.sql",
+		"/home/don/workspace/books/db/migrate/20200427003926_create_conditions.rb",
+		"/home/don/workspace/books/db/migrate/20200426235056_create_books.rb",
+		"/home/don/workspace/books/db/migrate/20200426235057_create_conditions.rb",
+		"/home/don/workspace/books/db/migrate/20200426235059_create_purposes.rb",
+		"/home/don/workspace/books/db/migrate/20200426235058_create_media_types.rb",
+		"/home/don/workspace/books/db/migrate/20200426232330_create_books.rb",
+		"/home/don/workspace/books/db/migrate/20200426231433_create_books.rb",
+		"/home/don/workspace/books/db/migrate/20200426230620_create_books.rb",
+		"/home/don/workspace/books/db/migrate/book_fields.copy.txt",
+		"/home/don/workspace/books/db/migrate/20200426223739_create_books.rb",
+		"/home/don/workspace/books/db/migrate/20200426211315_create_books.rb",
+		"/home/don/workspace/books/db/migrate/20200426205644_create_books.rb",
+		"/home/don/workspace/books/sql_commands/tb_delete_books.sql",
+		"/home/don/workspace/books/db/migrate/20200426204207_create_books.rb",
+		"/home/don/workspace/books/db/migrate/20200426203635_create_books.rb",
+		"/home/don/workspace/books/db/migrate/20200426200426_create_book.rb",
+		"/home/don/workspace/books/db/migrate/20200426195903_book.rb",
+		"/home/don/workspace/books/db/migrate/20200426195600_book.rb",
+		"/home/don/workspace/books/books_scripts/z_test.sh",
+		"/home/don/workspace/books/db/migrate/20200426194900_create_book.rb",
+		"/home/don/workspace/books/db/migrate/20200426194342_create_book.rb",
+		"/home/don/workspace/books/db/migrate/20200426193927_create_book.rb",
+		"/home/don/workspace/books/db/migrate/20200426193356_book.rb",
+		"/home/don/workspace/books/db/migrate/old/20200421023202_create_book.01.rb",
+		"/home/don/workspace/books/db/migrate/20200426173516_create_book.rb",
+		"/home/don/workspace/books/db/migrate/20200426180352_create_book.rb",
+		"/home/don/workspace/books/db/migrate/20200426165742_createtable1.rb",
+		"/home/don/workspace/books/db/migrate/20200426170743_createbook1.rb",
+		"/home/don/workspace/books/db/migrate/20200426171037_create_book2.rb",
+		"/home/don/workspace/books/db/migrate/20200426170501_create_book.rb",
+		"/home/don/workspace/books/db/migrate/20200426165811_createtable2.rb",
+		"/home/don/workspace/books/db/migrate/20200426165555_create_book.rb",
+		"/home/don/workspace/books/db/migrate/20200426164453_create_book.rb",
+		"/home/don/workspace/books/db/migrate/20200426080414_table.rb",
+		"/home/don/workspace/books/db/migrate/tempFileIn",
+		"/home/don/workspace/books/db/migrate/20200426080750_createtable.rb",
+		"/home/don/workspace/books/db/migrate/20200426075301_create_book.rb",
+		"/home/don/workspace/books/db/migrate/20200426075106_createbook.rb",
+		"/home/don/workspace/books/books_scripts/old/z_tb_create_all_rails.05.sh",
+		"/home/don/workspace/books/books_scripts/old/z_tb_create_all_rails.06.sh",
+		"/home/don/workspace/books/db/migrate/20200425225019_create_book.rb",
+		"/home/don/workspace/books/db/migrate/fileIn",
+		"/home/don/workspace/books/db/migrate/20200425082628_create_condition.rb",
+		"/home/don/workspace/books/db/migrate/20200425082629_create_media_type.rb",
+		"/home/don/workspace/books/db/migrate/20200425082627_create_book.rb",
+		"/home/don/workspace/books/db/migrate/20200425082618_create_purpose.rb",
+		"/home/don/workspace/books/db/migrate/20200425081248_create_book.rb",
+		"/home/don/workspace/books/db/migrate/20200425081620_create_book.rb",
+		"/home/don/workspace/books/db/migrate/prurpose_fields.txt",
+		"/home/don/workspace/books/db/migrate/20200424205740_create_book.rb",
+		"/home/don/workspace/books/db/migrate/20200424204235_create.rb",
+		"/home/don/workspace/books/db/migrate/second_file.txt",
+		"/home/don/workspace/books/db/migrate/newFile.txt",
+		"/home/don/workspace/books/db/migrate/second_file.rb",
+		"/home/don/workspace/books/books_scripts/old/z_menu_tb_create.01.sh",
+		"/home/don/workspace/books/db/migrate/20200422184010_create_book.rb",
+		"/home/don/workspace/books/books_scripts/old/z_menu_tb_create.02.sh",
+		"/home/don/workspace/books/books_scripts/old/z_menu_tb_create.03.sh",
+		"/home/don/workspace/books/books_scripts/z_menu_tb_create.03.sh",
+		"/home/don/workspace/books/books_scripts/old/z_menu_tb_create.04.sh",
+		"/home/don/workspace/books/books_scripts/z_menu_mg_create.sh",
+		"/home/don/workspace/books/books_scripts/z_menu_tb_create.04.sh",
+		"/home/don/workspace/books/books_scripts/old/z_tb_create_all_rails.03.sh",
+		"/home/don/workspace/books/books_scripts/z_menu_tb_create.01.sh",
+		"/home/don/workspace/books/books_scripts/old/z_tb_create_all_rails.04.sh",
+		"/home/don/workspace/books/books_scripts/old/z_menu_tb_delete.01.sh",
+		"/home/don/workspace/books/books_scripts/z_tb_create_test_rails.sh",
+		"/home/don/workspace/books/db/migrate/20200422080751_add_test.rb",
+		"/home/don/workspace/books/db/migrate/20200421023205_create_purpose.rb",
+		"/home/don/workspace/books/db/migrate/20200421205206_create_test.rb",
+		"/home/don/workspace/books/books_scripts/old/z_tb_create_purposes_rails.01.sh",
+		"/home/don/workspace/books/db/migrate/20200421194657_create_test.rb",
+		"/home/don/workspace/books/books_scripts/old/z_tb_create_all_rails.01.sh",
+		"/home/don/workspace/books/db/migrate/20200421201814_add_test.rb",
+		"/home/don/workspace/books/books_scripts/z_tb_add_all_rails.sh",
+		"/home/don/workspace/books/books_scripts/old/z_tb_delete_all_mysql.02.sh",
+		"/home/don/workspace/books/books_scripts/old/z_menu_tb_load.01.sh",
+		"/home/don/workspace/books/books_scripts/z_tb_load_all_mysql.01.sh"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"update_timestamps",
+			"= ",
+			"}\n",
+			"migrationName",
+			"...",
+			"deleteFile",
+			"    ",
+			"^    "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"=> ",
+			"migrationBuildName",
+			"  deleteMigrate",
+			"  "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 120.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "books.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/bin/bin.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 294.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

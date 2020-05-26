@@ -1,0 +1,74 @@
+<!--                                                                   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- System    : Centos 7.7                                            --> 
+<!--   Name    : peekaboo                                              --> 
+<!-- Location  : /home/don/workspace/books/app/views/books/            -->
+<!-- File Name : index.html                                            --> 
+<!-- Rev. Date : 05/24/2020                                            --> 
+<!-- Rev. No.  : 0.0.3                                                 --> 
+<!-- ----------------------------------------------------------------- --> 
+<!--                                                                   -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Books: <%= controller.action_name %></title>
+    <!--<title>jQuery UI Datepicker - Default functionality</title>-->
+    <meta name="Generator" content="Sublime Text">
+    <meta name="Author" content-"Don streeck">
+    <meta name="Keywords" content="Ruby on Rails">
+    <meta name="Description" content="Main Menu 1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" 
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+    <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
+    <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+    <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+    <!--<script>
+      $( function() {
+      $( "#datepicker" ).datepicker();
+      } );
+    </script>-->
+  </head>
+  <body>
+ 
+    <!--<p>Date: <input type="text" id="datepicker"></p>-->
+
+    <!-- Calls new.html.erb, edit.html.erb depending on controller action -->
+    <%= yield %>
+
+    <br><br><br>
+    <hr>
+    <address>
+      <table width="100%" border="0">
+        <tr>
+          <td>
+            Don Streeck
+          </td>
+          <td align="right">
+            <font size=-3>
+              Rev. book 0.0.3 / _form 0.0.4
+            </font>
+          </td>
+        </tr>
+      </table>
+    </address>
+
+  </body>
+</html>
+
+<!--                                                                   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev. # :     Description                             -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 05/24/2020 : 0.0.1  : Original.                                   -->
+<!--            :        : Add 4 meta name to to of meta list.         -->
+<!--            :        : Comment out <p> section input text.         -->
+<!--            :        : Add yield.                                  -->
+<!--            : 0.0.2  : Create Table #1 inside of Address.          -->
+<!--            : 0.0.3  : Reduse font size by -3 right adjust on      -->
+<!--            :        :   Rev. ### in address.                      -->
+<!-- ----------------------------------------------------------------- -->
+<!--            :        :                                             -->
+<!-- ----------------------------------------------------------------- -->

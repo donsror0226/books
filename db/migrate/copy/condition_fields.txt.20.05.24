@@ -1,0 +1,3 @@
+      t.integer :condition_idx, limit: 1, :unsigned => true, :unique => true, :null => false
+      t.index :condition_idx, :unique => true
+      t.string :condition_name, limit: 10, :null => false

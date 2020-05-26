@@ -1,0 +1,57 @@
+<!--                                                                   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- System    : Centos 7.7                                            --> 
+<!--   Name    : peekaboo                                              --> 
+<!-- Location  : /home/don/workspace/books/app/views/books/            -->
+<!-- File Name : index.html                                            --> 
+<!-- Rev. Date : 05/24/2020                                            --> 
+<!-- Rev. No.  : 0.0.1                                                 --> 
+<!-- ----------------------------------------------------------------- --> 
+<!--                                                                   -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>
+      Don's Book Inventory -- Main Menu - 1.0
+    </title>
+    <!--<title>jQuery UI Datepicker - Default functionality</title>-->
+    <meta name="Generator" content="Sublime Text">
+    <meta name="Author" content-"Don streeck">
+    <meta name="Keywords" content="Ruby on Rails">
+    <meta name="Description" content="Main Menu 1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" 
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $( function() {
+      $( "#datepicker" ).datepicker();
+      } );
+    </script>
+  </head>
+  <body>
+ 
+    <p>Date: <input type="text" id="datepicker"></p>
+    
+  </body>
+</html>
+
+<!--                                                                   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev. # :     Description                             -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 05/24/2020 : 0.0.1  : Original.                                   -->
+<!--            : 0.0.2  : Comment out title and add new title.        -->
+<!--            :        : Add 4 meta name to to of meta list.         -->
+<!--            :        : Comment out <p> section input text.         -->
+<!--            : 0.0.3  : Add Table #1.                               -->
+<!--            :        : Add Table #3.                               -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 05/16/2020 : 0.0.4  : Rearanged table layout.                     -->
+<!-- ----------------------------------------------------------------- -->
+<!--            :        :                                             -->
+<!-- ----------------------------------------------------------------- -->
