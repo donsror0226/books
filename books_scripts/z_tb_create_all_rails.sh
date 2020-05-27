@@ -111,7 +111,7 @@ _migrate_files()
 	echo -e "\t-------------------------------------------\n"
 	rake -q db:migrate 2>/dev/null
 	Errorcode=$?
-	echo -e "\nMigrate = Errorcode = $Errorcode \n"
+	#echo -e "\nMigrate = Errorcode = $Errorcode \n"
 }
 
 _remove_files()

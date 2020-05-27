@@ -2,7 +2,7 @@
 <!-- ----------------------------------------------------------------- -->
 <!-- System    : Centos 7.7                                            --> 
 <!--   Name    : peekaboo                                              --> 
-<!-- Location  : /home/don/workspace/books/app/views/books/            -->
+<!-- Location  : /home/don/workspace/books/public/                     -->
 <!-- File Name : index.html                                            --> 
 <!-- Rev. Date : 05/24/2020                                            --> 
 <!-- Rev. No.  : 0.0.6                                                 --> 
@@ -17,12 +17,12 @@
     </title>
     <!--<title>jQuery UI Datepicker - Default functionality</title>-->
     <meta name="Generator" content="Sublime Text">
-    <meta name="Author" content-"Don streeck">
+    <meta name="Author" content="Don streeck">
     <meta name="Keywords" content="Ruby on Rails">
     <meta name="Description" content="Main Menu 1.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" 
+    <!--<link rel="stylesheet"
       href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
     <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
     <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
@@ -32,6 +32,7 @@
       $( "#datepicker" ).datepicker();
       } );
     </script>-->
+
   </head>
   <body>
  
@@ -69,11 +70,23 @@
         <td width="20%">
           <br>
           <b>
+            <!-- -------------------------------------------------------- -->
+            <!-- This first call application.html.erb in /view/layouts/   -->
+            <!--   which inturns loads all css formating files, then      -->
+            <!--   call file scaffold.scss in /assets/stylesheets.        -->
+            <!-- Then call new.html.erb in /view/books/.                  -->
+            <!-- -------------------------------------------------------- -->
             <a href="/books/new">
               Input
             </a>
             <br><br>
 
+            <!-- -------------------------------------------------------- -->
+            <!-- This first call application.html.erb in /view/layouts/   -->
+            <!--   which inturns loads all css formating files, then      -->
+            <!--   call file scaffold.scss in /assets/stylesheets.        -->
+            <!-- Then call index.html.erb in /view/books/.                -->
+            <!-- -------------------------------------------------------- -->
             <a href="/books">
               List
             </a>

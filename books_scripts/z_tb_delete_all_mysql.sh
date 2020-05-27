@@ -134,7 +134,7 @@ case $1 in
 
 	5 )
 		deleteMigrate="_booktypes"
-		deleteTable="bookmediatype.types"
+		deleteTable="booktypes"
 		# passing variables $deleteMigrate & $deleteTable parital names.
 		_delete_all $deleteMigrate $deleteTable
 		;;

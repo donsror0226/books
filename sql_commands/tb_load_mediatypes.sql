@@ -15,12 +15,13 @@ use books_development;
 
 INSERT INTO mediatypes(media_type_idx, media_type_name, created_at, updated_at)
 VALUES
-	(1, "N/A",       NOW(), NOW() ),
-	(2, "3.5",       NOW(), NOW() ),
-	(3, "5.25",      NOW(), NOW() ),
-	(4, "CD",        NOW(), NOW() ),
-	(5, "Cassette",  NOW(), NOW() ),
-	(6, "Cartridge", NOW(), NOW() );
+	(0, "N/A",       NOW(), NOW() ),
+	(1, "3.5",       NOW(), NOW() ),
+	(2, "5.25",      NOW(), NOW() ),
+	(3, "CD",        NOW(), NOW() ),
+	(4, "Cassette",  NOW(), NOW() ),
+	(5, "Cartridge", NOW(), NOW() ),
+	(6, "Paper",     NOW(), NOW() );
 
 #
 # ----------------------------------------------------------------- #
@@ -29,6 +30,9 @@ VALUES
 # 05/09/2020 : 0.0.3  : Original. Copyed from                       #
 #            :        :   tb_load_media_types.sql.                  #
 #            :        : Reorderd table put "N/A" at the top.        #
+# ----------------------------------------------------------------- #
+# 05/25/2020 : 0.0.4  : Add option 7 "Paper" to mediatype.          #
+#            :        : Reorder mediatype starting at 0.            #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

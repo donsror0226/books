@@ -111,7 +111,7 @@ do
       ;;
 
     2 )
-      loadTable="media_types"
+      loadTable="mediatypes"
       # passing variables $loadTable parital names.
       _load_all $loadTable
       ;;
@@ -123,7 +123,7 @@ do
       ;;
 
     4 )
-      loadTable="books"
+      loadTable="booktypes"
       # passing variables $loadTable parital names.
       _load_all $loadTable
       ;;
