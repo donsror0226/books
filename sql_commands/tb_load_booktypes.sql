@@ -15,6 +15,7 @@ use books_development;
 
 INSERT INTO booktypes(book_type_idx, book_type_name, created_at, updated_at)
 VALUES
+	(0, "N/A",      NOW(), NOW() ),
 	(1, "Hard",     NOW(), NOW() ),
 	(2, "Soft",     NOW(), NOW() ),
 	(3, "Magazine", NOW(), NOW() ),

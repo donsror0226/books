@@ -15,6 +15,7 @@ use books_development;
 
 INSERT INTO conditions(condition_idx, condition_name, created_at, updated_at)
 VALUES
+	(0, "N/A",      NOW(), NOW() ),
 	(1, "Excelent", NOW(), NOW() ),
 	(2, "Good",     NOW(), NOW() ),
 	(3, "Fair",     NOW(), NOW() ),

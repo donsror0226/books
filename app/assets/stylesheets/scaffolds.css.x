@@ -3,9 +3,9 @@
 /* System    : Centos 7.7                                             */ 
 /*   Name    : peekaboo                                               */ 
 /* Location  : /home/don/workspace/books/app/assets/stylesheets/      */
-/* File Name : scaffolds.scss                                         */ 
-/* Rev. Date : 06/03/2020                                             */ 
-/* Rev. No.  : 0.0.3                                                  */ 
+/* File Name : scaffolds.scs                                          */ 
+/* Rev. Date : 05/28/2020                                             */ 
+/* Rev. No.  : 0.0.2                                                  */ 
 /* ------------------------------------------------------------------ */ 
 /*                                                                    */
 
@@ -14,13 +14,13 @@ body {
   color: #333;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 12px; /*13px;*/
+  font-size: 13px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 10px; /*13px;*/
+  font-size: 13px;
   line-height: 18px;
 }
 
@@ -32,15 +32,15 @@ pre {
 
 a {
   color: #000;
+}
 
-  &:visited {
-    color: #666;
-  }
+a:visited {
+  color: #666;
+}
 
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
+a:hover {
+  color: #fff;
+  background-color: #000;
 }
 
 th {
@@ -48,13 +48,11 @@ th {
 }
 
 td {
-  padding: 0px 5px 0px 3px; /*0 5px 7px;*/ /* top right bottom left */
+  padding: 0 5px 7px; /* top right bottom left */
 }
 
-div {
-  &.field, &.actions {
+div.field, div.actions {
     margin-bottom: 10px;
-  }
 }
 
 #notice {
@@ -73,8 +71,9 @@ div {
   padding: 7px 7px 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
+}
 
-  h2 {
+#error_explanation.h2 {
     text-align: left;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
@@ -84,11 +83,10 @@ div {
     color: #fff;
   }
 
-  ul li {
+#error_explanation.ul, #error_explanation.li {
     font-size: 12px;
     list-style: square;
   }
-}
 
 label {
   display: block;
@@ -114,30 +112,6 @@ h1 {
   color: green;
 }
 
-.grid-container {
-  display: grid;
-  /*grid-template-columns: auto auto auto auto;*/
-  grid-template-columns: 12% 38% 12% 38%;
-  grid-gap: 1px;
-  background-color: #2196F3; /* grid color */
-  padding: 1px;
-}
-
-.grid-container > div {
-  background-color: white; /*rgba(255, 255, 255, 0.8);*/ /* cell color */
-  text-align: left; /*center;*/
-  /*padding: 10px 0px 10px 0px;*/ /* top right bottom left */
-  /*font-size: 30px;*/
-}
-
-#even {
-  background-color: pink; /*rgba(255, 255, 255, 0.8);*/ /* cell color */
-  text-align: left; /*center;*/
-  /*padding: 10px 0px 10px 0px;*/ /* top right bottom left */
-  /*font-size: 30px;*/
-}
-
-
 /*                                                                   */
 /* ----------------------------------------------------------------- */
 /* Date Rev.  : Rev. # :     Description                             */
@@ -147,10 +121,6 @@ h1 {
 /* 05/28/2020 : 0.0.2  : Add <hr> to stylesheet.                     */
 /*            :        : Add <th> to stylesheet.                     */
 /*            :        : Add <h1> to stylesheet.                     */
-/* ----------------------------------------------------------------- */
-/* 06/03/2020 : 0.0.3  : Add .grid-container.                        */
-/*            :        : Add .grid-container > div                   */
-/*            :        : Add #even.                                  */
 /* ----------------------------------------------------------------- */
 /*            :        :                                             */
 /* ----------------------------------------------------------------- */

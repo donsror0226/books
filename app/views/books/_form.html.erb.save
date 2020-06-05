@@ -25,10 +25,6 @@
     </div>
   <% end %>
 
-  <!--<table width="100%" border=1>-->
-  <table width="100%" border=1>
-  <tr>
-  <td width="100%">
     <!-- ---------------------------------------------------------------- -->
     <!-- Table #1 - Book Info.                                            -->
     <!-- ---------------------------------------------------------------- -->
@@ -36,7 +32,7 @@
     <!--            Series No. / ISBN / Published Date / Book Type        -->
     <!-- ---------------------------------------------------------------- -->
     <!-- <table width="100%" border=1> -->
-    <table width="100%">
+    <table width="100%" border=1>
       <!-- -------------------------------------------------------------- -->
       <!-- Setup of 1st Row in Table #1.                                  -->
       <!--   Name = Author, Size = 40, Maxsize = 50.                      -->
@@ -167,21 +163,15 @@
                                   :book_type_name %>-->
         </td>
       </tr>
-      <tr>
-        <td width="100%" colspan=4>
-          <hr>
-          </hr>
-        </td>
-      </tr>
-    <!--</table>-->
+    </table>
 
     <!-- ---------------------------------------------------------------- -->
     <!-- Draws a horizontal line, Size = 4.                               -->
     <!-- Draws a horizontal using using stylesheet "scaffolds.scss".      -->
     <!-- ---------------------------------------------------------------- -->
     <!-- <hr size="4" "noshade"> -->
-    <!--<hr>
-    </hr>-->
+    <hr>
+    </hr>
   <!--</div>-->
 
   <!--<div id="lay_out_table_#2">-->
@@ -190,7 +180,7 @@
     <!-- ---------------------------------------------------------------- -->
     <!--            Purchase Date. / Entry Date / Location                -->
     <!-- ---------------------------------------------------------------- -->
-    <!--<table width="100%" border=1>-->
+    <table width="100%" border="1">
       <!-- -------------------------------------------------------------- -->
       <!-- Setup of 1st Row in Table #2.                                  -->
       <!--   Name = Purchase Date with calendar.                          -->
@@ -232,22 +222,15 @@
           <%= f.text_field :location, :size => 20, :maxsize => 20 %>
         </td>
       </tr>
-
-      <tr>
-        <td width="100%" colspan=4>
-          <hr>
-          </hr>
-        </td>
-      </tr>
-    <!--</table>-->
+    </table>
 
     <!-- ---------------------------------------------------------------- -->
     <!-- Draws a horizontal line, Size = 4.                               -->
     <!-- Draws a horizontal using using stylesheet "scaffolds.scss".      -->
     <!-- ---------------------------------------------------------------- -->
     <!-- <hr size="4" "noshade"> -->
-    <!--<hr>
-    </hr>-->
+    <hr>
+    </hr>
   <!--</div>-->
 
   <!--<div id="lay_out_table_#3">-->
@@ -257,7 +240,7 @@
     <!-- ---------------------------------------------------------------- -->
     <!--            Condition / Media Type / Purpose.                     -->
     <!-- ---------------------------------------------------------------- -->
-    <!--<table width="100%" border=1>-->
+    <table width="100%" border="1">
       <!-- -------------------------------------------------------------- -->
       <!-- Setup of 1st Row in Table #3.                                  -->
       <!--   Name = Condition from contition table.                       -->
@@ -372,9 +355,6 @@
         </tr>
       <!--</div>-->
     </table>
-  </td>
-  </tr>
-  </table>
 
   <div class="actions">
     <p>
@@ -406,6 +386,8 @@
 <!--            :        : Add <hr> to stylesheet.                     -->
 <!--            :        : Change first <td> to <th> and remove width. -->
 <!--            :        : Add <th> to stylesheet.                     -->
+<!--            :        :                                             -->
+<!--            :        :                                             -->
 <!-- ----------------------------------------------------------------- -->
 <!--            :        :                                             -->
 <!-- ----------------------------------------------------------------- -->

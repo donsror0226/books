@@ -30,6 +30,9 @@ gem 'jquery-ui-rails'
 # May need for what ??                05/23/2020
 gem 'jquery-rails'
 
+# Use to paginate the screen          05/31/2020
+gem "will_paginate"
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

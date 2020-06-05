@@ -15,6 +15,7 @@ use books_development;
 
 INSERT INTO conditions(condition_idx, condition_name, created_at, updated_at)
 VALUES
+	(0, "N/A",      NOW(), NOW() ),
 	(1, "Excelent", NOW(), NOW() ),
 	(2, "Good",     NOW(), NOW() ),
 	(3, "Fair",     NOW(), NOW() ),
@@ -35,6 +36,7 @@ VALUES
 
 INSERT INTO purposes(purpose_idx, purpose_type, purpose_name, created_at, updated_at)
 VALUES
+	(0, "N/A", "N/A",           NOW(), NOW() ),
 	(10, "OS", "TRS",           NOW(), NOW() ),
 	(20, "OS", "Commodore 64",  NOW(), NOW() ),
 	(30, "OS", "Commodore 128", NOW(), NOW() ),
@@ -83,6 +85,7 @@ VALUES
 
 INSERT INTO booktypes(book_type_idx, book_type_name, created_at, updated_at)
 VALUES
+	(0, "N/A",      NOW(), NOW() ),
 	(1, "Hard",     NOW(), NOW() ),
 	(2, "Soft",     NOW(), NOW() ),
 	(3, "Magazine", NOW(), NOW() ),

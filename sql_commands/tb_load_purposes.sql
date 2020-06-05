@@ -15,6 +15,7 @@ use books_development;
 
 INSERT INTO purposes(purpose_idx, purpose_type, purpose_name, created_at, updated_at)
 VALUES
+	(0, "N/A", "N/A",           NOW(), NOW() ),
 	(10, "OS", "TRS",           NOW(), NOW() ),
 	(20, "OS", "Commodore 64",  NOW(), NOW() ),
 	(30, "OS", "Commodore 128", NOW(), NOW() ),

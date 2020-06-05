@@ -12,18 +12,17 @@
 # ----------------------------------------------------------------- #
 #
 
-
 Rails.application.routes.draw do
 
   ## Rails provides a resources method which can be used to declare a
-  ##   a standard REST resource.
+  ##   standard REST resource.
   ##   You can create, read, update, destroy (CRUD).
   resources :books
   resources :conditions
   resources :mediatypes
   resources :purposes
   resources :booktypes
-  
+
   get 'books/new'
 
 	## Use on web page when you type localhost:3000 it will bring up the 

@@ -5,8 +5,8 @@
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/app/models/                 #
 # File Name : book.rb                                               #
-# Rev. Date : 05/13/2020                                            #
-# Rev. No.  : 0.0.2                                                 #
+# Rev. Date : 05/31/2020                                            #
+# Rev. No.  : 0.0.4                                                 #
 # ----------------------------------------------------------------- #
 #
 
@@ -15,6 +15,13 @@ class Book < ApplicationRecord
 	#belongs_to :mediatype
 	#belongs_to :purpose
 	#belongs_to :booktype
+
+	# --------------------------------------------------------------- #
+	# This part of the code put so many records on the screen at      #
+	#   one time with Prev / No. of sreens / Next.                    #
+	# --------------------------------------------------------------- #
+	cattr_reader :per_page
+	@@per_page = 3
 
 	# --------------------------------------------------------------- #
 	# -- Author                                                       #
@@ -113,25 +120,26 @@ class Book < ApplicationRecord
 	# --------------------------------------------------------------- #
 	# -- Price                                                        #
 	# -- Error 15 - Invalid no data in field.                         #
-	# -- Error 16 - Value must be 0 - 100.                            #
+	# -- Error 16 - Value must be 0 - 100. Does not work.             #
 	# -- Error 17 - Value not numeric.                                #
 	# -- Error 18 - Invalid format xxx.xx.                            #
 	# --------------------------------------------------------------- #
 	validates_presence_of :price,
 												:message => 
 												 " ---------> Error 15 - Field Blank."
-	validates_length_of :price,
-											:within => 0..100,
-											:message =>
-											 " ---------> Error 16 - Value must be 0 - 100."
+	# This does not work on numbeers #
+	#validates_length_of :price, #
+	#										:within => 0..6, #
+	#										:message => #
+	#										 " ---------> Error 16 - Value must be 0.00 - 100.00." #
 	validates_numericality_of :price,
 														:message =>
 											 			 " ---------> Error 17 - Value not numeric."
 	validates_format_of :price,
 #											:with => /\d{1,3}\.\d{0,2}$/,
-											:with => /\A\d{1,3}.\d{0,2}\z/,
+											:with => /\A\d{1,2}.\d{,2}\z/,
 											:message =>
-                       " ---------> Error 18 - Invalid format (xxx.xx)."
+                       " ---------> Error 18 - Invalid format (xx.xx)."
 
 	# --------------------------------------------------------------- #
 	# -- Purchase Date                                                #
@@ -186,6 +194,19 @@ end
 #            :        :                      media_type_id,         #
 #            :        :                      purpose_id,            #
 #            :        :                      book_type_id.          #
+# ----------------------------------------------------------------- #
+# 05/31/2020 : 0.0.4  : Add pageinating.                            #
+#            :        : This part of the code put so many records   #
+#            :        :   on the screen at one time with            #
+#            :        :   Prev / No. of screens / Next.             #
+#            :        : See controller/books_controller.rb          #
+#            :        :   for part 1 of pageinating.                #
+#            :        : See models/book.rb for part 2 of            #
+#            :        :   pageinating.                              #
+#            :        : See view/books/index.html.erb for part 3    #
+#            :        :   of pageinating.                           #
+#            :        : See environment.rb for part 4 of            #
+#            :        :   pageinating.                              #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #
