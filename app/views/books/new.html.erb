@@ -13,11 +13,31 @@
   New Book
 </h1>
 
+    <form action="/search">
+      Author:
+      <input name="q" type="text" placeholder="Keywords" aria-label="Search">
+      <button type="submit">
+        Search
+      </button>
+    </form>
+
 <!-- Call partial _form.html.erb -->
 <%= render 'form', book: @book %>
 
+<%= link_to 'Show', @book %>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<%= link_to 'Search', search_path %>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
 <%= link_to 'Back', books_path %>
-
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<a href="../index">
+  Main Menu
+</a>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+            <a href="/search?q=empty">
+              Search
+            </a>
+            
 <!-- ---------------------------------------------------------------- -->
 <!-- Draws a horizontal line, Size = 4.                               -->
 <!-- Draws a horizontal using using stylesheet "scaffolds.scss".      -->

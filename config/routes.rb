@@ -23,11 +23,23 @@ Rails.application.routes.draw do
   resources :purposes
   resources :booktypes
 
-  get 'books/new'
+  #get 'books/new'
+
+  get 'search', to: "books#search"
+  get 'book_search', to: "books#search"
+
+  ##get 'show', to: "books#show"
+
+  ## #2 - search
+  ## Use to setup the /search to your search page and pages#search
+  ##   means search.html.erb is located in the view folder.
+  #get '/search' => 'books#search', :as => 'search_book'
+
+  #get 'more_info', to: 'books#more'
 
 	## Use on web page when you type localhost:3000 it will bring up the 
 	##   Yay! You're on Rails default web page application working.
-	##   No git 'xxxxx' or resources :yyyyys
+	##   No git 'xxxxx' or resources :yyyyy's
 
 	# ## Tells the web page when you type localhost:3000/welcome/index it will
 	# ##   bring up the index page for your application.

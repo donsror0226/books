@@ -5,21 +5,34 @@
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/app/controllers/            #
 # File Name : books_controller.rb                                   #
-# Rev. Date : 05/31/2020                                            #
-# Rev. No.  : 0.0.4                                                 #
+# Rev. Date : 06/08/2020                                            #
+# Rev. No.  : 0.0.5                                                 #
 # ----------------------------------------------------------------- #
 #
 
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
+  ## Section Add by DPS
+  # GET /books/1
+  # GET /books/1.json
+  def search
+    #@books = Book.all
+    #@q = Books.ransack(search_params[:search])
+    #@books = @q.result
+
+    if !params[:q].blank?
+      @books = Book.where("author like ?", "%" + params[:q] + "%")
+    end
+  end
+
   # GET /books
   # GET /books.json
   def index
     @books = Book.all
 
-    # This part of the code put so many records on the screen at one      #
-    #   time with Prev / No. of screens / Next.                           #
+    ## This part of the code put so many records on the screen at one       ##
+    ##   time with Prev / No. of screens / Next.                            ##
     @books = Book.paginate :page => params[:page]
                           # :order => 'id'
   end
@@ -97,7 +110,7 @@ class BooksController < ApplicationController
                      :isbn_tab_no, :publisher, :published_date, 
                      :location, :price, :purchase_date, :entry_date, 
                      :condition_id, :media_type_id, :purpose_id, :book_type_id,
-                     :created_at, :updated_at)
+                     :created_at, :updated_at, :search, :q)
       ## example -> params.require(:user).permit(:username, :email, :password, :salt, :encrypted_password)
     end
 end
@@ -124,6 +137,8 @@ end
 #            :        :   of pageinating.                           #
 #            :        : See environment.rb for part 4 of            #
 #            :        :   pageinating.                              #
+# ----------------------------------------------------------------- #
+# 06/08/2020 : 0.0.5  : Clean up remove unneeded code and comments. #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

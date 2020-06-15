@@ -1,30 +1,47 @@
-<!--                                                                    -->
-<!-- ------------------------------------------------------------------ --> 
-<!-- System    : Centos 7.7                                             --> 
-<!--   Name    : peekaboo                                               --> 
-<!-- Location  : /home/don/workspace/books/app/views/books/             --> 
-<!-- File Name : index.html.erb                                         --> 
-<!-- Rev. Date : 05/31/2020                                             --> 
-<!-- Rev. No.  : 0.0.5                                                  --> 
-<!-- ------------------------------------------------------------------ --> 
-<!--                                                                    -->
-
+<!-- #2 - search                                                        -->
 <h1>
-  List Books
+  Search Books
 </h1>
 
-<!-- The notice is a message stating that Add/Edit was successfully.    -->
+ <!-- The notice is a message stating some thing was successfully.         -->
 <p id="notice"><%= notice %></p>
 
-<!-- ------------------------------------------------------------------ -->
-<!-- This part of the code put so many recores on the screen at one     -->
-<!--   Time with Prev / No. of screens / Next.                          -->
-<!-- ------------------------------------------------------------------ --> 
-<%= will_paginate @books %>
-  <!--<br>-->
+   <!--<form action="/search">
+      <input name="q" type="text" placeholder="Search" aria-label="Search">
+      <button type="submit">
+        Search
+      </button>
+    </form>-->
 
-  <% @books.each do |book| %>
+<!--<!%= search_form_for @q, remote: true do |f| %>
+  <!%= f.label :author_cont, 'Author' %>
+  <!%= f.search_field :author_cont %>
+  <!%= f.submit %>
+<!% end %>-->
 
+    <form action="/search">
+      Author:
+      <input name="q" type="text" placeholder="Keywords" aria-label="Search">
+      <button type="submit">
+        Search
+      </button>
+    </form>
+
+
+<% if @books.blank? %>
+  <% if params[:q] != "empty" %>
+    <br><br>
+    "***** No data in Seareh Books *****"<br>
+    <% if params[:q].blank? %>
+      "***** No data in Seareh Books - Blank *****"<br>
+    <% end %>
+    <% if params[:q].nil? %>
+      "***** No data in Seareh Books - Nil *****"
+    <% end %>
+  <% end %>
+
+<% else %>
+<% @books.each do |book| %>
   <!-- ---------------------------------------------------------------- -->
   <!-- Table #1 - Book Info.                                            -->
   <!-- ---------------------------------------------------------------- -->
@@ -88,6 +105,7 @@
       <td width="12%">
         Series No
       </td>
+
       <td width="38%" bgcolor="lightgray">
         <%=h book.series_no %>
       </td>
@@ -153,11 +171,16 @@
   </tbody>
 </table>-->
 
-<br>
+<% end %>
 
+<br>
+<br>
+<br>
 <%= link_to 'New Book', new_book_path %>
 &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
 <%= link_to 'Search', search_path %>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<%= link_to 'Back', books_path %>
 &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
 <a href="../index">
   Main Menu
@@ -166,6 +189,7 @@
             <a href="/search?q=empty">
               Search
             </a>
+
 
 <!-- ------------------------------------------------------------------ -->
 <!-- Draws a horizontal line, Size = 4.                                 -->
@@ -187,41 +211,20 @@
       </td>
       <td align="right">
         <font size=-3>
-          Rev. 0.0.5
+          Rev. 0.0.2
         </font>
       </td>
     </tr>
   </table>
 </address>
 
-<!--                                                                    -->
-<!-- ------------------------------------------------------------------ -->
-<!-- Date Rev.  : Rev. # :     Description                              -->
-<!-- ------------------------------------------------------------------ -->
-<!-- 05/14/2020 : 0.0.1  : Original.                                    -->
-<!-- ------------------------------------------------------------------ -->
-<!-- 05/28/2020 : 0.0.2  : Remove size and noshade from <hr>.           -->
-<!--            :        : Add <hr> to stylesheet.                      -->
-<!-- ------------------------------------------------------------------ -->
-<!-- 05/29/2020 : 0.0.3  : Create Table inside of Address.              -->
-<!--            :        : Add <hr> to stylesheet.                      -->
-<!-- ------------------------------------------------------------------ -->
-<!-- 05/31/2020 : 0.0.4  : Create Table #1.                             -->
-<!--            :        : Create Table #2. (Bottons).                  -->
-<!--            :        : Add <hr> to bottom of Table #2.              -->
-<!--            :        : Add link to Main Menu.                       -->
-<!--            : 0.0.5  : Add pageinating.                             -->
-<!--            :        : This part of the code put so many records    -->
-<!--            :        :   on the screen at one time with             -->
-<!--            :        :   Prev / No. of screens / Next.              -->
-<!--            :        : See controller/books_controller.rb           -->
-<!--            :        :   for part 1 of pageinating.                 -->
-<!--            :        : See models/book.rb for part 2 of             -->
-<!--            :        :   pageinating.                               -->
-<!--            :        : See view/books/index.html.erb for part 3     -->
-<!--            :        :   of pageinating.                            -->
-<!--            :        : See environment.rb for part 4 of             -->
-<!--            :        :   pageinating.                               -->
-<!-- ------------------------------------------------------------------ -->
-<!--            :        :                                              -->
-<!-- ------------------------------------------------------------------ -->
+<!--<!%= render @books_path %>-->
+
+<!-- Call partial _form.html.erb -->
+<!--<!%= render 'list', book: @book %>-->
+<!--<!%= render 'list', books: @book %>-->
+
+<!--<!%= render 'list', book: @book %>-->
+
+<!--<!% end %>-->
+

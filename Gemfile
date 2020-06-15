@@ -33,6 +33,14 @@ gem 'jquery-rails'
 # Use to paginate the screen          05/31/2020
 gem "will_paginate"
 
+# Use to search using Ransack         06/13/2020
+gem 'ransack'   #, github: 'activerecord-hackery/ransack'
+
+# Use to search using Thinking Sphinx                   06/13/2020
+# You will need mysql2 gem even if not running mysql2.  06/13/2020
+# You will need jdbc-jysql if usin JRuby.               06/13/2020
+gem 'thinking-sphinx'
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

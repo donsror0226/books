@@ -5,8 +5,8 @@
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/app/models/                 #
 # File Name : book.rb                                               #
-# Rev. Date : 05/31/2020                                            #
-# Rev. No.  : 0.0.4                                                 #
+# Rev. Date : 06/01/2020                                            #
+# Rev. No.  : 0.0.5                                                 #
 # ----------------------------------------------------------------- #
 #
 
@@ -120,14 +120,14 @@ class Book < ApplicationRecord
 	# --------------------------------------------------------------- #
 	# -- Price                                                        #
 	# -- Error 15 - Invalid no data in field.                         #
-	# -- Error 16 - Value must be 0 - 100. Does not work.             #
+	# -- Error 16 - Value must be 0 - 100. -Does not work.-           #
 	# -- Error 17 - Value not numeric.                                #
 	# -- Error 18 - Invalid format xxx.xx.                            #
 	# --------------------------------------------------------------- #
 	validates_presence_of :price,
 												:message => 
 												 " ---------> Error 15 - Field Blank."
-	# This does not work on numbeers #
+	# This does not work on numbers. It uses the command size(). #
 	#validates_length_of :price, #
 	#										:within => 0..6, #
 	#										:message => #
@@ -207,6 +207,9 @@ end
 #            :        :   of pageinating.                           #
 #            :        : See environment.rb for part 4 of            #
 #            :        :   pageinating.                              #
+# ----------------------------------------------------------------- #
+# 06/01/2020 : 0.0.5  : Remove validates_length_of :price           #
+#            :        :   Error 16, does not work on numbers.       #
 # ----------------------------------------------------------------- #
 #            :        :                                             #
 # ----------------------------------------------------------------- #

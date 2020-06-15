@@ -1,0 +1,70 @@
+/*                                                                    */
+/* ------------------------------------------------------------------ */ 
+/* System    : Centos 7.7                                             */ 
+/*   Name    : peekaboo                                               */ 
+/* Location  : /home/don/workspace/books/app/assets/stylesheets/      */
+/* File Name : scaffolds.scs                                          */ 
+/* Rev. Date : 05/28/2020                                             */ 
+/* Rev. No.  : 0.0.2                                                  */ 
+/* ------------------------------------------------------------------ */ 
+/*                                                                    */
+
+body {
+  background-color: #fff;       /* ffffff or fff = white */
+  /*color: red; /*#333;*/
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+a:link {
+  color: blue; /*#000;*/        /* 000000 or 000 = black */
+}
+
+a:visited {
+  color: red; /*#666;*/
+}
+
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+td {
+  padding: 10px 5px 7px; /* top right bottom left */
+  color: blue;
+}
+
+/* ************************************* */
+/* The section below was entered by DPS. */
+/* ************************************* */
+hr {
+  background-color: blue;
+  height: 5px;
+}
+
+th {
+  width: "12%";
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
+  font-family: verdana, arial, helvetica, scan-serif;
+  font-weight: bold;
+  color: green;
+}
+
+/*                                                                   */
+/* ----------------------------------------------------------------- */
+/* Date Rev.  : Rev. # :     Description                             */
+/* ----------------------------------------------------------------- */
+/* 05/05/2020 : 0.0.1  : Original.                                   */
+/* ----------------------------------------------------------------- */
+/* 05/28/2020 : 0.0.2  : Add <hr> to stylesheet.                     */
+/*            :        : Add <th> to stylesheet.                     */
+/*            :        : Add <h1> to stylesheet.                     */
+/* ----------------------------------------------------------------- */
+/*            :        :                                             */
+/* ----------------------------------------------------------------- */

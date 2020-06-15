@@ -1,0 +1,17 @@
+<!-- #2 - search                                                        -->
+<h1>
+  Search Books
+</h1>
+
+
+<!--<!%= form_tag(search_book_path, :method => "get", do %> -->
+    <!--class: 'navbar-form navbar-left') do %>  
+  <div class="input-group">  -->
+    <!--<!%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  -->
+<!--    <!%= search_field_tag :search, params[:search], placeholder: "Search", "form-control" %> -->
+    <!--<div class="input-group-btn">  -->
+      <!--<!%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  -->
+<!--      <!%= button_tag "", :author => nil %>  -->
+    <!--</div>  
+  </div>  -->
+<!--<!% end %>-->
