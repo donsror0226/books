@@ -11,7 +11,7 @@
 
 body {
   background-color: #fff;
-  color: #333;
+  color: #000;  /* #333; */
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 12px; /*13px;*/
@@ -34,7 +34,7 @@ a {
   color: #000;
 
   &:visited {
-    color: #666;
+    color: #000;  /* #666; */
   }
 
   &:hover {
@@ -115,6 +115,13 @@ h1 {
   color: green;
 }
 
+#border {
+  border-style: solid;
+  border-color: blue;
+  border-width: 2px;
+}
+
+
 .grid-container {
   display: grid;
   /*grid-template-columns: auto auto auto auto;*/
@@ -140,6 +147,14 @@ h1 {
   /* top right bottom left */
   /*padding: 10px 0px 10px 0px;*/ 
   /*font-size: 30px;*/
+}
+
+#destroy {
+  background-color: blue;
+}
+
+.link {
+  color: red;
 }
 
 /* ----------------------------------------------------------------- */
@@ -175,6 +190,8 @@ h1 {
 /*            :        : Add #even.                                  */
 /* ----------------------------------------------------------------- */
 /* 06/10/2020 : 0.0.4  : Add color code block.                       */
+/* ----------------------------------------------------------------- */
+/* 06/26/2020 : 0.0.5  : Add #destroy.                               */
 /* ----------------------------------------------------------------- */
 /*            :        :                                             */
 /* ----------------------------------------------------------------- */

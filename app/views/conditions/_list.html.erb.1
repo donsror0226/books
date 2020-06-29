@@ -1,0 +1,109 @@
+<!--                                                                    -->
+<!-- ------------------------------------------------------------------ --> 
+<!-- System    : Centos 7.7                                             --> 
+<!--   Name    : peekaboo                                               --> 
+<!-- Location  : /home/don/workspace/books/app/views/books/             -->
+<!-- File Name : _list.html.erb                                         --> 
+<!-- Rev. Date : 06/21/2020                                             --> 
+<!-- Rev. No.  : 0.0.2                                                  --> 
+<!-- ------------------------------------------------------------------ --> 
+<!--                                                                    -->
+
+<%= form_with(model: condition, local: true) do |f| %>
+  <!-- ---------------------------------------------------------------- -->
+  <!-- Error handeling.                                                 -->
+  <!-- ---------------------------------------------------------------- -->
+  <% if book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>-->
+
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Table #1 - Condition Info.                                         -->
+  <!-- ------------------------------------------------------------------ -->
+  <!--        Condition_idx / Condition_name                              -->
+  <!-- ------------------------------------------------------------------ -->
+  <table colspan=5 width="50%">
+    <thead>
+      <tr>
+        <td width="5%">
+          Idx
+        </td>
+        <td width="10%">
+          Name
+        </td>
+        <td width="30%">
+        </td>
+      </tr>
+    </thead>
+  </table>
+
+  <!--<table width="50%" border="1">-->
+  <table id="border" width="50%" border="1">
+    <tbody id="border">
+      <% @conditions.each do |condition| %>
+        <tr>
+          <td width="5%">
+            <%=h condition.condition_idx %>
+          </td>
+
+        <td width="10%">
+            <%=h condition.condition_name %>
+          </td>
+ 
+          <td width="10%">
+            <%= link_to 'Show', condition %>
+          </td>
+
+          <td width="10%">
+            <%= link_to 'Edit', edit_condition_path(condition) %>
+          </td>
+
+          <td width="10%">
+            <%= link_to 'Destroy', condition, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Draws a horizontal line, Size = 4.                                   -->
+<!-- Draws a horizontal using using style sheet "scaffolds.scss".         -->
+<!-- -------------------------------------------------------------------- -->
+<!-- <hr size="4" "noshade"> -->
+<hr>
+</hr>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Links at bottom of page/screen.                                      -->
+<!--            New Book / Search / Main Menu                             -->
+<!-- -------------------------------------------------------------------- -->
+<%= link_to 'New Condition', new_condition_path %>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<a href="/admin_index">
+  Admin Menu
+</a>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<a href="/main_index">
+  Main Menu
+</a>
+
+<!--                                                                   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev. # :     Description                             -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 06/21/2020 : 0.0.1  : Original. Copyed from show.html.erb.        -->
+<!--            : 0.0.2  : Cleanup remove unneded code and comments.   -->
+<!-- ----------------------------------------------------------------- -->
+<!--            :        :                                             -->
+<!-- ----------------------------------------------------------------- -->

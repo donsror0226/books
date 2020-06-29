@@ -2,10 +2,10 @@
 <!-- -------------------------------------------------------------------- -->
 <!-- System    : Centos 7.7                                               -->
 <!--   Name    : peekaboo                                                 -->
-<!-- Location  : /home/don/workspace/books/app/views/condition/           -->
+<!-- Location  : /home/don/workspace/books/app/views/books/               -->
 <!-- File Name : new.html.erb                                             -->
-<!-- Rev. Date : 06/26/2020                                               -->
-<!-- Rev. No.  : 0.0.3                                                    -->
+<!-- Rev. Date : 06/21/2020                                               -->
+<!-- Rev. No.  : 0.0.1                                                    -->
 <!-- -------------------------------------------------------------------- -->
 <!--                                                                      -->
 
@@ -15,10 +15,8 @@
 
 <!-- -------------------------------------------------------------------- -->
 <!-- Not using render _form.html.erb                                      -->
-<!-- Now using render _form_new.html.erb                                  -->
 <!-- -------------------------------------------------------------------- -->
-<!-- <!%= render 'form', condition: @condition %> -->
-<%= render 'form_new', condition: @condition %>
+<%= render 'form', condition: @condition %>
 
 <!-- -------------------------------------------------------------------- -->
 <!-- Draws a horizontal line, Size = 4.                                   -->
@@ -60,7 +58,7 @@
       </td>
       <td align="right">
         <font size=-3>
-          Rev. 0.0.3
+          Rev. 0.0.5
         </font>
       </td>
     </tr>
@@ -73,12 +71,6 @@
 <!-- -------------------------------------------------------------------- -->
 <!-- 06/21/2020 : 0.0.1  : Original.                                      -->
 <!--            :        : Copyed from new.html.erb (books).              -->
-<!-- -------------------------------------------------------------------- -->
-<!-- 06/26/2020 : 0.0.2  : Copy partial _form.html.erb to                 -->
-<!--            :        :              _form_new.html.erb                -->
-<!--            :        : Change render _form.html.erb to                -->
-<!--            :        :               _form.new.html.erb               -->
-<!--            : 0.0.3  : clean up remove unneeded code and comments.    -->
 <!-- -------------------------------------------------------------------- -->
 <!--            :        :                                                -->
 <!-- -------------------------------------------------------------------- -->

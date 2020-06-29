@@ -1,6 +1,87 @@
-<h1>Editing Condition</h1>
+<!--                                                                     -->
+<!-- ------------------------------------------------------------------- -->
+<!-- System    : Centos 7.7                                              -->
+<!--   Name    : peekaboo                                                -->
+<!-- Location  : /home/don/workspace/books/app/views/conditions/         -->
+<!-- File Name : edit.html.erb                                           -->
+<!-- Rev. Date : 06/25/2020                                              -->
+<!-- Rev. No.  : 0.0.4                                                   -->
+<!-- ------------------------------------------------------------------- -->
+<!--                                                                     -->
 
-<%= render 'form', condition: @condition %>
+<h1>
+	Editing Condition
+</h1>
 
+<!-- -------------------------------------------------------------------- -->
+<!-- Not using Call partial _form.html.erb                                -->
+<!-- Now using Call partial _form_edit.html.erb                           -->
+<!-- -------------------------------------------------------------------- -->
+<!-- <!%= render 'form', condition: @condition %> -->
+<%= render 'form_edit', condition: @condition %>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Draws a horizontal line, Size = 4.                                   -->
+<!-- Draws a horizontal using using stylesheet "scaffolds.scss".          -->
+<!-- -------------------------------------------------------------------- -->
+<!-- <hr size="4" "noshade"> -->
+<hr>
+</hr>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Links at bottom of page/screen.                                      -->
+<!--            Show /  Back / Admin Menu / Main Menu                     -->
+<!-- -------------------------------------------------------------------- -->
 <%= link_to 'Show', @condition %> |
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
 <%= link_to 'Back', conditions_path %>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<a href="/admin_index.html">
+  Admin Menu
+</a>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<a href="/main_index">
+  Main Menu
+</a>
+            
+<!-- -------------------------------------------------------------------- -->
+<!-- Draws a horizontal line, Size = 4.                                   -->
+<!-- Draws a horizontal using using stylesheet "scaffolds.scss".          -->
+<!-- -------------------------------------------------------------------- -->
+<!-- <hr size="4" "noshade"> -->
+<hr>
+</hr>
+
+<!-- -------------------------------------------------------------------- -->
+<!--  Table - Address - Section                                           -->
+<!--    Row #1 using 2 column.                                            -->
+<!-- -------------------------------------------------------------------- -->
+<address>
+  <table width="100%" border="0">
+    <tr>
+      <td>
+        Don Streeck
+      </td>
+      <td align="right">
+        <font size=-3>
+          Rev. 0.0.4
+        </font>
+      </td>
+    </tr>
+  </table>
+</address>
+
+<!--                                                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev. # :     Description                                -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 06/25/2020 : 0.0.1  : Original.                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 06/26/2020 : 0.0.2  : Copy partial _form.html.erb to                 -->
+<!--            :        :              _form_edit.html.erb               -->
+<!--            :        : Change render _form.html.erb to                -->
+<!--            :        :               _form.edit.html.erb              -->
+<!--            : 0.0.3  : clean up remove unneeded code and comments.    -->
+<!-- -------------------------------------------------------------------- -->
+<!--            :        :                                                -->
+<!-- -------------------------------------------------------------------- -->

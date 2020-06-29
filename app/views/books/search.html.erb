@@ -1,195 +1,180 @@
-<!-- #2 - search                                                        -->
+<!--                                                                    -->
+<!-- ------------------------------------------------------------------ --> 
+<!-- System    : Centos 7.7                                             --> 
+<!--   Name    : peekaboo                                               --> 
+<!-- Location  : /home/don/workspace/books/app/views/books/             -->
+<!-- File Name : _form.html.erb                                         --> 
+<!-- Rev. Date : 06/15/2020                                             --> 
+<!-- Rev. No.  : 0.0.3                                                  --> 
+<!-- ------------------------------------------------------------------ --> 
+<!--                                                                    -->
+
 <h1>
   Search Books
 </h1>
 
- <!-- The notice is a message stating some thing was successfully.         -->
+<!-- -------------------------------------------------------------------- -->
+<!-- The notice is a message stating some thing was successfully.         -->
+<!-- -------------------------------------------------------------------- -->
 <p id="notice"><%= notice %></p>
 
-   <!--<form action="/search">
-      <input name="q" type="text" placeholder="Search" aria-label="Search">
-      <button type="submit">
-        Search
-      </button>
-    </form>-->
-
-<!--<!%= search_form_for @q, remote: true do |f| %>
-  <!%= f.label :author_cont, 'Author' %>
-  <!%= f.search_field :author_cont %>
-  <!%= f.submit %>
-<!% end %>-->
-
-    <form action="/search">
-      Author:
-      <input name="q" type="text" placeholder="Keywords" aria-label="Search">
-      <button type="submit">
-        Search
-      </button>
-    </form>
-
+<!-- -------------------------------------------------------------------- -->
+<!-- Form for Search.                                                     -->
+<!-- -------------------------------------------------------------------- -->
+<form action="/search">
+  Author:
+  <input name="q" type="text" placeholder="Keywords" aria-label="Search">
+  <button type="submit">
+    Search
+  </button>
+</form>
 
 <% if @books.blank? %>
+  <br>
+  <br>
+  <br>
   <% if params[:q] != "empty" %>
-    <br><br>
+    <br>
+    <br>
     "***** No data in Seareh Books *****"<br>
-    <% if params[:q].blank? %>
-      "***** No data in Seareh Books - Blank *****"<br>
-    <% end %>
-    <% if params[:q].nil? %>
-      "***** No data in Seareh Books - Nil *****"
-    <% end %>
+    <!--<!% if params[:q].blank? %>-->
+      <!--"***** No data in Seareh Books - Blank *****"<br>-->
+    <!--<!% end %>-->
+    <!--<!% if params[:q].nil? %>-->
+      <!--"***** No data in Seareh Books - Nil *****"-->
+    <!--<!% end %>-->
   <% end %>
 
 <% else %>
-<% @books.each do |book| %>
-  <!-- ---------------------------------------------------------------- -->
-  <!-- Table #1 - Book Info.                                            -->
-  <!-- ---------------------------------------------------------------- -->
-  <!--            Author / Title / Publisher / Series Name /            -->
-  <!--            Series No. / ISBN / Published Date / Book Type        -->
-  <!-- ---------------------------------------------------------------- -->
-  <table width="100%" border=1>
-    <!-- -------------------------------------------------------------- -->
-    <!-- Setup of 1st Row in Table #1.                                  -->
-    <!--   Name = Author, Size = 40, Maxsize = 50.                      -->
-    <!--          Size is the display feild size.                       -->
-    <!-- Change the first <td> to <th> so stylesheet is used for <th>.  -->
-    <!-- -------------------------------------------------------------- -->
+  <% @books.each do |book| %>
+    <br>
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Table #1 - Book Info.                                            -->
+    <!-- ---------------------------------------------------------------- -->
+    <!--            Author / Title / Publisher / Series Name /            -->
+    <!--            Series No. / ISBN / Published Date / Book Type        -->
+    <!-- ---------------------------------------------------------------- -->
+    <table width="100%" border=1>
+      <!-- -------------------------------------------------------------- -->
+      <!-- Setup of 1st Row in Table #1.                                  -->
+      <!--   Name = Author, Size = 30, Maxsize = 50.                      -->
+      <!--          Size is the display feild size.                       -->
+      <!-- -------------------------------------------------------------- -->
       <tr>
-      <td width="12%">
-        Author
-      </td>
-      <td width="38%" bgcolor="lightgray">
-        <%=h book.author %>
-      </td>
-      <td width="12%">
-        *
-      </td>
-      <td width="38%">
-        **
-      </td>
-    </tr>
-
-    <!-- -------------------------------------------------------------- -->
-    <!-- Setup of 2nd Row in Table #1.                                  -->
-    <!--   Name = Title,, Size = 25, Maxsize = 25.                      -->
-    <!--   Name = Publisher, Size = 20, Maxsize = 20.                   -->
-    <!-- -------------------------------------------------------------- -->
-    <tr>
-      <td width="12%">
-        Title
-      </td>
-      <td width="38%" bgcolor="lightgray">
-        <%=h book.title %>
-      </td>
-      <td width="12%">
-        Publisher
-      </td>
-      <td width="38%" bgcolor="lightgray">
-        <%=h book.publisher %>
-      </td>
-    </tr>
-
-    <!-- -------------------------------------------------------------- -->
-    <!-- Setup of 3rd Row in Table #1.                                  -->
-    <!--   Name = Series name, Size = 25, Maxsize = 25.                 -->
-    <!--   Name = Series No. , Size =  3, Maxsize =  3.                 -->
-    <!-- -------------------------------------------------------------- -->
-    <tr>
-      <td width="12%">
-        Series Name
-      </td>
-      <td width="38%" bgcolor="lightgray">
-        <%=h book.series_name %>
-      </td>
-      <td width="12%">
-        Series No
-      </td>
-
-      <td width="38%" bgcolor="lightgray">
-        <%=h book.series_no %>
-      </td>
-    </tr>
-  <!--</table>-->
-
-  <!-- ---------------------------------------------------------------- -->
-  <!-- Table #2 - Bottons.                                              -->
-  <!-- ---------------------------------------------------------------- -->
-  <!--            Show / Edit / Destroy                                 -->
-  <!-- ---------------------------------------------------------------- -->
-  <table width="100%" border=0>
-    <tr>
-      <td width="15%">
-      </td>
-      <td width="10%">
-        <%= link_to 'Show', book %>
-      </td>
-      <td width="10%">
-        <%= link_to 'Edit', edit_book_path(book) %>
-      </td>
-      <td width="10%">
-        <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </td>
-      <td width="55%">
-      </td>
-    </tr>
-  </table>
-
-  <!-- ---------------------------------------------------------------- -->
-  <!-- Draws a horizontal line, Size = 4.                               -->
-  <!-- Draws a horizontal using using stylesheet "scaffolds.scss".      -->
-  <!-- ---------------------------------------------------------------- -->
-  <!-- <hr size="4" "noshade"> -->
-  <!--<hr>
-  </hr>-->
-    <tr>
-      <td width="100%" colspan=4>
-        <hr>
-        </hr>
-      </td>
-    </tr>
-
-</table>
-
-<% end %>
-
-<!--<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <!% @books.each do |book| %>
-      <tr>
-        <td><!%= link_to 'Show', book %></td>
-        <td><!%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><!%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td width="12%">
+          Author
+        </td>
+        <td width="38%" bgcolor="lightgray">
+          <%=h book.author %>
+        </td>
+        <td width="12%">
+          *
+        </td>
+        <td width="38%">
+          **
+        </td>
       </tr>
-    <!% end %>
-  </tbody>
-</table>-->
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- Setup of 2nd Row in Table #1.                                  -->
+      <!--   Name = Title,, Size = 25, Maxsize = 25.                      -->
+      <!--   Name = Publisher, Size = 20, Maxsize = 20.                   -->
+      <!-- -------------------------------------------------------------- -->
+      <tr>
+        <td width="12%">
+          Title
+        </td>
+        <td width="38%" bgcolor="lightgray">
+          <%=h book.title %>
+        </td>
+        <td width="12%">
+          Publisher
+        </td>
+        <td width="38%" bgcolor="lightgray">
+          <%=h book.publisher %>
+        </td>
+      </tr>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- Setup of 3rd Row in Table #1.                                  -->
+      <!--   Name = Series name, Size = 25, Maxsize = 25.                 -->
+      <!--   Name = Series No. , Size =  3, Maxsize =  3.                 -->
+      <!-- -------------------------------------------------------------- -->
+      <tr>
+        <td width="12%">
+          Series Name
+        </td>
+        <td width="38%" bgcolor="lightgray">
+          <%=h book.series_name %>
+        </td>
+        <td width="12%">
+          Series No
+        </td>
+        <td width="38%" bgcolor="lightgray">
+          <%=h book.series_no %>
+        </td>
+      </tr>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- Table #2 - Bottons.                                            -->
+      <!-- -------------------------------------------------------------- -->
+      <!--            Show / Edit / Destroy                               -->
+      <!-- -------------------------------------------------------------- -->
+      <table width="100%" border=0>
+        <tr>
+          <td width="15%">
+          </td>
+          <td width="10%">
+            <%= link_to 'Show', book %>
+          </td>
+          <td width="10%">
+            <%= link_to 'Edit', edit_book_path(book) %>
+          </td>
+          <td width="10%">
+          <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+          <td width="55%">
+          </td>
+        </tr>
+      </table>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- Draws a horizontal line, Size = 4.                             -->
+      <!-- Draws a horizontal using using stylesheet "scaffolds.scss".    -->
+      <!-- -------------------------------------------------------------- -->
+      <!-- <hr size="4" "noshade"> -->
+      <!--<hr>-->
+      <!--</hr>-->
+      <tr>
+        <td width="100%" colspan=4>
+          <hr>
+          </hr>
+        </td>
+      </tr>
+    </table>
+
+  <% end %>
 
 <% end %>
 
-<br>
-<br>
-<br>
+<!-- -------------------------------------------------------------------- -->
+<!-- Links at bottom of page/screen.                                      -->
+<!--            New Books / Search / Back / Maain Menu                    -->
+<!-- -------------------------------------------------------------------- -->
 <%= link_to 'New Book', new_book_path %>
 &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
-<%= link_to 'Search', search_path %>
-&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
-<%= link_to 'Back', books_path %>
-&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
-<a href="../index">
-  Main Menu
+<a href="/search?q=empty">
+  Search
 </a>
 &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
-            <a href="/search?q=empty">
-              Search
-            </a>
-
+<!-- This does not work -->
+<!--<!%= link_to 'Search', search_path %>-->
+<!--&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp-->
+<%= link_to 'Back', books_path %>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<a href="/main_index">
+  Main Menu
+</a>
 
 <!-- ------------------------------------------------------------------ -->
 <!-- Draws a horizontal line, Size = 4.                                 -->
@@ -211,20 +196,22 @@
       </td>
       <td align="right">
         <font size=-3>
-          Rev. 0.0.2
+          Rev. 0.0.3
         </font>
       </td>
     </tr>
   </table>
 </address>
 
-<!--<!%= render @books_path %>-->
-
-<!-- Call partial _form.html.erb -->
-<!--<!%= render 'list', book: @book %>-->
-<!--<!%= render 'list', books: @book %>-->
-
-<!--<!%= render 'list', book: @book %>-->
-
-<!--<!% end %>-->
-
+<!--                                                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev. # :     Description                                -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 06/13/2020 : 0.0.1  : Original.                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 06/14/2020 : 0.0.2  : Recreated multipliable times.                  -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 06/15/2020 : 0.0.3  : Cleanup remove unneeded code and comments.     -->
+<!-- -------------------------------------------------------------------- -->
+<!--            :        :                                                -->
+<!-- -------------------------------------------------------------------- -->

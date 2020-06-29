@@ -3,9 +3,9 @@
 <!-- System    : Centos 7.7                                            --> 
 <!--   Name    : peekaboo                                              --> 
 <!-- Location  : /home/don/workspace/books/public/                     -->
-<!-- File Name : index.html                                            --> 
-<!-- Rev. Date : 06/08/2020                                            --> 
-<!-- Rev. No.  : 0.0.8                                                 --> 
+<!-- File Name : admin_index.html                                      --> 
+<!-- Rev. Date : 06/21/2020                                            --> 
+<!-- Rev. No.  : 0.0.3                                                 --> 
 <!-- ----------------------------------------------------------------- --> 
 <!--                                                                   -->
 
@@ -13,13 +13,13 @@
 <html lang="en">
   <head>
     <title>
-      Don's Book Inventory -- Main Menu - 1.0
+      Don's Book Inventory -- Addmin Main Menu - 2.0
     </title>
     <!--<title>jQuery UI Datepicker - Default functionality</title>-->
     <meta name="Generator" content="Sublime Text">
     <meta name="Author" content="Don streeck">
     <meta name="Keywords" content="Ruby on Rails">
-    <meta name="Description" content="Main Menu 1.0">
+    <meta name="Description" content="Admin Main Menu 2.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="myscaffolds.css">
@@ -29,7 +29,7 @@
  
     <br><br>
     <!-- ---------------------------------------------------------------- -->
-    <!-- Table #1 - Main Menu - Section                                   -->
+    <!-- Table #1 - Admin Main Menu - Section                             -->
     <!-- ---------------------------------------------------------------- -->
     <table width="100%" border="8">
       <!-- -------------------------------------------------------------- -->
@@ -39,7 +39,7 @@
         <td colspan=3 align=center>
           <font size=+3>
             <b>
-              Main Menu - Books
+              Admin Main Menu - Books
             </b>
           </font>
         </td>
@@ -59,38 +59,36 @@
         <td width="20%">
           <br>
           <b>
-            <!-- -------------------------------------------------------- -->
+            <!-- ----------------------------------------------------2.1- -->
             <!-- This first call application.html.erb in /view/layouts/   -->
             <!--   which inturns loads all css formating files, then      -->
             <!--   call file scaffold.scss in /assets/stylesheets.        -->
-            <!-- Then call new.html.erb in /view/books/.                  -->
+            <!-- Then call conditions/new.html.erb in /view/              -->
             <!-- -------------------------------------------------------- -->
-            <a href="/books/new">
-              Input
+            <a href="/conditions/new">
+              New Condition
             </a>
             <br><br>
 
-            <!-- -------------------------------------------------------- -->
+            <!-- ----------------------------------------------------2.2- -->
             <!-- This first call application.html.erb in /view/layouts/   -->
             <!--   which inturns loads all css formating files, then      -->
             <!--   call file scaffold.scss in /assets/stylesheets.        -->
-            <!-- Then call index.html.erb in /view/books/.                -->
+            <!-- Then call condition/index.html.erb in /view/             -->
             <!-- -------------------------------------------------------- -->
-            <a href="/books">
-              List
+            <a href="/conditions">
+              List Conditions
+            </a>
+            <br><br>-----<br><br>
+
+            <!-- ---------------------------------------------------2.10- -->
+            <!-- This call a main_menu /main_index.html.                  -->
+            <!-- -------------------------------------------------------- -->
+            <a href="/main_index.html">
+              Main Menu
             </a>
             <br><br>
 
-            <!-- -------------------------------------------------------- -->
-            <!-- This first call application.html.erb in /view/layouts/   -->
-            <!--   which inturns loads all css formating files, then      -->
-            <!--   call file scaffold.scss in /assets/stylesheets.        -->
-            <!-- Then call search.html.erb in /view/books/.                -->
-            <!-- -------------------------------------------------------- -->
-            <a href="/search?q=empty">
-              Search
-            </a>
-            <br><br>
           </b>
         </td>
 
@@ -102,7 +100,7 @@
         </td>
       </tr>
     </table>
-    <br><br><br>
+    <br>
     <hr>
 
     <!-- ---------------------------------------------------------------- -->
@@ -133,22 +131,12 @@
 <!-- ----------------------------------------------------------------- -->
 <!-- Date Rev.  : Rev. # :     Description                             -->
 <!-- ----------------------------------------------------------------- -->
-<!-- 05/24/2020 : 0.0.1  : Original.                                   -->
-<!--            : 0.0.2  : Comment out title and add new title.        -->
-<!--            :        : Add 4 meta name to to of meta list.         -->
-<!--            :        : Comment out <p> section input text.         -->
-<!--            : 0.0.3  : Add Table #1.                               -->
-<!--            : 0.0.4  : Create Table #2 inside of Address.          -->
-<!--            : 0.0.5  : Add borders to table #1.                    -->
-<!--            :        : Add some spacing inside of table #1.        -->
-<!--            :        : Add some bolding inside of table #1.        -->
-<!--            : 0.0.6  : Reduse font size by -3 right adjust on      -->
-<!--            :        :   Rev. ### in address.                      -->
+<!-- 06/17/2020 : 0.0.1  : Original.                                   -->
+<!--            :        : Copyed Main_index.html.                     -->
 <!-- ----------------------------------------------------------------- -->
-<!-- 06/07/2020 : 0.0.7  : Add Search link.                            -->
-<!--            :        :   Not working. - Error -                    -->
+<!-- 06/19/2020 : 0.0.2  : Add Condition links new & list.             -->
 <!-- ----------------------------------------------------------------- -->
-<!-- 06/08/2020 : 0.0.8  : Clean up remove unneed code and comments.   -->
+<!-- 06/21/2020 : 0.0.3  : Add Main Menu link.                         -->
 <!-- ----------------------------------------------------------------- -->
 <!--            :        :                                             -->
 <!-- ----------------------------------------------------------------- -->

@@ -1,0 +1,195 @@
+<!--                                                                   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- System    : Centos 7.7                                            --> 
+<!--   Name    : peekaboo                                              --> 
+<!-- Location  : /home/don/workspace/books/public/                     -->
+<!-- File Name : main_index.html                                       --> 
+<!-- Rev. Date : 06/20/2020                                            --> 
+<!-- Rev. No.  : 0.2.1                                                 --> 
+<!-- ----------------------------------------------------------------- --> 
+<!--                                                                   -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>
+      Don's Book Inventory -- Main Menu - 1.0
+    </title>
+    <!--<title>jQuery UI Datepicker - Default functionality</title>-->
+    <meta name="Generator" content="Sublime Text">
+    <meta name="Author" content="Don streeck">
+    <meta name="Keywords" content="Ruby on Rails">
+    <meta name="Description" content="Main Menu 1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="myscaffolds.css">
+  </head>
+
+  <body>
+ 
+    <br><br>
+    <div id="table2">
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Table #1 - Main Menu - Section                                   -->
+    <!-- ---------------------------------------------------------------- -->
+    <table id="table1" width="100%" border="1">
+      <!-- -------------------------------------------------------------- -->
+      <!--    Row #1 - spaning all 3 column.                              -->
+      <!-- -------------------------------------------------------------- -->
+      <tr>
+        <!--<td colspan=3 align=center>-->
+        <td colspan=3>
+          <!--<font size=+3>-->
+            <b>
+              <h1>
+                Main Menu - Books
+              </h1>
+            </b>
+          <!--</font>-->
+        </td>
+      </tr>
+
+      <!-- <tr align=center> -->
+      <tr>
+        <!-- ------------------------------------------------------------ -->
+        <!--    Row #2 - column. #1.                                      -->
+        <!-- ------------------------------------------------------------ -->
+        <td width="40%">
+          <img src="/images/books.jpg">
+        </td>
+
+        <!-- ------------------------------------------------------------ -->
+        <!--    Row #2 - column. #2.                                      -->
+        <!-- ------------------------------------------------------------ -->
+        <td id="links" width="20%">
+          <br>
+          <b>
+            <!-- ----------------------------------------------------1.0- -->
+            <!-- This first call application.html.erb in /view/layouts/   -->
+            <!--   which inturns loads all css formating files, then      -->
+            <!--   call file scaffold.scss in /assets/stylesheets.        -->
+            <!-- Then call new.html.erb in /view/books/.                  -->
+            <!-- -------------------------------------------------------- -->
+            <a href="/books/new">
+              Input
+            </a>
+            <br><br>
+
+            <!-- ----------------------------------------------------1.1- -->
+            <!-- This first call application.html.erb in /view/layouts/   -->
+            <!--   which inturns loads all css formating files, then      -->
+            <!--   call file scaffold.scss in /assets/stylesheets.        -->
+            <!-- Then call index.html.erb in /view/books/.                -->
+            <!-- -------------------------------------------------------- -->
+            <a href="/books">
+              List
+            </a>
+            <br><br>
+
+            <!-- ----------------------------------------------------1.2- -->
+            <!-- This first call application.html.erb in /view/layouts/   -->
+            <!--   which inturns loads all css formating files, then      -->
+            <!--   call file scaffold.scss in /assets/stylesheets.        -->
+            <!-- Then call search.html.erb in /view/books/.                -->
+            <!-- -------------------------------------------------------- -->
+            <a href="/search?q=empty">
+              Search
+            </a>
+            <br><br>
+
+            <!-- ----------------------------------------------------1.3- -->
+            <!-- This will display Ruby and Rails versions.               -->
+            <!-- Location : home/don/.rvm/gems/rugy-2.2.2@bookinv/gems    -->
+            <!--            railties-5.1.4/lib/rails/templates/rails/     -->
+            <!--            welcome                                       -->
+            <!-- File : index.html.erb                                    -->
+            <!-- -------------------------------------------------------- -->
+            <a href="/">
+              Server Info
+            </a>
+            <br><br>
+
+            <!-- <hr id="small"> -->
+            <!-- <br> -->
+
+            <!-- ----------------------------------------------------1.4- -->
+            <!-- This call a sub menu admin/index.                        -->
+            <!-- -------------------------------------------------------- -->
+            <a href="/admin/admin_index.html">
+              Admin
+            </a>
+            <br><br>
+          </b>
+        </td>
+
+        <!-- ------------------------------------------------------------ -->
+        <!--    Row #2 - column. #3.                                      -->
+        <!-- ------------------------------------------------------------ -->
+        <td width="40%">
+          <img src="/images/books.jpg">
+        </td>
+      </tr>
+    </table>
+    </div>
+    <br><br><br>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Draws a horizontal line, Size = 4.                               -->
+    <!-- Draws a horizontal using using stylesheet "scaffolds.scss".      -->
+    <!-- ---------------------------------------------------------------- -->
+    <!-- <hr size="4" "noshade"> -->
+    <hr>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!--  Table #2 - Address - Section                                    -->
+    <!--    Row #1 using 2 column.                                        -->
+    <!-- ---------------------------------------------------------------- -->
+    <address>
+      <table width="100%" border="0">
+        <tr>
+          <td>
+            <font size=-3>
+              Don Streeck
+            </font>
+          </td>
+          <td align="right">
+            <font size=-3>
+              Rev. 0.0.10
+            </font>
+          </td>
+        </tr>
+      </table>
+    </address>
+  </body>
+</html>
+
+<!--                                                                   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev. # :     Description                             -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 05/24/2020 : 0.0.1  : Original.                                   -->
+<!--            : 0.0.2  : Comment out title and add new title.        -->
+<!--            :        : Add 4 meta name to to of meta list.         -->
+<!--            :        : Comment out <p> section input text.         -->
+<!--            : 0.0.3  : Add Table #1.                               -->
+<!--            : 0.0.4  : Create Table #2 inside of Address.          -->
+<!--            : 0.0.5  : Add borders to table #1.                    -->
+<!--            :        : Add some spacing inside of table #1.        -->
+<!--            :        : Add some bolding inside of table #1.        -->
+<!--            : 0.0.6  : Reduse font size by -3 right adjust on      -->
+<!--            :        :   Rev. ### in address.                      -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 06/07/2020 : 0.1.0: Add Search link.                              -->
+<!--            :        :   Not working. - Error -                    -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 06/08/2020 : 0.1.1  : Clean up remove unneed code and comments.   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 06/15/2020 : 0.1.2  : Search link working.                        -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 06/16/2020 : 0.1.3  : Add Server Info link.                       -->
+<!--            :        :   Displays Ruby/Rails versions.             -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 06/17/2020 : 0.2.0  : Add Admin link.                             -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 06/20/2020 : 0.2.1  : Remane index.html to main_index.html.       -->
+<!-- ----------------------------------------------------------------- -->

@@ -1,0 +1,85 @@
+<!--                                                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- System    : Centos 7.7                                               -->
+<!--   Name    : peekaboo                                                 -->
+<!-- Location  : /home/don/workspace/books/app/views/conditions/          -->
+<!-- File Name : _form_edit.html.erb                                      -->
+<!-- Rev. Date : 06/15/2020                                               -->
+<!-- Rev. No.  : 0.0.8                                                    -->
+<!-- -------------------------------------------------------------------- -->
+<!--                                                                      -->
+
+<%= form_with(model: condition, local: true) do |f| %>
+<!%= form_for(@condition) do |f| %>
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Error handeling.                                                   -->
+  <!-- ------------------------------------------------------------------ -->
+  <% if condition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(condition.errors.count, "error") %> prohibited this condition from being saved:</h2>
+
+      <ul>
+      <% condition.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- The first 2 lines wil get the last record, column condition_index, -->
+  <!--   or you can just use the third line to get the last record,       -->
+  <!--   column condition_index.                                          -->
+  <!-- The forth lines adds 1 to lastidx to get next_idx.                 -->
+  <%= lastidx = @last_idx %>
+  <!%= lastidx = lastidx.condition_idx %>
+  <!%= lastidx = @last_idx.condition_idx %>
+  <!%= next_idx = lastidx + 1 %>
+
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Table #1.                                                          -->
+  <!-- ------------------------------------------------------------------ -->
+  <!--            Condition idx / Conditin Name                           -->
+  <!-- ------------------------------------------------------------------ -->
+  <table width="35%" border=1>
+    <tr>
+      <td width="25%">
+        <%= f.label :condition_idx %>
+      </td>
+      <td width="10%">
+        <%= f.text_field :condition_idx,
+                         :size => 1,
+                         :maxsize => 5,
+                          autofocus: true %>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="25%">
+        <%= f.label :condition_name %>
+      </td>
+      <td width="10%">
+        <%= f.text_field :condition_name,
+                         :size => 10,
+                          autofocus: true %>
+      </td>
+    </tr>
+ 
+  </table>
+
+  <br>
+  <div class="actions">
+    <%= f.submit "Save Condition" %>
+  </div>
+<% end %>
+
+<!--                                                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev. # :     Description                                -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 06/21/2020 : 0.0.1  : Original.                                      -->
+<!--            :        : Copyed part of _form.html.erb (books).         -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 05/06/2020 : 0.0.2  : Rewrote multipliable times.                    -->
+<!-- -------------------------------------------------------------------- -->
+<!--            :        :                                                -->
+<!-- -------------------------------------------------------------------- -->

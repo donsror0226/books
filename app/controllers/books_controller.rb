@@ -14,13 +14,9 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   ## Section Add by DPS
-  # GET /books/1
-  # GET /books/1.json
+  ## GET /books/1
+  ## GET /books/1.json
   def search
-    #@books = Book.all
-    #@q = Books.ransack(search_params[:search])
-    #@books = @q.result
-
     if !params[:q].blank?
       @books = Book.where("author like ?", "%" + params[:q] + "%")
     end
@@ -32,7 +28,7 @@ class BooksController < ApplicationController
     @books = Book.all
 
     ## This part of the code put so many records on the screen at one       ##
-    ##   time with Prev / No. of screens / Next.                            ##
+    ##   time with Prev / No. of screens / Next.                        DPS ##
     @books = Book.paginate :page => params[:page]
                           # :order => 'id'
   end
@@ -105,7 +101,7 @@ class BooksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def book_params
-      ##params.fetch(:book, {})
+      ## params.fetch(:book, {}) ##
       params.require(:book).permit(:author, :title, :series_name, :series_no,
                      :isbn_tab_no, :publisher, :published_date, 
                      :location, :price, :purchase_date, :entry_date, 

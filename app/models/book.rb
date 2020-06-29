@@ -1,13 +1,13 @@
 #!/bin/bash
 #
-# ----------------------------------------------------------------- #
-# System    : Centos 7.7                                            #
-#   Name    : peekaboo                                              #
-# Location  : /home/don/workspace/books/app/models/                 #
-# File Name : book.rb                                               #
-# Rev. Date : 06/01/2020                                            #
-# Rev. No.  : 0.0.5                                                 #
-# ----------------------------------------------------------------- #
+# ------------------------------------------------------------------------- #
+# System    : Centos 7.7                                                    #
+#   Name    : peekaboo                                                      #
+# Location  : /home/don/workspace/books/app/models/                         #
+# File Name : book.rb                                                       #
+# Rev. Date : 06/01/2020                                                    #
+# Rev. No.  : 0.0.5                                                         #
+# ------------------------------------------------------------------------- #
 #
 
 class Book < ApplicationRecord
@@ -16,18 +16,18 @@ class Book < ApplicationRecord
 	#belongs_to :purpose
 	#belongs_to :booktype
 
-	# --------------------------------------------------------------- #
-	# This part of the code put so many records on the screen at      #
-	#   one time with Prev / No. of sreens / Next.                    #
-	# --------------------------------------------------------------- #
+	# ----------------------------------------------------------------------- #
+	# This part of the code put so many records on the screen at              #
+	#   one time with Prev / No. of sreens / Next.                        DPS #
+	# ----------------------------------------------------------------------- #
 	cattr_reader :per_page
 	@@per_page = 3
 
-	# --------------------------------------------------------------- #
-	# -- Author                                                       #
-	# -- Error 01 - Invalid no data in field.                         #
-	# -- Error 02 - Greater than 50 char.                             #
-	# --------------------------------------------------------------- #
+	# ----------------------------------------------------------------------- #
+	# -- Author                                                               #
+	# -- Error 01 - Invalid no data in field.                                 #
+	# -- Error 02 - Greater than 50 char.                                     #
+	# ----------------------------------------------------------------------- #
 	validates_presence_of :author,
 												:message => 
 												 " -------> Error 01 - Field Blank."
@@ -36,11 +36,11 @@ class Book < ApplicationRecord
 											:message =>
 											 " -------> Error 02 - Greater than 50 char."
 
-	# --------------------------------------------------------------- #
-	# -- Title                                                        #
-	# -- Error 03 - Invalid no data in field.                         #
-	# -- Error 04 - Greater than 25 char.                             #
-	# --------------------------------------------------------------- #
+	# ----------------------------------------------------------------------- #
+	# -- Title                                                                #
+	# -- Error 03 - Invalid no data in field.                                 #
+	# -- Error 04 - Greater than 25 char.                                     #
+	# ----------------------------------------------------------------------- #
 	validates_presence_of :title,
 												:message => 
 												 " ----------> Error 03 - Field Blank."
@@ -49,20 +49,20 @@ class Book < ApplicationRecord
 											:message =>
 											 " ----------> Error 04 - Greater than 25 char."
 
-	# --------------------------------------------------------------- #
-	# -- Series Name                                                  #
-	# -- Error 05 - Greater than 25 char.                             #
-	# --------------------------------------------------------------- #
+	# ----------------------------------------------------------------------- #
+	# -- Series Name                                                          #
+	# -- Error 05 - Greater than 25 char.                                     #
+	# ----------------------------------------------------------------------- #
 	validates_length_of :series_name,
 											:maximum => 25,
 											:message =>
 											 " -------> Error 05 - Greater than 50 char."
 
-	# --------------------------------------------------------------- #
-	# -- Series No.                                                   #
-	# -- Error 06 - Value must be 1 - 1oo.                            #
-	# -- Error 07 - Value not numeric.                                #
-	# --------------------------------------------------------------- #
+	# ----------------------------------------------------------------------- #
+	# -- Series No.                                                           #
+	# -- Error 06 - Value must be 1 - 1oo.                                    #
+	# -- Error 07 - Value not numeric.                                        #
+	# ----------------------------------------------------------------------- #
 	validates_inclusion_of :series_no,
 												 :within => 1..100,
 												 :allow_nil => true,
@@ -73,11 +73,11 @@ class Book < ApplicationRecord
 														:message =>
 											 			 " -------> Error 07 - Value not numeric."
 
-	# --------------------------------------------------------------- #
-	# -- ISBN - Tab No.                                               #
-	# -- Error 08 - Invalid no data in field.                         #
-	# -- Error 09 - Greater than 20 char.                             #
-	# --------------------------------------------------------------- #
+	# ----------------------------------------------------------------------- #
+	# -- ISBN - Tab No.                                                       #
+	# -- Error 08 - Invalid no data in field.                                 #
+	# -- Error 09 - Greater than 20 char.                                     #
+	# ----------------------------------------------------------------------- #
 	validates_presence_of :isbn_tab_no,
 												:message => 
 												 " --> Error 08 - Field Blank."
@@ -86,11 +86,11 @@ class Book < ApplicationRecord
 											:message =>
 											 " --> Error 09 - Greater than 20 char."
 
-	# --------------------------------------------------------------- #
-	# -- Publisher                                                    #
-	# -- Error 01 - Invalid no data in field.                         #
-	# -- Error 02 - Greater than 50 char.                             #
-	# --------------------------------------------------------------- #
+	# ----------------------------------------------------------------------- #
+	# -- Publisher                                                            #
+	# -- Error 01 - Invalid no data in field.                                 #
+	# -- Error 02 - Greater than 50 char.                                     #
+	# ----------------------------------------------------------------------- #
 	validates_presence_of :publisher,
 												:message => 
 												 " ----> Error 10 - Field Blank."
@@ -99,16 +99,16 @@ class Book < ApplicationRecord
 											:message =>
 											 " ----> Error 11 - Greater than 20 char."
 
-	# --------------------------------------------------------------- #
-	# -- Published Date                                               #
-	# -- Error 12 -                                                   #
-	# --------------------------------------------------------------- #
+	# ----------------------------------------------------------------------- #
+	# -- Published Date                                                       #
+	# -- Error 12 -                                                           #
+	# ----------------------------------------------------------------------- #
 
-	# --------------------------------------------------------------- #
-	# -- Location                                                     #
-	# -- Error 13 - Invalid no data in field.                         #
-	# -- Error 14 - Greater than 20 char.                             #
-	# --------------------------------------------------------------- #
+	# ----------------------------------------------------------------------- #
+	# -- Location                                                             #
+	# -- Error 13 - Invalid no data in field.                                 #
+	# -- Error 14 - Greater than 20 char.                                     #
+	# ----------------------------------------------------------------------- #
 	validates_presence_of :location,
 												:message => 
 												 " -----> Error 13 - Field Blank."
@@ -117,21 +117,25 @@ class Book < ApplicationRecord
 											:message =>
 											 " -----> Error 14 - Greater than 20 char."
 
-	# --------------------------------------------------------------- #
-	# -- Price                                                        #
-	# -- Error 15 - Invalid no data in field.                         #
-	# -- Error 16 - Value must be 0 - 100. -Does not work.-           #
-	# -- Error 17 - Value not numeric.                                #
-	# -- Error 18 - Invalid format xxx.xx.                            #
-	# --------------------------------------------------------------- #
+	# ----------------------------------------------------------------------- #
+	# -- Price                                                                #
+	# -- Error 15 - Invalid no data in field.                                 #
+	# -- Error 16 - Value must be 0 - 100. -Does not work.-                   #
+	# -- Error 17 - Value not numeric.                                        #
+	# -- Error 18 - Invalid format xxx.xx.                                    #
+	# ----------------------------------------------------------------------- #
 	validates_presence_of :price,
 												:message => 
 												 " ---------> Error 15 - Field Blank."
-	# This does not work on numbers. It uses the command size(). #
-	#validates_length_of :price, #
-	#										:within => 0..6, #
-	#										:message => #
-	#										 " ---------> Error 16 - Value must be 0.00 - 100.00." #
+	## This does not work on numbers. It uses the command size().            ##
+	##validates_length_of :price, #
+	##										:within => 0..6, #
+	##										:message => #
+	##										 " ---------> Error 16 - Value must be 0.00 - 100.00." ##
+	validates_inclusion_of :price,
+												 :within => 1..99.99,
+												 :message => 
+												  " -----> Error 16 - Value must be 1 - 99.99."
 	validates_numericality_of :price,
 														:message =>
 											 			 " ---------> Error 17 - Value not numeric."
@@ -141,75 +145,75 @@ class Book < ApplicationRecord
 											:message =>
                        " ---------> Error 18 - Invalid format (xx.xx)."
 
-	# --------------------------------------------------------------- #
-	# -- Purchase Date                                                #
-	# -- Error 19 -                                                   #
-	# --------------------------------------------------------------- #
+	# ----------------------------------------------------------------------- #
+	# -- Purchase Date                                                        #
+	# -- Error 19 -                                                           #
+	# ----------------------------------------------------------------------- #
 
-	# --------------------------------------------------------------- #
-	# -- Entry Date                                                   #
-	# -- Error 20 -                                                   #
-	# --------------------------------------------------------------- #
+	# ----------------------------------------------------------------------- #
+	# -- Entry Date                                                           #
+	# -- Error 20 -                                                           #
+	# ----------------------------------------------------------------------- #
 
-	# --------------------------------------------------------------- #
-	# -- Condition                                                    #
-	# -- Error 21 -                                                   #
-	# --------------------------------------------------------------- #
+	# ----------------------------------------------------------------------- #
+	# -- Condition                                                            #
+	# -- Error 21 -                                                           #
+	# ----------------------------------------------------------------------- #
 
-	# --------------------------------------------------------------- #
-	# -- Media Type                                                   #
-	# -- Error 22 -                                                   #
-	# --------------------------------------------------------------- #
+	# ----------------------------------------------------------------------- #
+	# -- Media Type                                                           #
+	# -- Error 22 -                                                           #
+	# ----------------------------------------------------------------------- #
 
-	# --------------------------------------------------------------- #
-	# -- Purpose                                                      #
-	# -- Error 23 -                                                   #
-	# --------------------------------------------------------------- #
+	# ----------------------------------------------------------------------- #
+	# -- Purpose                                                              #
+	# -- Error 23 -                                                           #
+	# ----------------------------------------------------------------------- #
 
-	# --------------------------------------------------------------- #
-	# -- Book Type                                                    #
-	# -- Error 24 -                                                   #
-	# --------------------------------------------------------------- #
+	# ----------------------------------------------------------------------- #
+	# -- Book Type                                                            #
+	# -- Error 24 -                                                           #
+	# ----------------------------------------------------------------------- #
 
 end
 
 #
-# ----------------------------------------------------------------- #
-# Date Rev.  : Rev. # :     Description                             #
-# ----------------------------------------------------------------- #
-# 05/13/2020 : 0.0.1  : Original.                                   #
-#            : 0.0.2  : Add verification for Author.                #
-# ----------------------------------------------------------------- #
-# 05/14/2020 : 0.0.3  : Add verification for title.                 #
-#            :        :                      series_name,           #
-#            :        :                      series_no,             #
-#            :        :                      isbn_tab_no,           #
-#            :        :                      publisher,             #
-#            :        :                      published_date,        #
-#            :        :                      location,              #
-#            :        :                      price,                 #
-#            :        :                      purchase_date,         #
-#            :        :                      entry_date,            #
-#            :        :                      condition_id,          #
-#            :        :                      media_type_id,         #
-#            :        :                      purpose_id,            #
-#            :        :                      book_type_id.          #
-# ----------------------------------------------------------------- #
-# 05/31/2020 : 0.0.4  : Add pageinating.                            #
-#            :        : This part of the code put so many records   #
-#            :        :   on the screen at one time with            #
-#            :        :   Prev / No. of screens / Next.             #
-#            :        : See controller/books_controller.rb          #
-#            :        :   for part 1 of pageinating.                #
-#            :        : See models/book.rb for part 2 of            #
-#            :        :   pageinating.                              #
-#            :        : See view/books/index.html.erb for part 3    #
-#            :        :   of pageinating.                           #
-#            :        : See environment.rb for part 4 of            #
-#            :        :   pageinating.                              #
-# ----------------------------------------------------------------- #
-# 06/01/2020 : 0.0.5  : Remove validates_length_of :price           #
-#            :        :   Error 16, does not work on numbers.       #
-# ----------------------------------------------------------------- #
-#            :        :                                             #
-# ----------------------------------------------------------------- #
+# ------------------------------------------------------------------------- #
+# Date Rev.  : Rev. # :     Description                                     #
+# ------------------------------------------------------------------------- #
+# 05/13/2020 : 0.0.1  : Original.                                           #
+#            : 0.0.2  : Add verification for Author.                        #
+# ------------------------------------------------------------------------- #
+# 05/14/2020 : 0.0.3  : Add verification for title.                         #
+#            :        :                      series_name,                   #
+#            :        :                      series_no,                     #
+#            :        :                      isbn_tab_no,                   #
+#            :        :                      publisher,                     #
+#            :        :                      published_date,                #
+#            :        :                      location,                      #
+#            :        :                      price,                         #
+#            :        :                      purchase_date,                 #
+#            :        :                      entry_date,                    #
+#            :        :                      condition_id,                  #
+#            :        :                      media_type_id,                 #
+#            :        :                      purpose_id,                    #
+#            :        :                      book_type_id.                  #
+# ------------------------------------------------------------------------- #
+# 05/31/2020 : 0.0.4  : Add pageinating.                                    #
+#            :        : This part of the code put so many records           #
+#            :        :   on the screen at one time with                    #
+#            :        :   Prev / No. of screens / Next.                     #
+#            :        : See controller/books_controller.rb                  #
+#            :        :   for part 1 of pageinating.                        #
+#            :        : See models/book.rb for part 2 of                    #
+#            :        :   pageinating.                                      #
+#            :        : See view/books/index.html.erb for part 3            #
+#            :        :   of pageinating.                                   #
+#            :        : See environment.rb for part 4 of                    #
+#            :        :   pageinating.                                      #
+# ------------------------------------------------------------------------- #
+# 06/01/2020 : 0.0.5  : Remove validates_length_of :price                   #
+#            :        :   Error 16, does not work on numbers.               #
+# ------------------------------------------------------------------------- #
+#            :        :                                                     #
+# ------------------------------------------------------------------------- #

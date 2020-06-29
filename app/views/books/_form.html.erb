@@ -4,8 +4,8 @@
 <!--   Name    : peekaboo                                               --> 
 <!-- Location  : /home/don/workspace/books/app/views/books/             -->
 <!-- File Name : _form.html.erb                                         --> 
-<!-- Rev. Date : 05/28/2020                                             --> 
-<!-- Rev. No.  : 0.0.7                                                  --> 
+<!-- Rev. Date : 06/15/2020                                             --> 
+<!-- Rev. No.  : 0.0.8                                                  --> 
 <!-- ------------------------------------------------------------------ --> 
 <!--                                                                    -->
 
@@ -25,360 +25,346 @@
     </div>
   <% end %>
 
-  <!--<table width="100%" border=1>-->
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Table #1 - Outter table.                                           -->
+  <!-- ------------------------------------------------------------------ -->
   <table width="100%" border=1>
-  <tr>
-  <td width="100%">
-    <!-- ---------------------------------------------------------------- -->
-    <!-- Table #1 - Book Info.                                            -->
-    <!-- ---------------------------------------------------------------- -->
-    <!--            Author / Title / Publisher / Series Name /            -->
-    <!--            Series No. / ISBN / Published Date / Book Type        -->
-    <!-- ---------------------------------------------------------------- -->
-    <!-- <table width="100%" border=1> -->
-    <table width="100%">
-      <!-- -------------------------------------------------------------- -->
-      <!-- Setup of 1st Row in Table #1.                                  -->
-      <!--   Name = Author, Size = 40, Maxsize = 50.                      -->
-      <!--          Size is the display feild size.                       -->
-      <!-- Change the first <td> to <th> so stylesheet is used for <th>.  -->
-      <!-- -------------------------------------------------------------- -->
-      <tr>
-        <td width="12%">
-          <%= f.label :author %>
-        </td>
-        <!--<td width="88%" colspan=3>-->
-        <td width="38%">
-          <%= f.text_field :author, :size => 30, :maxsize => 50, autofocus: true %>
-        </td>
-        <td width="12%">
-          *
-        </td>
-        <td width=38%>
-          **
-        </td>
-      </tr>
-
-      <!-- -------------------------------------------------------------- -->
-      <!-- Setup of 2nd Row in Table #1.                                  -->
-      <!--   Name = Title,, Size = 25, Maxsize = 25.                      -->
-      <!--   Name = Publisher, Size = 20, Maxsize = 20.                   -->
-      <!-- -------------------------------------------------------------- -->
-      <tr>
-        <td width="12%">
-          <%= f.label :title %>
-        </td>
-        <td width="38%">
-          <%= f.text_field :title, :size => 25, :maxsize => 25 %>
-        </td>
-        <td width="12%">
-          <%= f.label :publisher %>
-        </td>
-        <td width=38%>
-          <%= f.text_field :publisher, :size => 20, :maxsize => 20 %>
-        </td>
-      </tr>
-
-      <!-- -------------------------------------------------------------- -->
-      <!-- Setup of 3rd Row in Table #1.                                  -->
-      <!--   Name = Series name, Size = 25, Maxsize = 25.                 -->
-      <!--   Name = Series No. , Size =  3, Maxsize =  3.                 -->
-      <!-- -------------------------------------------------------------- -->
-      <tr>
-        <td width="12%">
-          <%= f.label :series_name %>
-        </td>
-        <td width="38%">
-          <%= f.text_field :series_name, :size => 25, :maxsize => 25 %>
-        </td>
-        <td width="12%">
-        <%= f.label :series_no %>
-        </td>
-        <td width=38%>
-          <%= f.text_field :series_no, :size => 3, :maxsize => 3 %>
-        </td>
-      </tr>
-
-      <!-- -------------------------------------------------------------- -->
-      <!-- Setup of 4th Row in Table #1.                                  -->
-      <!--   Name = ISBN Tab No, Size = 20, Maxsize = 20.                 -->
-      <!--   Name = Price, Size = 7, Maxsize = 7.                 -->
-      <!-- -------------------------------------------------------------- -->
-      <tr>
-        <td width="12%">
-          <%= f.label :isbn_tab_no %>
-        </td>
-        <td width="38%">
-          <%= f.text_field :isbn_tab_no, :size => 20, :maxsize => 20 %>
-        </td>
-        <td width="12%">
-          <%= f.label :price %>
-        </td>
-        <td width="38%">
-          <%= f.text_field :price, :size => 7, :maxsize => 7, :placeholder => "xx.xx" %>
-        </td>
-      </tr>
-
-      <!-- -------------------------------------------------------------- -->
-      <!-- Setup of 5th Row in Table #1.                                  -->
-      <!--   Name = Published Date with calendar.                         -->
-      <!--          - Pop Up Menus.                                       -->
-      <!--   Name = Book Type from book_type table.                       -->
-      <!-- -------------------------------------------------------------- -->
-      <tr>
-        <td width="12%">
-          <%= f.label :published_date %>
-        </td>
-        <td width="38%">
-          <!--<!%= f.date_select :published_date %>-->
-          <!--<!%= date_select :book, :published_date, :start_year => 1900 %>-->
-          <!--<!%= f.text_field :published_date %>-->
-          <!--<!%= f.date_field :published_date, :as => :date_picker %>-->
+    <tr>
+      <td width="100%">
+        <!-- ------------------------------------------------------------ -->
+        <!-- Table #2 - Book Info. (Inner table)                          -->
+        <!-- ------------------------------------------------------------ -->
+        <!--            Author / Title / Publisher / Series Name /        -->
+        <!--            Series No. / ISBN / Published Date / Book Type    -->
+        <!-- ------------------------------------------------------------ -->
+        <table width="100%" border=0>
           <!-- ---------------------------------------------------------- -->
-          <!-- :placeholder is not needed when using :date_picker         -->
-          <!--<!%= f.date_field :published_date, :as => :date_picker, :placeholder => "mm-dd-yyyy" %>-->
+          <!-- Setup of 1st Row in Table #2.                              -->
+          <!--   Name = Author, Size = 30, Maxsize = 50.                  -->
+          <!--          Size is the display feild size.                   -->
           <!-- ---------------------------------------------------------- -->
-          <%= f.date_field :published_date, :as => :date_picker %>
-        </td>
-        <td width="12%">
-          <%= f.label :book_type_id %>
-        </td>
-        <td width="38%">
-          <!--<!%= f.text_field :book_type_idx %>-->
-          <!-- -------------------------------------------------------- -->
-          <!-- #1 This method works.                                    -->
-          <!-- Note: Need to add belongs_to :book_type to book.rb       -->
-          <!--       Need to add has_many :books to book_type.rb        -->
-          <!-- -------------------------------------------------------- -->
-          <%= collection_select(:book,
-                                :book_type_id, 
-                                 Booktype.all, 
-                                :book_type_idx, 
-                                :book_type_name ) %>
-
-          <!-- -------------------------------------------------------- -->
-          <!-- #2 This method works.                                    -->
-          <!-- Note: Need to add belongs_to :book_type to book.rb      -->
-          <!--       Need to add has_many :books to book_type.rb       -->
-          <!-- -------------------------------------------------------- -->
-          <!--<!%= f.collection_select :book_type_id,
-                                   Booktype.all,
-                                  :book_type_idx,
-                                  :book_type_name %>-->
-        </td>
-      </tr>
-      <tr>
-        <td width="100%" colspan=4>
-          <hr>
-          </hr>
-        </td>
-      </tr>
-    <!--</table>-->
-
-    <!-- ---------------------------------------------------------------- -->
-    <!-- Draws a horizontal line, Size = 4.                               -->
-    <!-- Draws a horizontal using using stylesheet "scaffolds.scss".      -->
-    <!-- ---------------------------------------------------------------- -->
-    <!-- <hr size="4" "noshade"> -->
-    <!--<hr>
-    </hr>-->
-  <!--</div>-->
-
-  <!--<div id="lay_out_table_#2">-->
-    <!-- ---------------------------------------------------------------- -->
-    <!-- Table #2 - Purchased Info.                                       -->
-    <!-- ---------------------------------------------------------------- -->
-    <!--            Purchase Date. / Entry Date / Location                -->
-    <!-- ---------------------------------------------------------------- -->
-    <!--<table width="100%" border=1>-->
-      <!-- -------------------------------------------------------------- -->
-      <!-- Setup of 1st Row in Table #2.                                  -->
-      <!--   Name = Purchase Date with calendar.                          -->
-      <!-- -------------------------------------------------------------- -->
-      <tr>
-        <td width="12%">
-          <%= f.label :purchase_date %>
-        </td>
-        <td width="38%">
-          <!--<!%= f.date_select :purchase_date %>-->
-          <!--<!%= date_select :book, :purchase_date, :start_year => 1900 %>-->
-          <%= f.date_field :purchase_date, :as => :date_picker %>
-        </td>
-        <td width="12%">
-          *
-        </td>
-        <td width=38%>
-          **
-        </td>
-      </tr>
-
-      <!-- -------------------------------------------------------------- -->
-      <!-- Setup of 2nd Row in Table #2.                                  -->
-      <!--   Name = Entry Date.                                           -->
-      <!--   Name = Location.                                             -->
-      <!-- -------------------------------------------------------------- -->
-      <tr>
-        <td width="12%">
-          <%= f.label :entry_date %>
-        </td>
-        <td width="38%">
-          <!--<!%= f.date_select :entry_date %>-->
-          <%= f.date_field :entry_date, :as => :date_picker %>
-        </td>
-        <td width="12%">
-          <%= f.label :location %>
-        </td>
-        <td width="38%">
-          <%= f.text_field :location, :size => 20, :maxsize => 20 %>
-        </td>
-      </tr>
-
-      <tr>
-        <td width="100%" colspan=4>
-          <hr>
-          </hr>
-        </td>
-      </tr>
-    <!--</table>-->
-
-    <!-- ---------------------------------------------------------------- -->
-    <!-- Draws a horizontal line, Size = 4.                               -->
-    <!-- Draws a horizontal using using stylesheet "scaffolds.scss".      -->
-    <!-- ---------------------------------------------------------------- -->
-    <!-- <hr size="4" "noshade"> -->
-    <!--<hr>
-    </hr>-->
-  <!--</div>-->
-
-  <!--<div id="lay_out_table_#3">-->
-    <!-- ---------------------------------------------------------------- -->
-    <!-- Table #3 - Book Related Info.                                    -->
-    <!--          - Pop Up Menus.                                         -->
-    <!-- ---------------------------------------------------------------- -->
-    <!--            Condition / Media Type / Purpose.                     -->
-    <!-- ---------------------------------------------------------------- -->
-    <!--<table width="100%" border=1>-->
-      <!-- -------------------------------------------------------------- -->
-      <!-- Setup of 1st Row in Table #3.                                  -->
-      <!--   Name = Condition from contition table.                       -->
-      <!--   Name = Media_type from media_type table.                     -->
-      <!-- -------------------------------------------------------------- -->
-      <!--<div id="condition_area">-->
-        <tr>
-          <td width="12%">
-            <%= f.label :condition_id %>
-          </td>
-          <td width="38%">
-            <!--<!%= f.text_field :condition_idx %>-->
-            <!-- -------------------------------------------------------- -->
-            <!-- #1 This method works.                                    -->
-            <!-- Note: Need to add belongs_to :condition to book.rb       -->
-            <!--       Need to add has_many :books to condition.rb        -->
-            <!-- -------------------------------------------------------- -->
-            <%= collection_select(:book,
-                                  :condition_id, 
-                                   Condition.all, 
-                                  :condition_idx, 
-                                  :condition_name ) %>
-
-            <!-- -------------------------------------------------------- -->
-            <!-- #2 This method works.                                    -->
-            <!-- Note: Need to add belongs_to :condition to book.rb       -->
-            <!--       Need to add has_many :books to condition.rb        -->
-            <!-- -------------------------------------------------------- -->
-            <!--<!%= f.collection_select :condition_id,
-                                   Condition.all,
-                                  :condition_idx,
-                                  :condition_name %>-->
-          </td>
-        <!--</tr>-->
-      <!--</div>-->
-
-      <!--<div id="media_type_area">-->
-        <!--<tr>-->
-          <td width="12%">
-            <%= f.label :media_type_id %>
-          </td>
-          <td width="38%">
-            <!--<!%= f.text_field :media_type_idx %>-->
-            <!-- -------------------------------------------------------- -->
-            <!-- #1 This method works.                                    -->
-            <!-- Note: Need to add belongs_to :media_type to book.rb      -->
-            <!--       Need to add has_many :books to media_type.rb       -->
-            <!-- -------------------------------------------------------- -->
-            <%= collection_select(:book,
-                                  :media_type_id, 
-                                   Mediatype.all, 
-                                  :media_type_idx, 
-                                  :media_type_name ) %>
-
-            <!-- -------------------------------------------------------- -->
-            <!-- #2 This method works.                                    -->
-            <!-- Note: Need to add belongs_to :media_type to book.rb      -->
-            <!--       Need to add has_many :books to media_type.rb       -->
-            <!-- -------------------------------------------------------- -->
-            <!--<!%= f.collection_select :media_type_id,
-                                     Mediatype.all,
-                                    :media_type_idx,
-                                    :media_type_name %>-->
-          </td>
-        </tr>
-      <!--</div>-->
-
-      <!-- -------------------------------------------------------------- -->
-      <!-- Setup of 2nd Row in Table #3.                                  -->
-      <!--   Name = Purpose from purpose table.                           -->
-      <!-- -------------------------------------------------------------- -->
-      <!--<div id="purpose_area">-->
-        <tr>
-          <td width="12%">
-            <%= f.label :purpose_id %>
-          </td>
-          <td width="38%">
-            <!--<!%= f.text_field :purpose_idx %>-->
-            <!-- -------------------------------------------------------- -->
-            <!-- #1 This method works.                                    -->
-            <!-- Note: Need to add belongs_to :purpose to book.rb         -->
-            <!--       Need to add has_many :books to purpose.rb          -->
-            <!-- -------------------------------------------------------- -->
-            <!-- create 1st drop down list                                -->
-            <%= collection_select(:book,
-                                  :purpose_id, 
-                                   Purpose.all, 
-                                  :purpose_idx, 
-                                  :purpose_name ) %>
-
-            <!-- -------------------------------------------------------- -->
-            <!-- #2 This method works.                                    -->
-            <!-- Note: Need to add belongs_to :condition to book.rb       -->
-            <!--       Need to add has_many :books to condition.rb        -->
-            <!-- -------------------------------------------------------- -->
-            <!--<!%= f.collection_select :purpose_id,
-                                   Purpose.all,
-                                  :purpose_idx,
-                                  :Purpose_name %>-->
-          </td>
-        <!--</tr>-->
-      <!--</div>-->
-
-      <!--<div id="book_type_area">-->
-        <!--<tr>-->
-          <td width="12%">
-            *
-          </td>
-          <td width=38%>
+          <tr>
+            <td width="12%">
+              <%= f.label :author %>
+            </td>
+            <!--<td width="88%" colspan=3>-->
+            <td width="38%">
+              <%= f.text_field :author,
+                               :size => 30,
+                               :maxsize => 50, autofocus: true %>
+            </td>
+            <td width="12%">
+              *
+            </td>
+            <td width=38%>
             **
-          </td>
-        </tr>
-      <!--</div>-->
-    </table>
-  </td>
-  </tr>
+            </td>
+          </tr>
+
+          <!-- ---------------------------------------------------------- -->
+          <!-- Setup of 2nd Row in Table #2.                              -->
+          <!--   Name = Title, Size = 25, Maxsize = 25.                   -->
+          <!--   Name = Publisher, Size = 20, Maxsize = 20.               -->
+          <!-- ---------------------------------------------------------- -->
+          <tr>
+            <td width="12%">
+              <%= f.label :title %>
+            </td>
+            <td width="38%">
+              <%= f.text_field :title,
+                               :size => 25,
+                               :maxsize => 25 %>
+            </td>
+            <td width="12%">
+              <%= f.label :publisher %>
+            </td>
+            <td width=38%>
+              <%= f.text_field :publisher,
+                               :size => 20,
+                               :maxsize => 20 %>
+            </td>
+          </tr>
+
+          <!-- ---------------------------------------------------------- -->
+          <!-- Setup of 3rd Row in Table #2.                              -->
+          <!--   Name = Series name, Size = 25, Maxsize = 25.             -->
+          <!--   Name = Series No. , Size =  3, Maxsize =  3.             -->
+          <!-- ---------------------------------------------------------- -->
+          <tr>
+            <td width="12%">
+              <%= f.label :series_name %>
+            </td>
+            <td width="38%">
+              <%= f.text_field :series_name,
+                               :size => 25,
+                               :maxsize => 25 %>
+            </td>
+            <td width="12%">
+              <%= f.label :series_no %>
+            </td>
+            <td width=38%>
+              <%= f.text_field :series_no,
+                               :size => 3,
+                               :maxsize => 3 %>
+            </td>
+          </tr>
+
+          <!-- ---------------------------------------------------------- -->
+          <!-- Setup of 4th Row in Table #2.                              -->
+          <!--   Name = ISBN Tab No, Size = 20, Maxsize = 20.             -->
+          <!--   Name = Price, Size = 7, Maxsize = 7.                     -->
+          <!-- ---------------------------------------------------------- -->
+          <tr>
+            <td width="12%">
+              <%= f.label :isbn_tab_no %>
+            </td>
+            <td width="38%">
+              <%= f.text_field :isbn_tab_no,
+                               :size => 20,
+                               :maxsize => 20 %>
+            </td>
+            <td width="12%">
+              <%= f.label :price %>
+            </td>
+            <td width="38%">
+              <%= f.text_field :price,
+                               :size => 7,
+                               :maxsize => 7,
+                               :placeholder => "xx.xx" %>
+            </td>
+          </tr>
+
+          <!-- ---------------------------------------------------------- -->
+          <!-- Setup of 5th Row in Table #2.                              -->
+          <!--   Name = Published Date with calendar.                     -->
+          <!--   Name = Book Type from book_type table.                   -->
+          <!--          - Pop Up Menus.                                   -->
+          <!-- ---------------------------------------------------------- -->
+          <tr>
+            <td width="12%">
+              <%= f.label :published_date %>
+            </td>
+            <td width="38%">
+              <!-- ------------------------------------------------------ -->
+              <!-- Original code.                                         -->
+              <!--<!%= f.date_select :published_date %>-->
+              <!--<!%= date_select :book, :published_date, 
+                                          :start_year => 1900 %>-->
+              <!--<!%= f.text_field :published_date %>-->
+              <!--<!%= f.date_field :published_date, :as => :date_picker %>-->
+              <!-- ------------------------------------------------------ -->
+              <!--<!%= f.date_field :published_date, :as => :date_picker,
+                                  :placeholder => "mm-dd-yyyy" %>-->
+              <!-- :placeholder is not needed when using :date_picker     -->
+              <!-- ------------------------------------------------------ -->
+              <%= f.date_field :published_date,
+                               :as => :date_picker %>
+            </td>
+            <td width="12%">
+              <%= f.label :book_type_id %>
+            </td>
+            <td width="38%">
+              <!--<!%= f.text_field :book_type_idx %>-->
+              <!-- ------------------------------------------------------ -->
+              <!-- #1 This method works.                                  -->
+              <!-- Note: Need to add belongs_to :book_type to book.rb     -->
+              <!--       Need to add has_many :books to book_type.rb      -->
+              <!-- ------------------------------------------------------ -->
+              <%= collection_select(:book,
+                                    :book_type_id, 
+                                     Booktype.all, 
+                                    :book_type_idx, 
+                                    :book_type_name ) %>
+
+              <!-- ------------------------------------------------------ -->
+              <!-- #2 This method works.                                  -->
+              <!-- Note: Need to add belongs_to :book_type to book.rb     -->
+              <!--       Need to add has_many :books to book_type.rb      -->
+              <!-- ------------------------------------------------------ -->
+              <!--<!%= f.collection_select :book_type_id,
+                                       Booktype.all,
+                                      :book_type_idx,
+                                      :book_type_name %>-->
+            </td>
+          </tr>
+
+          <!-- ---------------------------------------------------------- -->
+          <!-- Setup of 6th Row in Table #2.                              -->
+          <!-- Draws a horizontal line, Size = 4.                         -->
+          <!-- Draws a horizontal using using stylesheet "scaffolds.scss".-->
+          <!-- ---------------------------------------------------------- -->
+          <tr>
+            <td width="100%" colspan=4>
+              <!-- <hr size="4" "noshade"> -->
+              <hr>
+              </hr>
+            </td>
+          </tr>
+
+          <!-- ---------------------------------------------------------- -->
+          <!-- Setup of 6th Row in Table #2.                              -->
+          <!--   Name = Purchase Date with calendar.                      -->
+          <!-- ---------------------------------------------------------- -->
+          <tr>
+            <td width="12%">
+              <%= f.label :purchase_date %>
+            </td>
+            <td width="38%">
+              <!--<!%= f.date_select :purchase_date %>-->
+              <!--<!%= date_select :book, :purchase_date, :start_year => 1900 %>-->
+              <%= f.date_field :purchase_date,
+                               :as => :date_picker %>
+            </td>
+            <td width="12%">
+              *
+            </td>
+            <td width=38%>
+              **
+            </td>
+          </tr>
+
+          <!-- ---------------------------------------------------------- -->
+          <!-- Setup of 7th Row in Table #2.                              -->
+          <!--   Name = Entry Date with calendar.                         -->
+          <!--   Name = Location.                                         -->
+          <!-- ---------------------------------------------------------- -->
+          <tr>
+            <td width="12%">
+              <%= f.label :entry_date %>
+            </td>
+            <td width="38%">
+              <!--<!%= f.date_select :entry_date %>-->
+              <%= f.date_field :entry_date,
+                               :as => :date_picker %>
+            </td>
+            <td width="12%">
+              <%= f.label :location %>
+            </td>
+            <td width="38%">
+              <%= f.text_field :location,
+                               :size => 20,
+                               :maxsize => 20 %>
+            </td>
+          </tr>
+
+          <!-- ---------------------------------------------------------- -->
+          <!-- Setup of 8th Row in Table #2.                              -->
+          <!-- Draws a horizontal line, Size = 4.                         -->
+          <!-- Draws a horizontal using using stylesheet "scaffolds.scss".-->
+          <!-- ---------------------------------------------------------- -->
+          <tr>
+            <td width="100%" colspan=4>
+              <hr>
+              </hr>
+            </td>
+          </tr>
+
+          <!-- ---------------------------------------------------------- -->
+          <!-- Setup of 9th Row in Table #2.                              -->
+          <!--   Name = Condition from contition table.                   -->
+          <!--   Name = Media_type from media_type table.                 -->
+          <!-- ---------------------------------------------------------- -->
+          <tr>
+            <td width="12%">
+              <%= f.label :condition_id %>
+            </td>
+            <td width="38%">
+              <!--<!%= f.text_field :condition_idx %>-->
+              <!-- ------------------------------------------------------ -->
+              <!-- #1 This method works.                                  -->
+              <!-- Note: Need to add belongs_to :condition to book.rb     -->
+              <!--       Need to add has_many :books to condition.rb      -->
+              <!-- ------------------------------------------------------ -->
+              <%= collection_select(:book,
+                                    :condition_id, 
+                                    Condition.all, 
+                                    :condition_idx, 
+                                    :condition_name ) %>
+
+              <!-- ------------------------------------------------------ -->
+              <!-- #2 This method works.                                  -->
+              <!-- Note: Need to add belongs_to :condition to book.rb     -->
+              <!--       Need to add has_many :books to condition.rb      -->
+              <!-- ------------------------------------------------------ -->
+              <!--<!%= f.collection_select :condition_id,
+                                     Condition.all,
+                                    :condition_idx,
+                                    :condition_name %>-->
+            </td>
+            <td width="12%">
+              <%= f.label :media_type_id %>
+            </td>
+            <td width="38%">
+              <!--<!%= f.text_field :media_type_idx %>-->
+              <!-- ------------------------------------------------------ -->
+              <!-- #1 This method works.                                  -->
+              <!-- Note: Need to add belongs_to :media_type to book.rb    -->
+              <!--       Need to add has_many :books to media_type.rb     -->
+              <!-- ------------------------------------------------------ -->
+              <%= collection_select(:book,
+                                    :media_type_id, 
+                                     Mediatype.all, 
+                                    :media_type_idx, 
+                                    :media_type_name ) %>
+
+              <!-- ------------------------------------------------------ -->
+              <!-- #2 This method works.                                  -->
+              <!-- Note: Need to add belongs_to :media_type to book.rb    -->
+              <!--       Need to add has_many :books to media_type.rb     -->
+              <!-- ------------------------------------------------------ -->
+              <!--<!%= f.collection_select :media_type_id,
+                                       Mediatype.all,
+                                      :media_type_idx,
+                                      :media_type_name %>-->
+            </td>
+          </tr>
+
+          <!-- ---------------------------------------------------------- -->
+          <!-- Setup of 10th Row in Table #2.                             -->
+          <!--   Name = Purpose from purpose table.                       -->
+          <!-- ---------------------------------------------------------- -->
+          <tr>
+            <td width="12%">
+              <%= f.label :purpose_id %>
+            </td>
+            <td width="38%">
+              <!--<!%= f.text_field :purpose_idx %>-->
+              <!-- ------------------------------------------------------ -->
+              <!-- #1 This method works.                                  -->
+              <!-- Note: Need to add belongs_to :purpose to book.rb       -->
+              <!--       Need to add has_many :books to purpose.rb        -->
+              <!-- ------------------------------------------------------ -->
+              <%= collection_select(:book,
+                                    :purpose_id, 
+                                     Purpose.all, 
+                                    :purpose_idx, 
+                                    :purpose_name ) %>
+
+              <!-- -------------------------------------------------------- -->
+              <!-- #2 This method works.                                    -->
+              <!-- Note: Need to add belongs_to :condition to book.rb       -->
+              <!--       Need to add has_many :books to condition.rb        -->
+              <!-- -------------------------------------------------------- -->
+              <!--<!%= f.collection_select :purpose_id,
+                                     Purpose.all,
+                                    :purpose_idx,
+                                    :Purpose_name %>-->
+            </td>
+            <td width="12%">
+              *
+            </td>
+            <td width=38%>
+              **
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
   </table>
 
   <div class="actions">
     <p>
-      <%= f.submit "Save Book"%>
+      <%= f.submit "Save Book" %>
     </p>
   </div>
 <% end %>
@@ -406,6 +392,8 @@
 <!--            :        : Add <hr> to stylesheet.                     -->
 <!--            :        : Change first <td> to <th> and remove width. -->
 <!--            :        : Add <th> to stylesheet.                     -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 06/15/2020 : 0.0.8  : Cleanup remove unneded code and comments.   -->
 <!-- ----------------------------------------------------------------- -->
 <!--            :        :                                             -->
 <!-- ----------------------------------------------------------------- -->

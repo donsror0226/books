@@ -9,8 +9,7 @@
 <!-- ------------------------------------------------------------------ --> 
 <!--                                                                    -->
 
-<!%= form_with(model: condition, local: true) do |f| %>
-<%= form_for(@condition) do |f| %>
+<%= form_with(model: condition, local: true) do |f| %>
   <!-- ---------------------------------------------------------------- -->
   <!-- Error handeling.                                                 -->
   <!-- ---------------------------------------------------------------- -->
@@ -30,10 +29,10 @@
   <!--   or you can just use the third line to get the last record,       -->
   <!--   column condition_index.                                          -->
   <!-- The forth lines adds 1 to lastidx to get next_idx.                 -->
-  <%= lastidx = @last_idx %>
-  <!%= lastidx = lastidx.condition_idx %>
-  <!%= lastidx = @last_idx.condition_idx %>
-  <!%= next_idx = lastidx + 1 %>
+  <% lastidx = @last_idx %>
+  <% lastidx = lastidx.condition_idx %>
+  <% lastidx = @last_idx.condition_idx %>
+  <% next_idx = lastidx + 1 %>
 
   <!-- ------------------------------------------------------------------ -->
   <!-- Table #1.                                                          -->
@@ -48,8 +47,8 @@
       <td width="5%">
         <%= f.text_field :condition_idx,
                          :size => 1,
+                         :placeholder => next_idx,
                          :maxsize => 5 %>
-<!--                         :placeholder => next_idx %>-->
       </td>
     </tr>
     <tr>

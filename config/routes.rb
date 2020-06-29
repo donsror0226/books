@@ -23,12 +23,12 @@ Rails.application.routes.draw do
   resources :purposes
   resources :booktypes
 
-  #get 'books/new'
-
   get 'search', to: "books#search"
-  get 'book_search', to: "books#search"
+  #get 'book_search', to: "books#search"
 
   ##get 'show', to: "books#show"
+
+  get 'destroy_condition', to: "conditions#destroy_condition"
 
   ## #2 - search
   ## Use to setup the /search to your search page and pages#search

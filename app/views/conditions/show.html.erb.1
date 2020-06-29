@@ -1,0 +1,116 @@
+<!--                                                                     -->
+<!-- ------------------------------------------------------------------- -->
+<!-- System    : Centos 7.7                                              -->
+<!--   Name    : peekaboo                                                -->
+<!-- Location  : /home/don/workspace/books/app/views/conditions/         -->
+<!-- File Name : show.html.erb                                           -->
+<!-- Rev. Date : 06/20/2020                                              -->
+<!-- Rev. No.  : 0.0.1                                                   -->
+<!-- ------------------------------------------------------------------- -->
+<!--                                                                     -->
+
+<h1>
+	Show Condition
+</h1>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- The notice is a message stating some thing was successfully.         -->
+<!-- -------------------------------------------------------------------- -->
+<p id="notice"><%= notice %></p>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Call partial _list.html.erb                                          -->
+<!-- -------------------------------------------------------------------- -->
+<%= render 'list', condition: @condition %>
+
+<!-- ===== -->
+<!-- <!%= form_with(model: condition, local: true) do |f| %> -->
+<% @conditions.each do |condition| %>
+
+  <!-- ---------------------------------------------------------------- -->
+  <!-- Error handeling.                                                 -->
+  <!-- ---------------------------------------------------------------- -->
+  <% if condition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(condition.errors.count, "error") %> prohibited this condition from being saved:</h2>
+
+      <ul>
+      <% condition.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Table #1 - Condition Info.                                         -->
+  <!-- ------------------------------------------------------------------ -->
+  <!--        Condition_idx / Condition_name                              -->
+  <!-- ------------------------------------------------------------------ -->
+  <table width="50%">
+    <tr>
+      <td width="15%" bgcolor="lightgreen">
+        <strong>
+          Record:
+        </strong>
+      </td>
+      <td width="15%" bgcolor="pink">
+         <%=h condition.id %>
+      </td>
+      <td width="20%">
+      </td>
+
+    <tr>
+      <td width="15%" bgcolor="lightgreen">
+        <strong>
+          Condition Idx:
+        </strong>
+      </td>
+      <td width="15%" bgcolor="pink">
+         <%=h condition.condition_idx %>
+      </td>
+      <td width="20%">
+      </td>
+    </tr>
+
+    <tr>
+      <td width="15%" bgcolor="lightgreen">
+        <strong>
+          Condition Name:
+        </strong>
+      </td>
+      <td width="15%" bgcolor="pink">
+         <%=h condition.condition_name %>
+      </td>
+      <td width="20%">
+      </td>
+    </tr>
+
+  </table>
+
+<% end %>
+<!-- ===== -->
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Draws a horizontal line, Size = 4.                                   -->
+<!-- Draws a horizontal using using stylesheet "scaffolds.scss".          -->
+<!-- -------------------------------------------------------------------- -->
+<!-- <hr size="4" "noshade"> -->
+<hr>
+</hr>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Links at bottom of page/screen.                                      -->
+<!--            Edit / Search / Back / Maain Menu                         -->
+<!-- -------------------------------------------------------------------- -->
+<%= link_to 'Edit', edit_condition_path(@condition) %> |
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<%= link_to 'Back', conditions_path %>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<a href="/admin_index.html">
+  Admin Menu
+</a>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<a href="/main_index">
+  Main Menu
+</a>
