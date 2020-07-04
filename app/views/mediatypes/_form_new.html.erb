@@ -2,24 +2,24 @@
 <!-- ------------------------------------------------------------------ --> 
 <!-- System    : Centos 7.7                                             --> 
 <!--   Name    : peekaboo                                               --> 
-<!-- Location  : /home/don/workspace/books/app/views/conditions/        -->
+<!-- Location  : /home/don/workspace/books/app/views/mediatypes/        -->
 <!-- File Name : _form_new.html.erb                                     --> 
-<!-- Rev. Date : 06/26/2020                                             --> 
-<!-- Rev. No.  : 0.0.4                                                  --> 
+<!-- Rev. Date : 07/01/2020                                             --> 
+<!-- Rev. No.  : 0.0.2                                                  --> 
 <!-- ------------------------------------------------------------------ --> 
 <!--                                                                    -->
 
-<!%= form_with(model: condition, local: true) do |f| %>
-<%= form_for(@condition) do |f| %>
+<!%= form_with(model: mediatype, local: true) do |form| %>
+<%= form_for(@mediatype) do |f| %>
   <!-- ---------------------------------------------------------------- -->
   <!-- Error handeling.                                                 -->
   <!-- ---------------------------------------------------------------- -->
-  <% if condition.errors.any? %>
+  <% if mediatype.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(condition.errors.count, "error") %> prohibited this condition from being saved:</h2>
+      <h2><%= pluralize(mediatype.errors.count, "error") %> prohibited this mediatype from being saved:</h2>
 
       <ul>
-      <% condition.errors.full_messages.each do |message| %>
+      <% mediatype.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -27,44 +27,44 @@
   <% end %>
 
   <!-- ------------------------------------------------------------------ -->
-  <!-- The first 2 lines wil get the last record, column condition_idx,   -->
+  <!-- The first 2 lines wil get the last record, column book_type_idx,   -->
   <!--   or you can just use the third line to get the last record,       -->
-  <!--   column condition_idx.                                            -->
+  <!--   column booktype_idx.                                             -->
   <!-- The forth lines adds 1 to lastidx to get next_idx.                 -->
   <!-- Display next_idx.                                                  --> 
   <!-- ------------------------------------------------------------------ -->
-  <!%= lastidx = @last_idx %>
-  <!%= lastidx = lastidx.condition_idx %>
-  <!%= lastidx = @last_idx.condition_idx %>
-  <!%= next_idx = lastidx + 1 %>
+  <!% lastidx = @last_idx %>
+  <!% lastidx = lastidx.media_type_idx %>
+  <!% lastidx = @last_idx.media_type_idx %>
+  <!% next_idx = lastidx + 1 %>
   <!-- Display the next idx                                               -->
-  Next condition idx is : <%= @next_idx %>
+  Next media_type is : <%= @next_idx %>
 
   <!-- ------------------------------------------------------------------ -->
   <!-- Table #1.                                                          -->
   <!-- ------------------------------------------------------------------ -->
-  <!--            Condition idx / Conditin Name                           -->
+  <!--            Media Type idx / Media Type Name                        -->
   <!-- ------------------------------------------------------------------ -->
   <table width="50%" border=1>
     <tr>
       <td width="15%">
-        <%= f.label :condition_idx %>
+        <%= f.label :mediatype_idx %>
       </td>
       <td width="5%">
-        <%= f.text_field :condition_idx,
+        <%= f.text_field :media_type_idx,
                          :size => 1,
                          :maxsize => 5,
                          :placeholder => @next_idx,
-                         :value => @next_idx,
-                          autofocus: true %>
+                         :value => @next_idx %>
+                          <!-- autofocus: true %> -->
       </td>
     </tr>
     <tr>
       <td width="15%">
-        <%= f.label :condition_name %>
+        <%= f.label :media_type_name %>
       </td>
       <td width="10%">
-        <%= f.text_field :condition_name,
+        <%= f.text_field :media_type_name,
                          :size => 10,
                           autofocus: true %>
       </td>
@@ -74,7 +74,7 @@
 
   <br>
   <div class="actions">
-    <%= f.submit "Add Condition" %>
+    <%= f.submit "Add Media Types" %>
   </div>
 <% end %>
 
@@ -82,15 +82,9 @@
 <!-- -------------------------------------------------------------------- -->
 <!-- Date Rev.  : Rev. # :     Description                                -->
 <!-- -------------------------------------------------------------------- -->
-<!-- 06/21/2020 : 0.0.1  : Original.                                      -->
-<!--            :        : Copyed part of _form.html.erb (books).         -->
-<!-- -------------------------------------------------------------------- -->
-<!-- 05/06/2020 : 0.0.2  : Rewrote multipliable times.                    -->
-<!-- -------------------------------------------------------------------- -->
-<!-- 06/25/2020 : 0.0.3  : Rename _form.html.erb (conditon) to            -->
-<!--            :        :        _forn_new.html.erb (condition).         -->
-<!-- -------------------------------------------------------------------- -->
-<!-- 06/26/2020 : 0.0.4  : Clean up remove unnedded code and comments.    -->
+<!-- 07/02/2020 : 0.0.1  : Original.                                      -->
+<!--            :        : Copyed part of _form.html.erb (condition).     -->
+<!--            : 0.0.2  : Clean up remove unnedded code and comments.    -->
 <!-- -------------------------------------------------------------------- -->
 <!--            :        :                                                -->
 <!-- -------------------------------------------------------------------- -->

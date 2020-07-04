@@ -2,7 +2,7 @@
 <!-- -------------------------------------------------------------------- -->
 <!-- System    : Centos 7.7                                               -->
 <!--   Name    : peekaboo                                                 -->
-<!-- Location  : /home/don/workspace/books/app/views/condition/           -->
+<!-- Location  : /home/don/workspace/books/app/views/conditions/          -->
 <!-- File Name : new.html.erb                                             -->
 <!-- Rev. Date : 06/26/2020                                               -->
 <!-- Rev. No.  : 0.0.3                                                    -->
@@ -30,16 +30,19 @@
 
 <!-- -------------------------------------------------------------------- -->
 <!-- Links at bottom of page/screen.                                      -->
-<!--            Show / Search / Back / Maain Menu                         -->
+<!--            list / Back                                               -->
 <!-- -------------------------------------------------------------------- -->
 <%= link_to 'List', @condition %>
 &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
 <%= link_to 'Back', conditions_path %>
+
+<!-- Can not call Main Menu or Admin Menu get an error.
 &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
 <a href="admin_index">
   Admin Menu
 </a>
-    
+-->
+
 <!-- -------------------------------------------------------------------- -->
 <!-- Draws a horizontal line, Size = 4.                                   -->
 <!-- Draws a horizontal using using stylesheet "scaffolds.scss".          -->

@@ -1,18 +1,18 @@
-<!--                                                                    -->
-<!-- ------------------------------------------------------------------ --> 
-<!-- System    : Centos 7.7                                             --> 
-<!--   Name    : peekaboo                                               --> 
-<!-- Location  : /home/don/workspace/books/app/views/condition/         -->
-<!-- File Name : _list.html.erb                                         --> 
-<!-- Rev. Date : 06/21/2020                                             --> 
-<!-- Rev. No.  : 0.0.2                                                  --> 
-<!-- ------------------------------------------------------------------ --> 
-<!--                                                                    -->
+<!--                                                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- System    : Centos 7.7                                               -->
+<!--   Name    : peekaboo                                                 -->
+<!-- Location  : /home/don/workspace/books/app/views/condition/           -->
+<!-- File Name : _list.html.erb                                           -->
+<!-- Rev. Date : 06/21/2020                                               -->
+<!-- Rev. No.  : 0.0.2                                                    -->
+<!-- -------------------------------------------------------------------- -->
+<!--                                                                     -->
 
 <%= form_with(model: condition, local: true) do |f| %>
-  <!-- ---------------------------------------------------------------- -->
-  <!-- Error handeling.                                                 -->
-  <!-- ---------------------------------------------------------------- -->
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Error handeling.                                                   -->
+  <!-- ------------------------------------------------------------------ -->
   <% if condition.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(condition.errors.count, "error") %> prohibited this condition from being saved:</h2>

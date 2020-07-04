@@ -23,12 +23,12 @@
 <!-- -------------------------------------------------------------------- -->
 <!%= render 'list', condition: @condition %>
 
-<!-- ------------------------------------------------------------------ -->
-<!-- Table #1 - Condition Info.                                         -->
-<!-- ------------------------------------------------------------------ -->
-<!--        Condition_idx / Condition_name                              -->
-<!-- ------------------------------------------------------------------ -->
-<table width="30%" border="1">
+<!-- -------------------------------------------------------------------- -->
+<!-- Table #1 - Condition Info.                                           -->
+<!-- -------------------------------------------------------------------- -->
+<!--        Condition_idx / Condition_name                                -->
+<!-- -------------------------------------------------------------------- -->
+<table width="35%" border="1">
   <tr>
     <td width="15%" bgcolor="lightgreen">
       <strong>
@@ -74,7 +74,6 @@
     <!--<td width="20%">-->
     <!--</td>-->
   </tr>
-
 </table>
 
 <!-- -------------------------------------------------------------------- -->
@@ -87,11 +86,11 @@
 
 <!-- -------------------------------------------------------------------- -->
 <!-- Links at bottom of page/screen.                                      -->
-<!--            New / Edit /  Back / Admin Menu / Main Menu               -->
+<!--            New / Edit / Back / Admin Menu / Main Menu                -->
 <!-- -------------------------------------------------------------------- -->
 <%= link_to 'New Condition', new_condition_path %>
 &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
-<%= link_to 'Edit', edit_condition_path(@condition) %> |
+<%= link_to 'Edit', edit_condition_path(@condition) %>
 &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
 <%= link_to 'Back', conditions_path %>
 &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp

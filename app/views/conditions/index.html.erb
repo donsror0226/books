@@ -2,7 +2,7 @@
 <!-- -------------------------------------------------------------------- -->
 <!-- System    : Centos 7.7                                               -->
 <!--   Name    : peekaboo                                                 -->
-<!-- Location  : /home/don/workspace/books/app/views/books/               -->
+<!-- Location  : /home/don/workspace/books/app/views/condition/           -->
 <!-- File Name : index.html.erb                                           -->
 <!-- Rev. Date : 06/26/2020                                               -->
 <!-- Rev. No.  : 0.0.7                                                    -->
@@ -42,8 +42,8 @@
 <!-- -------------------------------------------------------------------- -->
 <!--            Condition_idx / Condition_name                            -->
 <!-- -------------------------------------------------------------------- -->
- <!--<table width="50%" border="1">-->
- <table id="border" width="50%" border="1">
+<!--<table width="50%" border="1">-->
+<table id="border" width="50%" border="1">
   <tbody id="border">
     <% @conditions.each do |condition| %>
       <tr>
@@ -64,28 +64,8 @@
         </td>
 
         <td width="10%">
-          <!--
-            <!%= link_to 'Destroy', condition, method: :delete, data: { confirm: 'Are you sure?' } %>
-          -->
-
-            <!-- This code is the above code converted into html code     -->
-            <a data-confirm="Are you sure?" rel="nofollow"
-               data-method="delete" href="condition">
-               Destroy
-            </a>
-
-<!--
-            <!%= link_to 'Destroy', condition, method: :delete, data: { confirm: 'Are you sure?' }, :id => "destroy" %>
-
-<!%= link_to "[Delete]", customer_path(customer.id, :customer_delete => true), :method => :delete, :data => {:confirm => "Are You Sure?"}, :class => 'link' %>
-
-<!%= link_to "[Delete]", customer_path(customer.id, :customer_delete => true), :method => :delete, :data => {:confirm => "Are You Sure?"} %>
-
-link_to("Destroy", "http://www.example.com", method: :delete)
-
--->
-
-         </td>
+          <%= link_to 'Destroy', condition, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
 
       </tr>
     <% end %>
@@ -102,7 +82,7 @@ link_to("Destroy", "http://www.example.com", method: :delete)
 
 <!-- -------------------------------------------------------------------- -->
 <!-- Links at bottom of page/screen.                                      -->
-<!--            New Book / Search / Main Menu                             -->
+<!--            New Condition / Admin Menu / Main Menu                    -->
 <!-- -------------------------------------------------------------------- -->
 <%= link_to 'New Condition', new_condition_path %>
 &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
@@ -155,7 +135,7 @@ link_to("Destroy", "http://www.example.com", method: :delete)
 <!--            :        : Add <hr> to style sheet.                       -->
 <!-- -------------------------------------------------------------------- -->
 <!-- 05/31/2020 : 0.0.4  : Create Table #1.                               -->
-<!--            :        : Create Table #2. (Bot tons).                   -->
+<!--            :        : Create Table #2. (Bottons).                    -->
 <!--            :        : Add <hr> to bottom of Table #2.                -->
 <!--            :        : Add link to Main Menu.                         -->
 <!--            : 0.0.5  : Add paginating.                                -->

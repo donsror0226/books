@@ -1,0 +1,493 @@
+
+<!--                                                                   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- System    : Centos 7.7                                            --> 
+<!--   Name    : peekaboo                                              --> 
+<!-- Location  : /home/don/workspace/books/app/views/layouts/          -->
+<!-- File Name : application.html.erb                                  --> 
+<!-- Rev. Date : 05/28/2020                                            --> 
+<!-- Rev. No.  : 0.0.2                                                 --> 
+<!-- ----------------------------------------------------------------- --> 
+<!--                                                                   -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+    	Books controller: index
+    </title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="/+hssWv/5qSWWB/hg5TJy37wDV3GlqhY0nXexkoOHAMfHjx4lA97o1RPVYU6/n5LW/cr+ddyxi2DHSBMQeyRTw==" />
+
+    <link rel="stylesheet" media="all" href="/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="/assets/booktypes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="/assets/conditions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="/assets/mediatypes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="/assets/purposes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="/assets/scaffolds.self-e3dc2eff5246ea3a35adc27fbe3df4712c069025d0fa5eed8eb60371a4669728.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="/assets/application.self-caeda60dff36ff90e2fa808c4352ba6729c539024ae34bb38463463598d40eb5.css?body=1" data-turbolinks-track="reload" />
+    <script src="/assets/rails-ujs.self-8944eaf3f9a2615ce7c830a810ed630e296633063af8bb7441d5702fbe3ea597.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/booktypes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/action_cable.self-69fddfcddf4fdef9828648f9330d6ce108b93b82b0b8d3affffc59a114853451.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/conditions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/mediatypes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/purposes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/application.self-21782653f2e0e80f36088678606a2b003b3bfbb67f61179498ed64b77a6303c3.js?body=1" data-turbolinks-track="reload"></script>
+  </head>
+
+  <body>
+
+  	<!-- ------------------------------------------------------------- -->
+  	<!-- This will call new.html.erb, edit.html.erb, show.html.erb,    -->
+    <!--   search.html.erb                                             -->
+  	<!-- depending on which controller action did the calling.         -->
+  	<!-- ------------------------------------------------------------- -->
+    <!--                                                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- System    : Centos 7.7                                               -->
+<!--   Name    : peekaboo                                                 -->
+<!-- Location  : /home/don/workspace/books/app/views/books/               -->
+<!-- File Name : index.html.erb                                           -->
+<!-- Rev. Date : 06/15/2020                                               -->
+<!-- Rev. No.  : 0.0.6                                                    -->
+<!-- -------------------------------------------------------------------- -->
+<!--                                                                      -->
+
+<h1>
+  List Books
+</h1>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- The notice is a message stating that Add/Edit was successfully.      -->
+<!-- -------------------------------------------------------------------- -->
+<p id="notice"></p>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- This part of the code put so many records on the screen at one       -->
+<!--   Time with Prev / No. of screens / Next.                            -->
+<!-- -------------------------------------------------------------------- -->
+<div role="navigation" aria-label="Pagination" class="pagination"><span class="previous_page disabled">&#8592; Previous</span> <em class="current" aria-label="Page 1" aria-current="page">1</em> <a rel="next" aria-label="Page 2" href="/books?page=2">2</a> <a aria-label="Page 3" href="/books?page=3">3</a> <a aria-label="Page 4" href="/books?page=4">4</a> <a class="next_page" rel="next" href="/books?page=2">Next &#8594;</a></div>
+
+
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Table #1 - Book Info. (Outer table).                               -->
+  <!-- ------------------------------------------------------------------ -->
+  <!--            Author / Title / Publisher / Series Name /              -->
+  <!--            Series No. / ISBN / Published Date / Book Type          -->
+  <!-- ------------------------------------------------------------------ -->
+  <table width="100%" border=1>
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Setup of 1st Row in Table #1.                                    -->
+    <!--   Name = Author, Size = 40, Maxsize = 50.                        -->
+    <!--          Size is the display field size.                         -->
+    <!-- ---------------------------------------------------------------- -->
+    <tr>
+      <td width="12%">
+        Author
+      </td>
+      <td width="38%" bgcolor="lightgray">
+        author-all
+      </td>
+      <td width="12%">
+        *
+      </td>
+      <td width="38%">
+        **
+      </td>
+    </tr>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Setup of 2nd Row in Table #1.                                    -->
+    <!--   Name = Title,, Size = 25, Maxsize = 25.                        -->
+    <!--   Name = Publisher, Size = 20, Maxsize = 20.                     -->
+    <!-- ---------------------------------------------------------------- -->
+    <tr>
+      <td width="12%">
+        Title
+      </td>
+      <td width="38%" bgcolor="lightgray">
+        title-all
+      </td>
+      <td width="12%">
+        Publisher
+      </td>
+      <td width="38%" bgcolor="lightgray">
+        publisher-all
+      </td>
+    </tr>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Setup of 3rd Row in Table #1.                                    -->
+    <!--   Name = Series name, Size = 25, Maxsize = 25.                   -->
+    <!--   Name = Series No. , Size =  3, Maxsize =  3.                   -->
+    <!-- ---------------------------------------------------------------- -->
+    <tr>
+      <td width="12%">
+        Series Name
+      </td>
+      <td width="38%" bgcolor="lightgray">
+        series name-all
+      </td>
+      <td width="12%">
+        Series No
+      </td>
+      <td width="38%" bgcolor="lightgray">
+         99
+      </td>
+    </tr>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Setup of 4th row in Table #1.                                    -->
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Table #2 - Links at after each partial record.                   -->
+    <!-- ---------------------------------------------------------------- -->
+    <!--            Show / Edit / Destroy                                 -->
+    <!-- ---------------------------------------------------------------- -->
+    <table width="100%" border=0>
+      <tr>
+        <td width="15%">
+        </td>
+        <td width="10%">
+          <a href="/books/1">Show</a>
+        </td>
+        <td width="10%">
+          <a href="/books/1/edit">Edit</a>
+        </td>
+        <td width="10%">
+          <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/books/1">Destroy</a>
+        </td>
+        <td width="55%">
+        </td>
+      </tr>
+    </table>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Setup of 5th row in Table #1.                                    -->
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Draws a horizontal line, Size = 4.                               -->
+    <!-- Draws a horizontal using using style sheet "scaffolds.scss".     -->
+    <!-- ---------------------------------------------------------------- -->
+    <tr>
+      <td width="100%" colspan=4>
+        <!-- <hr size="4" "noshade"> -->
+        <hr>
+        </hr>
+      </td>
+    </tr>
+  </table>
+
+
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Table #1 - Book Info. (Outer table).                               -->
+  <!-- ------------------------------------------------------------------ -->
+  <!--            Author / Title / Publisher / Series Name /              -->
+  <!--            Series No. / ISBN / Published Date / Book Type          -->
+  <!-- ------------------------------------------------------------------ -->
+  <table width="100%" border=1>
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Setup of 1st Row in Table #1.                                    -->
+    <!--   Name = Author, Size = 40, Maxsize = 50.                        -->
+    <!--          Size is the display field size.                         -->
+    <!-- ---------------------------------------------------------------- -->
+    <tr>
+      <td width="12%">
+        Author
+      </td>
+      <td width="38%" bgcolor="lightgray">
+        
+      </td>
+      <td width="12%">
+        *
+      </td>
+      <td width="38%">
+        **
+      </td>
+    </tr>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Setup of 2nd Row in Table #1.                                    -->
+    <!--   Name = Title,, Size = 25, Maxsize = 25.                        -->
+    <!--   Name = Publisher, Size = 20, Maxsize = 20.                     -->
+    <!-- ---------------------------------------------------------------- -->
+    <tr>
+      <td width="12%">
+        Title
+      </td>
+      <td width="38%" bgcolor="lightgray">
+        
+      </td>
+      <td width="12%">
+        Publisher
+      </td>
+      <td width="38%" bgcolor="lightgray">
+        
+      </td>
+    </tr>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Setup of 3rd Row in Table #1.                                    -->
+    <!--   Name = Series name, Size = 25, Maxsize = 25.                   -->
+    <!--   Name = Series No. , Size =  3, Maxsize =  3.                   -->
+    <!-- ---------------------------------------------------------------- -->
+    <tr>
+      <td width="12%">
+        Series Name
+      </td>
+      <td width="38%" bgcolor="lightgray">
+        
+      </td>
+      <td width="12%">
+        Series No
+      </td>
+      <td width="38%" bgcolor="lightgray">
+         
+      </td>
+    </tr>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Setup of 4th row in Table #1.                                    -->
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Table #2 - Links at after each partial record.                   -->
+    <!-- ---------------------------------------------------------------- -->
+    <!--            Show / Edit / Destroy                                 -->
+    <!-- ---------------------------------------------------------------- -->
+    <table width="100%" border=0>
+      <tr>
+        <td width="15%">
+        </td>
+        <td width="10%">
+          <a href="/books/2">Show</a>
+        </td>
+        <td width="10%">
+          <a href="/books/2/edit">Edit</a>
+        </td>
+        <td width="10%">
+          <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/books/2">Destroy</a>
+        </td>
+        <td width="55%">
+        </td>
+      </tr>
+    </table>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Setup of 5th row in Table #1.                                    -->
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Draws a horizontal line, Size = 4.                               -->
+    <!-- Draws a horizontal using using style sheet "scaffolds.scss".     -->
+    <!-- ---------------------------------------------------------------- -->
+    <tr>
+      <td width="100%" colspan=4>
+        <!-- <hr size="4" "noshade"> -->
+        <hr>
+        </hr>
+      </td>
+    </tr>
+  </table>
+
+
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Table #1 - Book Info. (Outer table).                               -->
+  <!-- ------------------------------------------------------------------ -->
+  <!--            Author / Title / Publisher / Series Name /              -->
+  <!--            Series No. / ISBN / Published Date / Book Type          -->
+  <!-- ------------------------------------------------------------------ -->
+  <table width="100%" border=1>
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Setup of 1st Row in Table #1.                                    -->
+    <!--   Name = Author, Size = 40, Maxsize = 50.                        -->
+    <!--          Size is the display field size.                         -->
+    <!-- ---------------------------------------------------------------- -->
+    <tr>
+      <td width="12%">
+        Author
+      </td>
+      <td width="38%" bgcolor="lightgray">
+        
+      </td>
+      <td width="12%">
+        *
+      </td>
+      <td width="38%">
+        **
+      </td>
+    </tr>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Setup of 2nd Row in Table #1.                                    -->
+    <!--   Name = Title,, Size = 25, Maxsize = 25.                        -->
+    <!--   Name = Publisher, Size = 20, Maxsize = 20.                     -->
+    <!-- ---------------------------------------------------------------- -->
+    <tr>
+      <td width="12%">
+        Title
+      </td>
+      <td width="38%" bgcolor="lightgray">
+        
+      </td>
+      <td width="12%">
+        Publisher
+      </td>
+      <td width="38%" bgcolor="lightgray">
+        
+      </td>
+    </tr>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Setup of 3rd Row in Table #1.                                    -->
+    <!--   Name = Series name, Size = 25, Maxsize = 25.                   -->
+    <!--   Name = Series No. , Size =  3, Maxsize =  3.                   -->
+    <!-- ---------------------------------------------------------------- -->
+    <tr>
+      <td width="12%">
+        Series Name
+      </td>
+      <td width="38%" bgcolor="lightgray">
+        
+      </td>
+      <td width="12%">
+        Series No
+      </td>
+      <td width="38%" bgcolor="lightgray">
+         
+      </td>
+    </tr>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Setup of 4th row in Table #1.                                    -->
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Table #2 - Links at after each partial record.                   -->
+    <!-- ---------------------------------------------------------------- -->
+    <!--            Show / Edit / Destroy                                 -->
+    <!-- ---------------------------------------------------------------- -->
+    <table width="100%" border=0>
+      <tr>
+        <td width="15%">
+        </td>
+        <td width="10%">
+          <a href="/books/3">Show</a>
+        </td>
+        <td width="10%">
+          <a href="/books/3/edit">Edit</a>
+        </td>
+        <td width="10%">
+          <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/books/3">Destroy</a>
+        </td>
+        <td width="55%">
+        </td>
+      </tr>
+    </table>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Setup of 5th row in Table #1.                                    -->
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Draws a horizontal line, Size = 4.                               -->
+    <!-- Draws a horizontal using using style sheet "scaffolds.scss".     -->
+    <!-- ---------------------------------------------------------------- -->
+    <tr>
+      <td width="100%" colspan=4>
+        <!-- <hr size="4" "noshade"> -->
+        <hr>
+        </hr>
+      </td>
+    </tr>
+  </table>
+
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Links at bottom of page/screen.                                      -->
+<!--            New Book / Search / Main Menu                             -->
+<!-- -------------------------------------------------------------------- -->
+<a href="/books/new">New Book</a>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<!-- This does not work. -->
+<!--<!%= link_to 'Search', search_path %>-->
+<!--&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp-->
+<a href="/search?q=empty">
+  Search
+</a>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<a href="/main_index">
+  Main Menu
+</a>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Draws a horizontal line, Size = 4.                                   -->
+<!-- Draws a horizontal using using style sheet "scaffolds.scss".         -->
+<!-- -------------------------------------------------------------------- -->
+<!-- <hr size="4" "noshade"> -->
+<hr>
+</hr>
+
+<!-- -------------------------------------------------------------------- -->
+<!--  Table - Address - Section                                           -->
+<!--    Row #1 using 2 column.                                            -->
+<!-- -------------------------------------------------------------------- -->
+<address>
+  <table width="100%" border="0">
+    <tr>
+      <td>
+        Don Streeck
+      </td>
+      <td align="right">
+        <font size=-3>
+          Rev. 0.0.6
+        </font>
+      </td>
+    </tr>
+  </table>
+</address>
+
+<!--                                                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev. # :     Description                                -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 05/14/2020 : 0.0.1  : Original.                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 05/28/2020 : 0.0.2  : Remove size and noshade from <hr>.             -->
+<!--            :        : Add <hr> to style sheet.                       -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 05/29/2020 : 0.0.3  : Create Table inside of Address.                -->
+<!--            :        : Add <hr> to style sheet.                       -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 05/31/2020 : 0.0.4  : Create Table #1.                               -->
+<!--            :        : Create Table #2. (Bot tons).                   -->
+<!--            :        : Add <hr> to bottom of Table #2.                -->
+<!--            :        : Add link to Main Menu.                         -->
+<!--            : 0.0.5  : Add paginating.                                -->
+<!--            :        : This part of the code put so many records      -->
+<!--            :        :   on the screen at one time with               -->
+<!--            :        :   Prev / No. of screens / Next.                -->
+<!--            :        : See controller/books_controller.rb             -->
+<!--            :        :   for part 1 of paginating.                    -->
+<!--            :        : See models/book.rb for part 2 of               -->
+<!--            :        :   paginating.                                  -->
+<!--            :        : See view/books/index.html.erb for part 3       -->
+<!--            :        :   of paginating.                               -->
+<!--            :        : See environment.rb for part 4 of               -->
+<!--            :        :   paginating.                                  -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 06/15/2020 : 0.0.6  : Cleanup remove unneeded code and comments.     -->
+<!-- -------------------------------------------------------------------- -->
+<!--            :        :                                                -->
+<!-- -------------------------------------------------------------------- -->
+
+    
+  </body>
+</html>
+
+<!--                                                                   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev. # :     Description                             -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 05/24/2020 : 0.0.1  : Original.                                   -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 05/28/2020 : 0.0.2  : Added < %= controller.action_name % >       -->
+<!--            :        :   title block.                              -->
+<!-- ----------------------------------------------------------------- -->
+<!--            :        :                                             -->
+<!-- ----------------------------------------------------------------- -->

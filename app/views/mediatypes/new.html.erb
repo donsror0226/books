@@ -1,5 +1,87 @@
-<h1>New Mediatype</h1>
+<!--                                                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- System    : Centos 7.7                                               -->
+<!--   Name    : peekaboo                                                 -->
+<!-- Location  : /home/don/workspace/books/app/views/mediatypes/          -->
+<!-- File Name : new.html.erb                                             -->
+<!-- Rev. Date : 07/02/2020                                               -->
+<!-- Rev. No.  : 0.0.2                                                    -->
+<!-- -------------------------------------------------------------------- -->
+<!--                                                                      -->
 
-<%= render 'form', mediatype: @mediatype %>
+<h1>
+	New Media Type
+</h1>
 
+<!-- -------------------------------------------------------------------- -->
+<!-- The notice is a message stating that Add/Edit was successfully.      -->
+<!-- -------------------------------------------------------------------- -->
+<p id="notice"><%= notice %></p>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Not using render _form.html.erb                                      -->
+<!-- Now using render _form_new.html.erb                                  -->
+<!-- -------------------------------------------------------------------- -->
+<!-- <!%= render 'form', mediatype: @mediatype %> -->
+<%= render 'form_new', mediatype: @mediatype %>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Draws a horizontal line, Size = 4.                                   -->
+<!-- Draws a horizontal using using stylesheet "scaffolds.scss".          -->
+<!-- -------------------------------------------------------------------- -->
+<!-- <hr size="4" "noshade"> -->
+<hr>
+</hr>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Links at bottom of page/screen.                                      -->
+<!--            list / Back                                               -->
+<!-- -------------------------------------------------------------------- -->
+<%= link_to 'List', @mediatype %>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
 <%= link_to 'Back', mediatypes_path %>
+
+<!-- Can not call Main Menu or Admin Menu get an error.
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<a href="admin_index">
+  Admin Menu
+</a>
+-->
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Draws a horizontal line, Size = 4.                                   -->
+<!-- Draws a horizontal using using stylesheet "scaffolds.scss".          -->
+<!-- -------------------------------------------------------------------- -->
+<!-- <hr size="4" "noshade"> -->
+<hr>
+</hr>
+
+<!-- -------------------------------------------------------------------- -->
+<!--  Table - Address - Section                                           -->
+<!--    Row #1 using 2 column.                                            -->
+<!-- -------------------------------------------------------------------- -->
+<address>
+  <table width="100%" border="0">
+    <tr>
+      <td>
+        Don Streeck
+      </td>
+      <td align="right">
+        <font size=-3>
+          Rev. 0.0.2
+        </font>
+      </td>
+    </tr>
+  </table>
+</address>
+
+<!--                                                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev. # :     Description                                -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 07/02/2020 : 0.0.1  : Original.                                      -->
+<!--            :        : Copyed from new.html.erb (condition).          -->
+<!--            : 0.0.2  : clean up remove unneeded code and comments.    -->
+<!-- -------------------------------------------------------------------- -->
+<!--            :        :                                                -->
+<!-- -------------------------------------------------------------------- -->

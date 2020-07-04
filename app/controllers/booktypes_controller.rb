@@ -1,3 +1,15 @@
+#!/bin/bash
+#
+# ----------------------------------------------------------------- #
+# System    : Centos 7.7                                            #
+#   Name    : peekaboo                                              #
+# Location  : /home/don/workspace/books/app/controllers/            #
+# File Name : booktypes_controller.rb                               #
+# Rev. Date : 06/29/2020                                            #
+# Rev. No.  : 0.0.3                                                 #
+# ----------------------------------------------------------------- #
+#
+
 class BooktypesController < ApplicationController
   before_action :set_booktype, only: [:show, :edit, :update, :destroy]
 
@@ -10,10 +22,16 @@ class BooktypesController < ApplicationController
   # GET /booktypes/1
   # GET /booktypes/1.json
   def show
+    @booktype = Booktype.find(params[:id])
+      #@booktypes = Booktype.all
   end
 
   # GET /booktypes/new
   def new
+    ## Thie first line will get the last record from the booktype table.   ##
+    ## The next line will add 1 to last_index.                             ##
+    @last_idx = Booktype.last.book_type_idx
+    @next_idx = @last_idx + 1
     @booktype = Booktype.new
   end
 
@@ -69,6 +87,19 @@ class BooktypesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def booktype_params
-      params.fetch(:booktype, {})
+      ## params.fetch(:booktype, {})
+      params.require(:booktype).permit(:book_type_idx, :book_type_name,
+                     :last_idx, :next_idx, @last_idx, @next_idx)
     end
 end
+
+#
+# ----------------------------------------------------------------- #
+# Date Rev.  : Rev. # :     Description                             #
+# ----------------------------------------------------------------- #
+# 06/29/2020 : 0.0.1  : Original, Copyed conditions_controller.rb   #
+#            : 0.0.2  : Add params (see conditions_controller.rb).  #
+#            : 0.0.3  : Add get last record in new.                 #
+# ----------------------------------------------------------------- #
+#            :        :                                             #
+# ----------------------------------------------------------------- #

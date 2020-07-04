@@ -1,4 +1,141 @@
+<!--                                                                     -->
+<!-- ------------------------------------------------------------------- -->
+<!-- System    : Centos 7.7                                              -->
+<!--   Name    : peekaboo                                                -->
+<!-- Location  : /home/don/workspace/books/app/views/mediatypes/         -->
+<!-- File Name : show.html.erb                                           -->
+<!-- Rev. Date : 07/02/2020                                              -->
+<!-- Rev. No.  : 0.0.2                                                   -->
+<!-- ------------------------------------------------------------------- -->
+<!--                                                                     -->
+
+<h1>
+	Show Book Types
+</h1>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- The notice is a message stating some thing was successfully.         -->
+<!-- -------------------------------------------------------------------- -->
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_mediatype_path(@mediatype) %> |
+<!-- -------------------------------------------------------------------- -->
+<!-- Call partial _list.html.erb                                          -->
+<!-- -------------------------------------------------------------------- -->
+<!%= render 'list', mediatype: @mediatype %>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Table #1 - Book Type Info.                                           -->
+<!-- -------------------------------------------------------------------- -->
+<!--        Media_type_idx / Media_type_name                              -->
+<!-- -------------------------------------------------------------------- -->
+<table width="35%" border="1">
+  <tr>
+    <td width="15%" bgcolor="lightgreen">
+      <strong>
+        Record:
+      </strong>
+    </td>
+    <td width="15%" bgcolor="pink">
+       <%=h @mediatype.id %>
+    </td>
+    <!--<td width="20%">-->
+    <!--</td>-->
+  </tr>
+
+  <tr height="5px" bgcolor="blue">
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="15%" bgcolor="lightgreen">
+      <strong>
+        Media Type Idx:
+      </strong>
+    </td>
+    <td width="15%" bgcolor="pink">
+       <%=h @mediatype.media_type_idx %>
+    </td>
+    <!--<td width="20%">-->
+    <!--</td>-->
+  </tr>
+
+  <tr>
+    <td width="15%" bgcolor="lightgreen">
+      <strong>
+        Media Type Name:
+      </strong>
+    </td>
+    <td width="15%" bgcolor="pink">
+       <%=h @mediatype.media_type_name %>
+    </td>
+    <!--<td width="20%">-->
+    <!--</td>-->
+  </tr>
+</table>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Draws a horizontal line, Size = 4.                                   -->
+<!-- Draws a horizontal using using stylesheet "scaffolds.scss".          -->
+<!-- -------------------------------------------------------------------- -->
+<!-- <hr size="4" "noshade"> -->
+<hr>
+</hr>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Links at bottom of page/screen.                                      -->
+<!--            New / Edit / Back / Admin Menu / Main Menu                -->
+<!-- -------------------------------------------------------------------- -->
+<%= link_to 'New Media Type', new_mediatype_path %>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<%= link_to 'Edit', edit_mediatype_path(@mediatype) %>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
 <%= link_to 'Back', mediatypes_path %>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<a href="/admin_index.html">
+  Admin Menu
+</a>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<a href="/main_index">
+  Main Menu
+</a>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Draws a horizontal line, Size = 4.                                   -->
+<!-- Draws a horizontal using using stylesheet "scaffolds.scss".          -->
+<!-- -------------------------------------------------------------------- -->
+<!-- <hr size="4" "noshade"> -->
+<hr>
+</hr>
+
+<!-- -------------------------------------------------------------------- -->
+<!--  Table - Address - Section                                           -->
+<!--    Row #1 using 2 column.                                            -->
+<!-- -------------------------------------------------------------------- -->
+<address>
+  <table width="100%" border="0">
+    <tr>
+      <td>
+        Don Streeck
+      </td>
+      <td align="right">
+        <font size=-3>
+          Rev. 0.0.2
+        </font>
+      </td>
+    </tr>
+  </table>
+</address>
+
+<!--                                                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev. # :     Description                                -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 07/02/2020 : 0.0.1  : Original.                                      -->
+<!--            :        : Copyed part of show.html.erb (condition).      -->
+<!--            : 0.0.2  : clean up remove unneeded code and comments.    -->
+<!-- -------------------------------------------------------------------- -->
+<!--            :        :                                                -->
+<!-- -------------------------------------------------------------------- -->

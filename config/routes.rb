@@ -2,14 +2,14 @@
 #
 # Tells Rails where you actual home page is located and resources.
 #
-# ----------------------------------------------------------------- #
-# System    : Centos 7.7                                            #
-#   Name    : peekaboo                                              #
-# Location  : /home/don/workspace/books/config/                     #
-# File Name : routes.rb                                             #
-# Rev. Date : 05/13/2020                                            #
-# Rev. No.  : 0.0.4                                                 #
-# ----------------------------------------------------------------- #
+# ------------------------------------------------------------------------- #
+# System    : Centos 7.7                                                    #
+#   Name    : peekaboo                                                      #
+# Location  : /home/don/workspace/books/config/                             #
+# File Name : routes.rb                                                     #
+# Rev. Date : 06/26/2020                                                    #
+# Rev. No.  : 0.0.5                                                         #
+# ------------------------------------------------------------------------- #
 #
 
 Rails.application.routes.draw do
@@ -24,11 +24,6 @@ Rails.application.routes.draw do
   resources :booktypes
 
   get 'search', to: "books#search"
-  #get 'book_search', to: "books#search"
-
-  ##get 'show', to: "books#show"
-
-  get 'destroy_condition', to: "conditions#destroy_condition"
 
   ## #2 - search
   ## Use to setup the /search to your search page and pages#search
@@ -55,17 +50,17 @@ Rails.application.routes.draw do
 end
 
 #
-# ----------------------------------------------------------------- #
-# Date Rev.  : Rev. # :     Description                             #
-# ----------------------------------------------------------------- #
-# 05/05/2020 : 0.0.1  : Original.                                   #
-#            : 0.0.2  : Add root 'welcome#index'                    #
-#            : 0.0.3  : Add resources :books                        #
-# ----------------------------------------------------------------- #
-# 05/13/2020 : 0.0.4  : Add resources :condition, :mediatypes,      #
-#            :        :               :purposes,  :booktypes.       #
-#            :        : Comment out get welcome/index,              #
-#            :        :             root welcome#index.             #
-# ----------------------------------------------------------------- #
-#            :        :                                             #
-# ----------------------------------------------------------------- #
+# ------------------------------------------------------------------------- #
+# Date Rev.  : Rev. # :     Description                                     #
+# ------------------------------------------------------------------------- #
+# 05/05/2020 : 0.0.1  : Original.                                           #
+#            : 0.0.2  : Add root 'welcome#index'                            #
+#            : 0.0.3  : Add resources :books                                #
+# ------------------------------------------------------------------------- #
+# 05/13/2020 : 0.0.4  : Add resources :condition, :mediatypes,              #
+#            :        :               :purposes,  :booktypes.               #
+#            :        : Comment out get welcome/index,                      #
+#            :        :             root welcome#index.                     #
+# ------------------------------------------------------------------------- #
+# 06/29/2020 : 0.0.5  : Cleanup remove code and comments.                   #
+# ------------------------------------------------------------------------- #

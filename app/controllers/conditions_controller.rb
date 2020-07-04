@@ -5,8 +5,8 @@
 #   Name    : peekaboo                                              #
 # Location  : /home/don/workspace/books/app/controllers/            #
 # File Name : conditions_controller.rb                              #
-# Rev. Date : 06/08/2020                                            #
-# Rev. No.  : 0.0.5                                                 #
+# Rev. Date : 06/21/2020                                            #
+# Rev. No.  : 0.0.3                                                 #
 # ----------------------------------------------------------------- #
 #
 
@@ -23,21 +23,20 @@ class ConditionsController < ApplicationController
   # GET /conditions/1.json
   def show
     @condition = Condition.find(params[:id])
-    @conditions = Condition.all
-        #render :index
-        #format.html { render :edit }
+      #@conditions = Condition.all
   end
 
   # GET /conditions/new
   def new
-    ## This line will get the last record from the condition table.        ##
-    @last_idx = Condition.last
+    ## Thie first line will get the last record from the condition table.  ##
+    ## The next line will add 1 to last_index.                             ##
+    @last_idx = Condition.last.condition_idx
+    @next_idx = @last_idx + 1
     @condition = Condition.new
   end
 
   # GET /conditions/1/edit
   def edit
-    #@last_idx = Condition.last
   end
 
   # POST /conditions
@@ -73,14 +72,11 @@ class ConditionsController < ApplicationController
   # DELETE /conditions/1
   # DELETE /conditions/1.json
   def destroy
-    #@condition.destroy
-    #respond_to do |format|
-    #  format.html { redirect_to conditions_url, notice: 'Condition was successfully destroyed.' }
-    #  format.json { head :no_content }
-    #end
-  end
-
-  def condition_destroy
+    @condition.destroy
+    respond_to do |format|
+      format.html { redirect_to conditions_url, notice: 'Condition was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   private
@@ -93,7 +89,7 @@ class ConditionsController < ApplicationController
     def condition_params
       ## params.fetch(:condition, {}) ##
       params.require(:condition).permit(:condition_idx, :condition_name,
-                     :last_idx, :next_idx)
+                     :last_idx, :next_idx, @last_idx, @next_idx)
     end
 end
 
