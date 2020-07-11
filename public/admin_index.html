@@ -4,8 +4,8 @@
 <!--   Name    : peekaboo                                              --> 
 <!-- Location  : /home/don/workspace/books/public/                     -->
 <!-- File Name : admin_index.html                                      --> 
-<!-- Rev. Date : 06/21/2020                                            --> 
-<!-- Rev. No.  : 0.0.3                                                 --> 
+<!-- Rev. Date : 07/03/2020                                            --> 
+<!-- Rev. No.  : 0.0.6                                                 --> 
 <!-- ----------------------------------------------------------------- --> 
 <!--                                                                   -->
 
@@ -13,13 +13,13 @@
 <html lang="en">
   <head>
     <title>
-      Don's Book Inventory -- Addmin Main Menu - 2.0.0
+      Don's Book Inventory -- Admin Main Menu - 2.0.0
     </title>
     <!--<title>jQuery UI Datepicker - Default functionality</title>-->
     <meta name="Generator" content="Sublime Text">
     <meta name="Author" content="Don streeck">
     <meta name="Keywords" content="Ruby on Rails">
-    <meta name="Description" content="Admin Main Menu 2.0.a">
+    <meta name="Description" content="Admin Main Menu 2.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="myscaffolds.css">
@@ -46,7 +46,7 @@
       </tr>
 
       <tr align=center>
-        <!-- ------------------------------------------------------------ -->
+        <!-- --------------------------------------------------------2.0- -->
         <!--    Row #2 - column. #1.                                      -->
         <!-- ------------------------------------------------------------ -->
         <td width="40%">
@@ -54,11 +54,12 @@
         </td>
 
         <!-- ------------------------------------------------------------ -->
-        <!--    Row #2 - column. #2.                                      -->
+        <!--    Row #2 - column. #2                                       -->
         <!-- ------------------------------------------------------------ -->
         <td width="20%">
           <br>
           <b>
+          <!-- Condition.                                                 -->
           <!-- ------------------------------------------------------2.1- -->
           <!-- This first call application.html.erb in /view/layouts/     -->
           <!--   which inturns loads all css formating files, then        -->
@@ -66,7 +67,7 @@
           <!-- Then call conditions/new.html.erb in /view/                -->
           <!-- ---------------------------------------------------------- -->
           <a href="/conditions/new">
-          New Condition
+            New Condition
           </a>
           <br><br>
 
@@ -81,6 +82,7 @@
           </a>
           <br>-----<br>
 
+          <!-- Book Types.                                                -->
           <!-- ------------------------------------------------------2.3- -->
           <!-- This first call application.html.erb in /view/layouts/     -->
           <!--   which inturns loads all css formating files, then        -->
@@ -92,18 +94,18 @@
           </a>
           <br><br>
 
-            <!-- ----------------------------------------------------2.4- -->
-            <!-- This first call application.html.erb in /view/layouts/   -->
-            <!--   which inturns loads all css formating files, then      -->
-            <!--   call file scaffold.scss in /assets/stylesheets.        -->
-            <!-- Then call booktypes/index.html.erb in /view/             -->
-            <!-- -------------------------------------------------------- -->
-            <a href="/booktypes">
-              List Book Types
-            </a>
-
+          <!-- ------------------------------------------------------2.4- -->
+          <!-- This first call application.html.erb in /view/layouts/     -->
+          <!--   which inturns loads all css formating files, then        -->
+          <!--   call file scaffold.scss in /assets/stylesheets.          -->
+          <!-- Then call booktypes/index.html.erb in /view/               -->
+          <!-- ---------------------------------------------------------- -->
+          <a href="/booktypes">
+            List Book Types
+          </a>
           <br>-----<br>
 
+          <!-- Media Type.                                                -->
           <!-- ------------------------------------------------------2.5- -->
           <!-- This first call application.html.erb in /view/layouts/     -->
           <!--   which inturns loads all css formating files, then        -->
@@ -115,30 +117,52 @@
           </a>
           <br><br>
 
-            <!-- ----------------------------------------------------2.6- -->
-            <!-- This first call application.html.erb in /view/layouts/   -->
-            <!--   which inturns loads all css formating files, then      -->
-            <!--   call file scaffold.scss in /assets/stylesheets.        -->
-            <!-- Then call mediatypes/index.html.erb in /view/            -->
-            <!-- -------------------------------------------------------- -->
-            <a href="/mediatypes">
-              List Media Types
-            </a>
+          <!-- ----------------------------------------------------2.6- -->
+          <!-- This first call application.html.erb in /view/layouts/   -->
+          <!--   which inturns loads all css formating files, then      -->
+          <!--   call file scaffold.scss in /assets/stylesheets.        -->
+          <!-- Then call mediatypes/index.html.erb in /view/            -->
+          <!-- -------------------------------------------------------- -->
+          <a href="/mediatypes">
+            List Media Types
+          </a>
+          <br>-----<br>
 
-            <br><br>-----<br><br>
+          <!-- Purpose.                                                   -->
+          <!-- ------------------------------------------------------2.7- -->
+          <!-- This first call application.html.erb in /view/layouts/     -->
+          <!--   which inturns loads all css formating files, then        -->
+          <!--   call file scaffold.scss in /assets/stylesheets.          -->
+          <!-- Then call mediatypes/new.html.erb in /view/                -->
+          <!-- ---------------------------------------------------------- -->
+          <a href="/purposes/new">
+            New Purposes
+          </a>
+          <br><br>
 
-            <!-- ---------------------------------------------------2.10- -->
-            <!-- This call a main_menu /main_index.html.                  -->
-            <!-- -------------------------------------------------------- -->
-            <a href="/main_index.html">
-              Main Menu
-            </a>
-            <br><br>
+          <!-- ------------------------------------------------------2.8- -->
+          <!-- This first call application.html.erb in /view/layouts/     -->
+          <!--   which inturns loads all css formating files, then        -->
+          <!--   call file scaffold.scss in /assets/stylesheets.          -->
+          <!-- Then call mediatypes/index.html.erb in /view/              -->
+          <!-- ---------------------------------------------------------- -->
+          <a href="/purposes">
+            List Purposes
+          </a>
+          <br><br>-----<br><br>
+
+          <!-- ------------------------------------------------------2.9- -->
+          <!-- This call a main_menu /main_index.html.                    -->
+          <!-- ---------------------------------------------------------- -->
+          <a href="/main_index.html">
+            Main Menu
+          </a>
+          <br><br>
 
           </b>
         </td>
 
-        <!-- ------------------------------------------------------------ -->
+        <!-- -------------------------------------------------------2.10- -->
         <!--    Row #2 - column. #3.                                      -->
         <!-- ------------------------------------------------------------ -->
         <td width="40%">
@@ -147,7 +171,14 @@
       </tr>
     </table>
     <br>
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Draws a horizontal line, Size = 4.                               -->
+    <!-- Draws a horizontal using using style sheet "scaffolds.scss".     -->
+    <!-- ---------------------------------------------------------------- -->
+    <!-- <hr size="4" "noshade"> -->
     <hr>
+    </hr>
 
     <!-- ---------------------------------------------------------------- -->
     <!--  Table #2 - Address - Section                                    -->
@@ -183,6 +214,12 @@
 <!-- 06/19/2020 : 0.0.2  : Add Condition links new & list.             -->
 <!-- ----------------------------------------------------------------- -->
 <!-- 06/21/2020 : 0.0.3  : Add Main Menu link.                         -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 07/01/2020 : 0.0.4  : Add Book Type links new & list.             -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 07/02/2020 : 0.0.5  : Add Media Type links new & list.            -->
+<!-- ----------------------------------------------------------------- -->
+<!-- 07/03/2020 : 0.0.6  : Add Purpose links new & list.               -->
 <!-- ----------------------------------------------------------------- -->
 <!--            :        :                                             -->
 <!-- ----------------------------------------------------------------- -->

@@ -1,6 +1,83 @@
-<h1>Editing Purpose</h1>
+<!--                                                                     -->
+<!-- ------------------------------------------------------------------- -->
+<!-- System    : Centos 7.7                                              -->
+<!--   Name    : peekaboo                                                -->
+<!-- Location  : /home/don/workspace/books/app/views/booktypes/          -->
+<!-- File Name : edit.html.erb                                           -->
+<!-- Rev. Date : 07/06/2020                                              -->
+<!-- Rev. No.  : 0.0.2                                                   -->
+<!-- ------------------------------------------------------------------- -->
+<!--                                                                     -->
 
-<%= render 'form', purpose: @purpose %>
+<h1>
+	Editing Purpose
+</h1>
 
+<!-- -------------------------------------------------------------------- -->
+<!-- Not using Call partial _form.html.erb                                -->
+<!-- Now using Call partial _form_edit.html.erb                           -->
+<!-- -------------------------------------------------------------------- -->
+<!-- <!%= render 'form', purpose: @purpose %> -->
+<%= render 'form_edit', purpose: @purpose %>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Draws a horizontal line, Size = 4.                                   -->
+<!-- Draws a horizontal using using stylesheet "scaffolds.scss".          -->
+<!-- -------------------------------------------------------------------- -->
+<!-- <hr size="4" "noshade"> -->
+<hr>
+</hr>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Links at bottom of page/screen.                                      -->
+<!--            Show / Back / Admin Menu / Main Menu                      -->
+<!-- -------------------------------------------------------------------- -->
 <%= link_to 'Show', @purpose %> |
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
 <%= link_to 'Back', purposes_path %>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<a href="/admin_index.html">
+  Admin Menu
+</a>
+&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+<a href="/main_index">
+  Main Menu
+</a>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Draws a horizontal line, Size = 4.                                   -->
+<!-- Draws a horizontal using using stylesheet "scaffolds.scss".          -->
+<!-- -------------------------------------------------------------------- -->
+<!-- <hr size="4" "noshade"> -->
+<hr>
+</hr>
+
+<!-- -------------------------------------------------------------------- -->
+<!--  Table - Address - Section                                           -->
+<!--    Row #1 using 2 column.                                            -->
+<!-- -------------------------------------------------------------------- -->
+<address>
+  <table width="100%" border="0">
+    <tr>
+      <td>
+        Don Streeck
+      </td>
+      <td align="right">
+        <font size=-3>
+          Rev. 0.0.2
+        </font>
+      </td>
+    </tr>
+  </table>
+</address>
+
+<!--                                                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev. # :     Description                                -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 07/06/2020 : 0.0.1  : Original.                                      -->
+<!--            :        : Copyed part of edit.html.erb (condition).      -->
+<!--            : 0.0.2  : clean up remove unneeded code and comments.    -->
+<!-- -------------------------------------------------------------------- -->
+<!--            :        :                                                -->
+<!-- -------------------------------------------------------------------- -->

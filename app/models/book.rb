@@ -209,7 +209,7 @@ end
 #            :        :   pageinating.                                      #
 #            :        : See view/books/index.html.erb for part 3            #
 #            :        :   of pageinating.                                   #
-#            :        : See environment.rb for part 4 of                    #
+#            :        : See config/environment.rb for part 4                #
 #            :        :   pageinating.                                      #
 # ------------------------------------------------------------------------- #
 # 06/01/2020 : 0.0.5  : Remove validates_length_of :price                   #

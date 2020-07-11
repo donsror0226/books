@@ -1,13 +1,13 @@
 #!/bin/bash
 #
-# ----------------------------------------------------------------- #
-# System    : Centos 7.7                                            #
-#   Name    : peekaboo                                              #
-# Location  : /home/don/workspace/books/app/controllers/            #
-# File Name : mediatypes_controller.rb                              #
-# Rev. Date : 07/02/2020                                            #
-# Rev. No.  : 0.0.3                                                 #
-# ----------------------------------------------------------------- #
+# ------------------------------------------------------------------------- #
+# System    : Centos 7.7                                                    #
+#   Name    : peekaboo                                                      #
+# Location  : /home/don/workspace/books/app/controllers/                    #
+# File Name : mediatypes_controller.rb                                      #
+# Rev. Date : 07/02/2020                                                    #
+# Rev. No.  : 0.0.3                                                         #
+# ------------------------------------------------------------------------- #
 #
 
 class MediatypesController < ApplicationController
@@ -94,12 +94,12 @@ class MediatypesController < ApplicationController
 end
 
 #
-# ----------------------------------------------------------------- #
-# Date Rev.  : Rev. # :     Description                             #
-# ----------------------------------------------------------------- #
-# 07/02/2020 : 0.0.1  : Original, Copyed conditions_controller.rb   #
-#            : 0.0.2  : Add params (see conditions_controller.rb).  #
-#            : 0.0.3  : Add get last record in new.                 #
-# ----------------------------------------------------------------- #
-#            :        :                                             #
-# ----------------------------------------------------------------- #
+# ------------------------------------------------------------------------- #
+# Date Rev.  : Rev. # :     Description                                     #
+# ------------------------------------------------------------------------- #
+# 07/02/2020 : 0.0.1  : Original, Copyed conditions_controller.rb           #
+#            : 0.0.2  : Add params (see conditions_controller.rb).          #
+#            : 0.0.3  : Add get last record in new.                         #
+# ------------------------------------------------------------------------- #
+#            :        :                                                     #
+# ------------------------------------------------------------------------- #

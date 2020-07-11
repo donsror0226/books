@@ -1,0 +1,95 @@
+<!--                                                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- System    : Centos 7.7                                               -->
+<!--   Name    : peekaboo                                                 -->
+<!-- Location  : /home/don/workspace/books/app/views/purposes/            -->
+<!-- File Name : _form_edit.html.erb                                      -->
+<!-- Rev. Date : 07/06/2020                                               -->
+<!-- Rev. No.  : 0.0.2                                                    -->
+<!-- -------------------------------------------------------------------- -->
+<!--                                                                      -->
+
+<%= form_with(model: purpose, local: true) do |f| %>
+<!%= form_for(@purpose) do |f| %>
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Error handeling.                                                   -->
+  <!-- ------------------------------------------------------------------ -->
+  <% if purpose.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(purpose.errors.count, "error") %> prohibited this purpose from being saved:</h2>
+
+      <ul>
+      <% purpose.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- The first 2 lines wil get the last record, column condition_index, -->
+  <!--   or you can just use the third line to get the last record,       -->
+  <!--   column condition_index.                                          -->
+  <!-- The forth lines adds 1 to lastidx to get next_idx.                 -->
+  <%= lastidx = @last_idx %>
+  <!%= lastidx = lastidx.purpose_idx %>
+  <!%= lastidx = @last_idx.purpose_idx %>
+  <!%= next_idx = lastidx + 1 %>
+
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Table #1.                                                          -->
+  <!-- ------------------------------------------------------------------ -->
+  <!--            Purpose idx / Purpose Type / Purpose Name               -->
+  <!-- ------------------------------------------------------------------ -->
+  <table width="100%" border=1>
+    <tr>
+      <td width="25%">
+        <%= f.label :purpose_idx %>
+      </td>
+      <td width="10%">
+        <%= f.text_field :purpose_idx,
+                         :size => 3,
+                         :maxsize => 5 %>
+                          <!-- autofocus: true %> -->
+      </td>
+    </tr>
+
+    <tr>
+      <td width="25%">
+        <%= f.label :purpose_type %>
+      </td>
+      <td width="15%">
+        <%= f.text_field :purpose_type,
+                         :size => 15,
+                          autofocus: true %>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="25%">
+        <%= f.label :purpose_name %>
+      </td>
+      <td width="15%">
+        <%= f.text_field :purpose_name,
+                         :size => 20,
+                          autofocus: true %>
+      </td>
+    </tr>
+  </table>
+
+  <br>
+  <div class="actions">
+    <%= f.submit "Save Purpose" %>
+  </div>
+<% end %>
+
+<!--                                                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev. # :     Description                                -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 07/06/2020 : 0.0.1  : Original.                                      -->
+<!--            :        : Copyed part of _form.edit.html.erb             -->
+<!--            :        :  (condition).                                  -->
+<!--            : 0.0.2  : Clean up remove unneeded code and comments.    -->
+<!-- -------------------------------------------------------------------- -->
+<!--            :        :                                                -->
+<!-- -------------------------------------------------------------------- -->

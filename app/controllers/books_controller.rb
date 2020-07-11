@@ -1,13 +1,13 @@
 #!/bin/bash
 #
-# ----------------------------------------------------------------- #
-# System    : Centos 7.7                                            #
-#   Name    : peekaboo                                              #
-# Location  : /home/don/workspace/books/app/controllers/            #
-# File Name : books_controller.rb                                   #
-# Rev. Date : 06/08/2020                                            #
-# Rev. No.  : 0.0.5                                                 #
-# ----------------------------------------------------------------- #
+# ------------------------------------------------------------------------- #
+# System    : Centos 7.7                                                    #
+#   Name    : peekaboo                                                      #
+# Location  : /home/don/workspace/books/app/controllers/                    #
+# File Name : books_controller.rb                                           #
+# Rev. Date : 06/08/2020                                                    #
+# Rev. No.  : 0.0.5                                                         #
+# ------------------------------------------------------------------------- #
 #
 
 class BooksController < ApplicationController
@@ -112,29 +112,29 @@ class BooksController < ApplicationController
 end
 
 #
-# ----------------------------------------------------------------- #
-# Date Rev.  : Rev. # :     Description                             #
-# ----------------------------------------------------------------- #
-# 05/05/2020 : 0.0.1  : Original.                                   #
-# ----------------------------------------------------------------- #
-# 05/06/2020 : 0.0.2  : Replaced params.fetch with params.require.  #
-# ----------------------------------------------------------------- #
-# 05/13/2020 : 0.0.3  : Rewrote multipliable times.                 #
-# ----------------------------------------------------------------- #
-# 05/31/2020 : 0.0.4  : Add pageinating.                            #
-#            :        : This part of the code put so many records   #
-#            :        :   on the screen at one time with            #
-#            :        :   Prev / No. of screens / Next.             #
-#            :        : See controller/books_controller.rb          #
-#            :        :   for part 1 of pageinating.                #
-#            :        : See models/book.rb for part 2 of            #
-#            :        :   pageinating.                              #
-#            :        : See view/books/index.html.erb for part 3    #
-#            :        :   of pageinating.                           #
-#            :        : See environment.rb for part 4 of            #
-#            :        :   pageinating.                              #
-# ----------------------------------------------------------------- #
-# 06/08/2020 : 0.0.5  : Clean up remove unneeded code and comments. #
-# ----------------------------------------------------------------- #
-#            :        :                                             #
-# ----------------------------------------------------------------- #
+# ------------------------------------------------------------------------- #
+# Date Rev.  : Rev. # :     Description                                     #
+# ------------------------------------------------------------------------- #
+# 05/05/2020 : 0.0.1  : Original.                                           #
+# ------------------------------------------------------------------------- #
+# 05/06/2020 : 0.0.2  : Replaced params.fetch with params.require.          #
+# ------------------------------------------------------------------------- #
+# 05/13/2020 : 0.0.3  : Rewrote multipliable times.                         #
+# ------------------------------------------------------------------------- #
+# 05/31/2020 : 0.0.4  : Add pageinating.                                    #
+#            :        : This part of the code put so many records           #
+#            :        :   on the screen at one time with                    #
+#            :        :   Prev / No. of screens / Next.                     #
+#            :        : See controller/books_controller.rb                  #
+#            :        :   for part 1 of pageinating.                        #
+#            :        : See models/book.rb for part 2 of                    #
+#            :        :   pageinating.                                      #
+#            :        : See view/books/index.html.erb for part 3            #
+#            :        :   of pageinating.                                   #
+#            :        : See config/environment.rb for part 4                #
+#            :        :   pageinating.                                      #
+# ------------------------------------------------------------------------- #
+# 06/08/2020 : 0.0.5  : Clean up remove unneeded code and comments.         #
+# ------------------------------------------------------------------------- #
+#            :        :                                                     #
+# ------------------------------------------------------------------------- #

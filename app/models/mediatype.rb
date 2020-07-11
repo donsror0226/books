@@ -14,10 +14,10 @@ class Mediatype < ApplicationRecord
 	#has_many :books
 
 	# ----------------------------------------------------------------------- #
-	# -- Book Type idx                                                        #
+	# -- Media Type idx                                                       #
 	# -- Error 01 - Invalid no data in field.                                 #
 	# -- Error 02 - Value not numeric.                                        #
-	# -- Error 03 - Value not between 1 - 9.                                  #
+	# -- Error 03 - Value not between 0 - 9.                                  #
 	# -- Error 04 - Value not Unique on Save.                                 #
 	# -- Error 05 - Value not Unique on Update.                               #
 	# ----------------------------------------------------------------------- #
@@ -40,8 +40,9 @@ class Mediatype < ApplicationRecord
 													:on => :update,
 													:message =>
 													 " -----> Error 05 - Value not Unique on update."
+
 	# ----------------------------------------------------------------------- #
-	# -- Book Type Name                                                       #
+	# -- Media Type Name                                                        #
 	# -- Error 06 - Invalid no data in field.                                 #
 	# -- Error 07 - Greater than 15 char.                                     #
 	# -- Error 08 - Value not Unique on Save.                                 #
