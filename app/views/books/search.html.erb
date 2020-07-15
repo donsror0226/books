@@ -23,7 +23,10 @@
 <!-- -------------------------------------------------------------------- -->
 <form action="/search">
   Author:
-  <input name="q" type="text" placeholder="Keywords" aria-label="Search">
+  <input name="q" type="text"
+                  placeholder="Keywords"
+                  aria-label="Search"
+                  autofocus>
   <button type="submit">
     Search
   </button>
@@ -34,16 +37,29 @@
   <br>
   <br>
   <% if params[:q] != "empty" %>
-    <br>
-    <br>
-    "***** No data in Seareh Books *****"<br>
+    <div>
+    <!--<h3 style=color:Red;>-->
+    <h3>
+      ***** No data in Search Books *****
+    </h3>
+    </div>
     <!--<!% if params[:q].blank? %>-->
-      <!--"***** No data in Seareh Books - Blank *****"<br>-->
+      <!--"***** No data in Search Books - Blank *****"<br>-->
     <!--<!% end %>-->
     <!--<!% if params[:q].nil? %>-->
-      <!--"***** No data in Seareh Books - Nil *****"-->
+      <!--"***** No data in Search Books - Nil *****"-->
     <!--<!% end %>-->
-  <% end %>
+  <br>
+  <br>
+  <br>
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Draws a horizontal line, Size = 4.                                 -->
+  <!-- Draws a horizontal using using stylesheet "scaffolds.scss".        -->
+  <!-- ------------------------------------------------------------------ -->
+  <!-- <hr size="4" "noshade"> -->
+  <hr>
+  </hr>
+<% end %>
 
 <% else %>
   <% @books.each do |book| %>
@@ -176,18 +192,18 @@
   Main Menu
 </a>
 
-<!-- ------------------------------------------------------------------ -->
-<!-- Draws a horizontal line, Size = 4.                                 -->
-<!-- Draws a horizontal using using stylesheet "scaffolds.scss".        -->
-<!-- ------------------------------------------------------------------ -->
+<!-- -------------------------------------------------------------------- -->
+<!-- Draws a horizontal line, Size = 4.                                   -->
+<!-- Draws a horizontal using using stylesheet "scaffolds.scss".          -->
+<!-- -------------------------------------------------------------------- -->
 <!-- <hr size="4" "noshade"> -->
 <hr>
 </hr>
 
-<!-- ------------------------------------------------------------------ -->
-<!--  Table - Address - Section                                         -->
-<!--    Row #1 using 2 column.                                          -->
-<!-- ------------------------------------------------------------------ -->
+<!-- -------------------------------------------------------------------- -->
+<!--  Table - Address - Section                                           -->
+<!--    Row #1 using 2 column.                                            -->
+<!-- -------------------------------------------------------------------- -->
 <address>
   <table width="100%" border="0">
     <tr>

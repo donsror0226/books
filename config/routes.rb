@@ -14,6 +14,8 @@
 
 Rails.application.routes.draw do
 
+  #get 'home/index'
+
   ## Rails provides a resources method which can be used to declare a
   ##   standard REST resource.
   ##   You can create, read, update, destroy (CRUD).
@@ -45,6 +47,8 @@ Rails.application.routes.draw do
   # ##   bring up the index page for your application.
   # ##   It uses the root of the application.
   # root 'welcome#index'
+
+  # root ‘home#index’
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

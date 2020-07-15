@@ -49,6 +49,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# Add by DPS                                            07/13/2020
+gem 'bcrypt', '~> 3.1.13'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

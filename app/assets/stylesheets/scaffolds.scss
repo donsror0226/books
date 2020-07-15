@@ -1,13 +1,13 @@
-/*                                                                    */
-/* ------------------------------------------------------------------ */ 
-/* System    : Centos 7.7                                             */ 
-/*   Name    : peekaboo                                               */ 
-/* Location  : /home/don/workspace/books/app/assets/stylesheets/      */
-/* File Name : scaffolds.scss                                         */ 
-/* Rev. Date : 06/10/2020                                             */ 
-/* Rev. No.  : 0.0.4                                                  */ 
-/* ------------------------------------------------------------------ */ 
-/*                                                                    */
+/*                                                                        */
+/* ---------------------------------------------------------------------- */
+/* System    : Centos 7.7                                                 */
+/*   Name    : peekaboo                                                   */
+/* Location  : /home/don/workspace/books/app/assets/stylesheets/          */
+/* File Name : scaffolds.scss                                             */
+/* Rev. Date : 07/12/2020                                                 */
+/* Rev. No.  : 0.0.6                                                      */
+/* ---------------------------------------------------------------------- */
+/*                                                                        */
 
 body {
   background-color: #fff;
@@ -121,7 +121,6 @@ h1 {
   border-width: 2px;
 }
 
-
 .grid-container {
   display: grid;
   /*grid-template-columns: auto auto auto auto;*/
@@ -157,41 +156,155 @@ h1 {
   color: red;
 }
 
-/* ----------------------------------------------------------------- */
-/* Color Codes  :    Color Name                                      */
-/* 000 : 000000 : Black                                              */
-/* fff : ffffff : White                                              */
-/*     : 008000 : Green                                              */
-/*     : 00ff00 : Green 1                                            */
-/* f00 : ff0000 : Red                                                */
-/* 00f : 0000ff : Blue                                               */
-/*     :        : Orange                                             */
-/* eee : eeeeee : - Off White                                        */
-/* 666 : 666666 : Gray 40                                            */
-/* c00 : cc0000 : - Red                                              */
-/*     : f0f0f0 : Gray 94 - off white                                */
-/*     : 2196F3 : - Light Blue - purple                              */
-/*     :        :                                                    */
-/* ----------------------------------------------------------------- */
+h3 {
+  /*background-color: lightgray;*/
+  color: red;
+  font-weight: bold;
+  text-align: center; /*left;*/
+  border: 5px double red;
+  background-color: lightblue; /* powerblue; */
+  /* --------------------------------------------------------------------- */
+  /* padding-top: 50px;                                                    */
+  /* padding-right: 0px;                                                   */
+  /* padding-bottom: 20px;                                                 */
+  /* padding-left: 0px;                                                    */
+  /* The 4 Padding lines above can be rewriten as one line. see below.     */
+  /* --------------------------------------------------------------------- */
+  padding: 50px 0px 20px 0px; /* Top Right Bottom Left */
+  height: 50px; /* 200px; */
+  width: 50%;
+}
+
+/* ********************************************* */
+/* The section below is for Login with Password. */
+/* ********************************************* */
+.Sign_Form{
+  text-align: center;
+  margin:auto;
+  margin-top:10px;  
+  width:500px;
+  background-color: rgba(0, 0, 0, .2);
+  padding-bottom:20px;
+  padding-top:2px;
+  border-radius: 18px;
+  box-shadow: 5px 5px 5px #888888;
+
+}
+
+.Signup_Errors{
+  list-style-type: none;
+  text-align:left;
+  margin-left:66px;
+  color:red;
+}
+
+.Main_Header{
+  background-image: url('header_bg.png');
+  height:60px;
+  padding:0 20px;
+  border-radius: 18px;
+  box-shadow: 5px 5px 5px #888888;
+
+}
+
+.Main_Header h1{
+  float:left;
+  margin-top:8px;
+  color:#C4C1BD;
+  background-image: url('ruby-source-logo.png');
+  height:43px;
+  width:215px;
+  text-indent:-9999px;
+}
+
+.nav{
+  list-style-type: none;
+  float: right;
+  color:#C4C1BD;
+
+}
+.nav li{
+  display: inline;
+  margin-right:5px;
+
+}
+.nav_links{
+  color: #C4C1BD;
+  text-decoration: none;
+} 
+
+.notice, .valid_notice, .invalid_notice{
+  height:35px;
+  width: 400px;
+  margin:auto;
+  margin-top:20px;
+}
+.notice, .invalid_notice p, .valid_notice p{
+  text-align:center;
+  margin-top:6px;
+}
+
+.notice{
+  background-color: transparent;
+}
+
+.invalid_notice{
+  background-color: #FFCCCC;
+  border:1px solid red;
+}
+.valid_notice{
+  background-color: #CCFFCC;
+  border:1px solid green;
+}
+
+.User_Header{
+
+  background-color: rgba(0, 0, 0, .2);
+  border-radius: 18px;
+  margin:auto;
+  width:220px;
+  text-align:center;
+}
+
+/* ----------------------------------------------------------------------- */
+/* Color Codes  :    Color Name                                            */
+/* 000 : 000000 : Black                                                    */
+/* fff : ffffff : White                                                    */
+/*     : 008000 : Green                                                    */
+/*     : 00ff00 : Green 1                                                  */
+/* f00 : ff0000 : Red                                                      */
+/* 00f : 0000ff : Blue                                                     */
+/*     :        : Orange                                                   */
+/* eee : eeeeee : - Off White                                              */
+/* 666 : 666666 : Gray 40                                                  */
+/* c00 : cc0000 : - Red                                                    */
+/*     : f0f0f0 : Gray 94 - off white                                      */
+/*     : 2196F3 : - Light Blue - purple                                    */
+/*     :        : Gray - gray                                              */
+/*     :        : LightGray - lightgray                                    */
+/*     :        :                                                          */
+/* ----------------------------------------------------------------------- */
 
 
-/*                                                                   */
-/* ----------------------------------------------------------------- */
-/* Date Rev.  : Rev. # :     Description                             */
-/* ----------------------------------------------------------------- */
-/* 05/05/2020 : 0.0.1  : Original.                                   */
-/* ----------------------------------------------------------------- */
-/* 05/28/2020 : 0.0.2  : Add <hr> to stylesheet.                     */
-/*            :        : Add <th> to stylesheet.                     */
-/*            :        : Add <h1> to stylesheet.                     */
-/* ----------------------------------------------------------------- */
-/* 06/03/2020 : 0.0.3  : Add .grid-container.                        */
-/*            :        : Add .grid-container > div                   */
-/*            :        : Add #even.                                  */
-/* ----------------------------------------------------------------- */
-/* 06/10/2020 : 0.0.4  : Add color code block.                       */
-/* ----------------------------------------------------------------- */
-/* 06/26/2020 : 0.0.5  : Add #destroy.                               */
-/* ----------------------------------------------------------------- */
-/*            :        :                                             */
-/* ----------------------------------------------------------------- */
+/*                                                                         */
+/* ----------------------------------------------------------------------- */
+/* Date Rev.  : Rev. # :     Description                                   */
+/* ----------------------------------------------------------------------- */
+/* 05/05/2020 : 0.0.1  : Original.                                         */
+/* ----------------------------------------------------------------------- */
+/* 05/28/2020 : 0.0.2  : Add <hr> to stylesheet.                           */
+/*            :        : Add <th> to stylesheet.                           */
+/*            :        : Add <h1> to stylesheet.                           */
+/* ----------------------------------------------------------------------- */
+/* 06/03/2020 : 0.0.3  : Add .grid-container.                              */
+/*            :        : Add .grid-container > div                         */
+/*            :        : Add #even.                                        */
+/* ----------------------------------------------------------------------- */
+/* 06/10/2020 : 0.0.4  : Add color code block.                             */
+/* ----------------------------------------------------------------------- */
+/* 06/26/2020 : 0.0.5  : Add #destroy.                                     */
+/* ----------------------------------------------------------------------- */
+/* 07/12/2020 : 0.0.6  : Add h3.                                           */
+/* ----------------------------------------------------------------------- */
+/*            :        :                                                   */
+/* ----------------------------------------------------------------------- */

@@ -19,10 +19,21 @@
 <p id="notice"><%= notice %></p>
 
 <!-- -------------------------------------------------------------------- -->
+<!-- Table #0 - Diaplay Paging / Sort by.                                 -->
+<!-- -------------------------------------------------------------------- -->
 <!-- This part of the code put so many records on the screen at one       -->
 <!--   Time with Prev / No. of screens / Next.                            -->
 <!-- -------------------------------------------------------------------- -->
-<%= will_paginate @books %>
+<table width="100%" border="0">
+  <tr>
+    <td width="50%" align=left>
+      <%= will_paginate @books %>
+    </td>
+    <td width="50%" align=right>
+      Sorting by Author.
+    </td>
+  </tr>
+</table>
 
 <!-- -------------------------------------------------------------------- -->
 <!-- This will not sort by author and display all with paging.            -->
@@ -227,7 +238,7 @@
 <!-- -------------------------------------------------------------------- -->
 <!-- 06/15/2020 : 0.0.6  : Cleanup remove unneeded code and comments.     -->
 <!-- -------------------------------------------------------------------- -->
-<!-- 07/11/2020 : 0.0.7  : Will sort by author befor displaying.          -->
+<!-- 07/11/2020 : 0.0.7  : Added sort by author befor displaying.         -->
 <!-- -------------------------------------------------------------------- -->
 <!--            :        :                                                -->
 <!-- -------------------------------------------------------------------- -->
