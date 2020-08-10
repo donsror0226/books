@@ -4,8 +4,8 @@
 /*   Name    : peekaboo                                                    */
 /* Location  : /home/don/workspace/books/app/assets/stylesheets/           */
 /* File Name : scaffolds.css                                               */
-/* Rev. Date : 06/16/2020                                                  */
-/* Rev. No.  : 0.0.3                                                       */
+/* Rev. Date : 07/25/2020                                                  */
+/* Rev. No.  : 0.0.4                                                       */
 /* ----------------------------------------------------------------------- */
 /*                                                                         */
 
@@ -103,23 +103,60 @@ address {
   line-height: 0px;
 }
 
-/*                                                                   */
-/* ----------------------------------------------------------------- */
-/* Date Rev.  : Rev. # :     Description                             */
-/* ----------------------------------------------------------------- */
-/* 05/05/2020 : 0.0.1  : Original.                                   */
-/* ----------------------------------------------------------------- */
-/* 05/28/2020 : 0.0.2  : Add <hr> to stylesheet.                     */
-/*            :        : Add <th> to stylesheet.                     */
-/*            :        : Add <h1> to stylesheet.                     */
-/* ----------------------------------------------------------------- */
-/* 06/16/2020 : 0.0.3  : Added font-size, text_align,                */
-/*            :        :   line-height to <h1>.                      */
-/*            :        : Added <address> to stylesheet.              */
-/*            :        : Added #link to stylesheet.                  */
-/*            :        :   Using id="link".                          */
-/*            :        : Added #table1 to stylesheet.                */
-/*            :        :   Using id="table1".                        */
-/* ----------------------------------------------------------------- */
-/*            :        :                                             */
-/* ----------------------------------------------------------------- */
+/* Color
+/* ----------------------------------------------------------------------- */
+/* Color Codes  :    Color Name                                            */
+/* 000 : 000000 : Black                                                    */
+/* fff : ffffff : White                                                    */
+/*     : 008000 : Green                                                    */
+/*     : 00ff00 : Green 1                                                  */
+/* f00 : ff0000 : Red                                                      */
+/* 00f : 0000ff : Blue                                                     */
+/*     :        : Orange                                                   */
+/* eee : eeeeee : - Off White                                              */
+/* 666 : 666666 : Gray 40                                                  */
+/* c00 : cc0000 : - Red                                                    */
+/*     : f0f0f0 : Gray 94 - off white                                      */
+/*     : 2196F3 : - Light Blue - purple                                    */
+/*     :        : Gray - gray                                              */
+/*     :        : LightGray - lightgray                                    */
+/*     :        :                                                          */
+/* ----------------------------------------------------------------------- */
+
+
+/* Info.                                                                   */
+/* ----------------------------------------------------------------------- */
+/*  Selector  Example       Example description                            */
+/*  .class    .intro      Selects all elements with class="intro".         */
+/*  #id       #firstname  Selects the element with id="firstname".         */
+/* ----------------------------------------------------------------------- */
+/*  *         *           Selects all elements.                            */
+/*  element   p           Selects all <p> elements.                        */
+/*  element,element,..                                                     */
+/*            div,p       Selects all <div> elements and                   */
+/*                          all <p> elements.                              */
+/* ----------------------------------------------------------------------- */
+
+
+/*                                                                         */
+/* ----------------------------------------------------------------------- */
+/* Date Rev.  : Rev. # :     Description                                   */
+/* ----------------------------------------------------------------------- */
+/* 05/05/2020 : 0.0.1  : Original.                                         */
+/* ----------------------------------------------------------------------- */
+/* 05/28/2020 : 0.0.2  : Add <hr> to stylesheet.                           */
+/*            :        : Add <th> to stylesheet.                           */
+/*            :        : Add <h1> to stylesheet.                           */
+/* ----------------------------------------------------------------------- */
+/* 06/16/2020 : 0.0.3  : Added font-size, text_align,                      */
+/*            :        :   line-height to <h1>.                            */
+/*            :        : Added <address> to stylesheet.                    */
+/*            :        : Added #link to stylesheet.                        */
+/*            :        :   Using id="link".                                */
+/*            :        : Added #table1 to stylesheet.                      */
+/*            :        :   Using id="table1".                              */
+/* ----------------------------------------------------------------------- */
+/* 07/25/2020 : 0.0.4  : Add Color and Info. sections.                     */
+/* ----------------------------------------------------------------------- */
+/*            :        :                                                   */
+/* ----------------------------------------------------------------------- */

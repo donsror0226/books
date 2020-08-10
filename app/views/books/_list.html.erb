@@ -1,18 +1,18 @@
-<!--                                                                    -->
-<!-- ------------------------------------------------------------------ --> 
-<!-- System    : Centos 7.7                                             --> 
-<!--   Name    : peekaboo                                               --> 
-<!-- Location  : /home/don/workspace/books/app/views/books/             -->
-<!-- File Name : _list.html.erb                                         --> 
-<!-- Rev. Date : 06/15/2020                                             --> 
-<!-- Rev. No.  : 0.0.2                                                  --> 
-<!-- ------------------------------------------------------------------ --> 
-<!--                                                                    -->
+<!--                                                                      -->
+<!-- -------------------------------------------------------------------- --> 
+<!-- System    : Centos 7.7                                               --> 
+<!--   Name    : peekaboo                                                 --> 
+<!-- Location  : /home/don/workspace/books/app/views/books/               -->
+<!-- File Name : _list.html.erb                                           --> 
+<!-- Rev. Date : 07/25/2020                                               --> 
+<!-- Rev. No.  : 0.0.3                                                    --> 
+<!-- -------------------------------------------------------------------- --> 
+<!--                                                                      -->
 
 <%= form_with(model: book, local: true) do |f| %>
-  <!-- ---------------------------------------------------------------- -->
-  <!-- Error handeling.                                                 -->
-  <!-- ---------------------------------------------------------------- -->
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Error handeling.                                                   -->
+  <!-- ------------------------------------------------------------------ -->
   <% if book.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
@@ -25,17 +25,17 @@
     </div>
   <% end %>
 
-  <!-- ---------------------------------------------------------------- -->
-  <!-- Table #1 - Book Info.                                            -->
-  <!-- ---------------------------------------------------------------- -->
-  <!--        Author       / Title      / Series Name    / Series No.   -->
-  <!--        ISBN Tab No. / Publisher  / Published Date / Location     -->
-  <!--        Price        / Entry Date /                               -->
-  <!--        Condition Id  - Condition Name  /                         -->
-  <!--        Media Type Id - Media Type Name /                         -->
-  <!--        Purpose Id    - Purpose Name    /                         -->
-  <!--        Book Type Id  - Book Type Name.                           -->
-  <!-- ---------------------------------------------------------------- -->
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Table #1 - Book Info.                                              -->
+  <!-- ------------------------------------------------------------------ -->
+  <!--        Author       / Title      / Series Name    / Series No.     -->
+  <!--        ISBN Tab No. / Publisher  / Published Date / Location       -->
+  <!--        Price        / Entry Date /                                 -->
+  <!--        Condition Id  - Condition Name  /                           -->
+  <!--        Media Type Id - Media Type Name /                           -->
+  <!--        Purpose Id    - Purpose Name    /                           -->
+  <!--        Book Type Id  - Book Type Name.                             -->
+  <!-- ------------------------------------------------------------------ -->
   <table width="65%" border=1>
     <tr>
       <td width="15%" bgcolor="lightgreen">
@@ -271,16 +271,41 @@
 				<%=h record.book_type_name %>
       </td>
     </tr>
+
+    <tr>
+      <td width="15%" bgcolor="lightgreen">
+        <strong>
+          Created:
+        </strong>
+      </td>
+      <td width="50%" colspan=2 bgcolor="pink">
+       <%=h @book.created_at %>
+      </td>
+    </tr>
+
+    <tr>
+       <td width="15%" bgcolor="lightgreen">
+        <strong>
+          Updated
+        </strong>
+      </td>
+      <td width="50%" colspan=2 bgcolor="pink">
+       <%=h @book.updated_at %>
+      </td>
+   </tr>
+
   </table>
 <% end %>
 
-<!--                                                                   -->
-<!-- ----------------------------------------------------------------- -->
-<!-- Date Rev.  : Rev. # :     Description                             -->
-<!-- ----------------------------------------------------------------- -->
-<!-- 06/14/2020 : 0.0.1  : Original. Copyed from show.html.erb.        -->
-<!-- ----------------------------------------------------------------- -->
-<!-- 06/15/2020 : 0.0.2  : Cleanup remove unneded code and comments.   -->
-<!-- ----------------------------------------------------------------- -->
-<!--            :        :                                             -->
-<!-- ----------------------------------------------------------------- -->
+<!--                                                                      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- Date Rev.  : Rev. # :     Description                                -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 06/14/2020 : 0.0.1  : Original. Copyed from show.html.erb.           -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 06/15/2020 : 0.0.2  : Cleanup remove unneded code and comments.      -->
+<!-- -------------------------------------------------------------------- -->
+<!-- 07/25/2020 : 0.0.3  : Add created_at & updated_at to Table 1 Row 4.  -->
+<!-- -------------------------------------------------------------------- -->
+<!--            :        :                                                -->
+<!-- -------------------------------------------------------------------- -->

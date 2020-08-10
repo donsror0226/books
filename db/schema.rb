@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200713190145) do
+ActiveRecord::Schema.define(version: 20200715190103) do
 
   create_table "books", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "author", limit: 50, null: false
@@ -48,6 +48,14 @@ ActiveRecord::Schema.define(version: 20200713190145) do
     t.index ["condition_idx"], name: "index_conditions_on_condition_idx", unique: true
   end
 
+  create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_items_on_user_id"
+  end
+
   create_table "mediatypes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "media_type_idx", limit: 1, null: false, unsigned: true
     t.string "media_type_name", limit: 15, null: false
@@ -65,12 +73,13 @@ ActiveRecord::Schema.define(version: 20200713190145) do
     t.index ["purpose_idx"], name: "index_purposes_on_purpose_idx", unique: true
   end
 
-  ## create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-  ##   t.string "email"
-  ##   t.string "password_digest"
-  ##   t.datetime "created_at", null: false
-  ##   t.datetime "updated_at", null: false
-  ##   t.index ["email"], name: "index_users_on_email", unique: true
-  ## end
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
+  add_foreign_key "items", "users"
 end
